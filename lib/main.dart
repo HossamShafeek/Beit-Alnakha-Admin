@@ -1,0 +1,37 @@
+import 'package:beit_alnakha_admin/beit_alnakha_admin.dart';
+import 'package:beit_alnakha_admin/bloc_observer.dart';
+import 'package:easy_localization/easy_localization.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
+import 'package:beit_alnakha_admin/config/local/cache_helper.dart';
+import 'package:beit_alnakha_admin/config/local/cache_helper_secure.dart';
+import 'package:beit_alnakha_admin/config/local/cache_helper_keys.dart';
+import 'package:beit_alnakha_admin/core/utils/app_constants.dart';
+import 'config/routes/url_strategy.dart';
+import 'core/dependency_injection/injectable_config.dart';
+import 'core/utils/lang.dart';
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await EasyLocalization.ensureInitialized();
+  configureDependencies();
+  await CacheHelperSecure.initialSecureStorage();
+  await CacheHelper.initialSharedPreference();
+  Bloc.observer = MyBlocObserver();
+  AppConstants.accessToken =
+      await CacheHelperSecure.getData(key: CacheHelperKeys.accessToken) ?? '';
+  SystemChrome.setSystemUIOverlayStyle(AppConstants.systemUiOverlayStyleDark);
+  GoRouter.optionURLReflectsImperativeAPIs = true;
+  setPathUrlStrategy();
+  runApp(
+    EasyLocalization(
+      supportedLocales: const [arabicLocal],
+      fallbackLocale: arabicLocal,
+      startLocale: arabicLocal,
+      path: assetsLocalization,
+      child: const BeitAlnakhaAdmin(),
+    ),
+  );
+}

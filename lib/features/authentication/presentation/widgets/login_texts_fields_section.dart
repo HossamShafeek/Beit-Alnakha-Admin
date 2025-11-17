@@ -1,0 +1,94 @@
+import 'package:beit_alnakha_admin/core/responsive_helper/responsive_app_extensions.dart';
+import 'package:beit_alnakha_admin/core/utils/app_assets.dart';
+import 'package:beit_alnakha_admin/core/utils/app_colors.dart';
+import 'package:beit_alnakha_admin/core/utils/app_size.dart';
+import 'package:beit_alnakha_admin/core/utils/app_strings.dart';
+import 'package:beit_alnakha_admin/core/widgets/custom_text_field.dart';
+import 'package:beit_alnakha_admin/features/authentication/presentation/cubits/login_cubit/login_cubit.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+
+class LoginTextsFieldsSection extends StatelessWidget {
+  const LoginTextsFieldsSection({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    LoginCubit loginCubit = context.read<LoginCubit>();
+    return Form(
+      key: loginCubit.formKey,
+      child: Column(
+        children: [
+          CustomTextField(
+            textStyleColor: AppColors.white,
+            hintStyleColor: AppColors.grey88,
+            textInputType: TextInputType.emailAddress,
+            controller: loginCubit.emailController,
+            backgroundColor: AppColors.secondaryTwo,
+            prefixIcon: SizedBox(
+              width: context.getIconsSizeForTextField,
+              height: context.getIconsSizeForTextField,
+              child: Center(
+                child: SvgPicture.asset(
+                  AppAssets.username,
+                  colorFilter: ColorFilter.mode(
+                    AppColors.white,
+                    BlendMode.srcIn,
+                  ),
+                  width: context.getIconsSizeForTextField,
+                  height: context.getIconsSizeForTextField,
+                ),
+              ),
+            ),
+            validator: (value) {
+              if (value!.trim().isEmpty) {
+                return AppStrings.pleaseEnterUsername;
+              }
+              return null;
+            },
+            hintText: AppStrings.enterUsername,
+          ),
+          CustomTextField(
+            onFieldSubmitted: (value) {
+              if (loginCubit.formKey.currentState!.validate()) {
+                loginCubit.login();
+              }
+            },
+            textStyleColor: AppColors.white,
+            hintStyleColor: AppColors.grey88,
+            passwordVisibilityColor: AppColors.white,
+            backgroundColor: AppColors.secondaryTwo,
+            textInputType: TextInputType.visiblePassword,
+            paddingForBottom: 0,
+            obscureText: true,
+            enabledPasswordVisibility: true,
+
+            prefixIcon: SizedBox(
+              width: AppSize.size20,
+              height: AppSize.size20,
+              child: Center(
+                child: SvgPicture.asset(
+                  AppAssets.lock,
+                  colorFilter: ColorFilter.mode(
+                    AppColors.white,
+                    BlendMode.srcIn,
+                  ),
+                  width: AppSize.size20,
+                  height: AppSize.size20,
+                ),
+              ),
+            ),
+            controller: loginCubit.passwordController,
+            validator: (value) {
+              if (value!.trim().isEmpty) {
+                return AppStrings.pleaseEnterPassword;
+              }
+              return null;
+            },
+            hintText: AppStrings.enterPassword,
+          ),
+        ],
+      ),
+    );
+  }
+}

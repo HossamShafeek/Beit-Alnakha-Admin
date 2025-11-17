@@ -1,0 +1,20 @@
+import 'package:beit_alnakha_admin/core/utils/app_colors.dart';
+import 'package:flutter/material.dart';
+
+class LoadingIndicatorWidget extends StatelessWidget {
+  final double strokeWidth;
+  final Color color;
+
+  const LoadingIndicatorWidget({
+    super.key,
+    this.strokeWidth = 4.0,
+    this.color = AppColors.primary,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: CircularProgressIndicator(color: color, strokeWidth: strokeWidth),
+    );
+  }
+}

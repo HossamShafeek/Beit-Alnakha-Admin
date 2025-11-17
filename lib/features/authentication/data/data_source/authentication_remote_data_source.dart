@@ -1,0 +1,31 @@
+import 'package:beit_alnakha_admin/core/api/api_services.dart';
+import 'package:beit_alnakha_admin/core/api/end_points.dart';
+import 'package:beit_alnakha_admin/features/authentication/data/models/authentication_model/authentication_model.dart';
+import 'package:beit_alnakha_admin/features/authentication/params/login_params.dart';
+import 'package:injectable/injectable.dart';
+
+
+abstract class AuthenticationRemoteDataSource {
+  Future<AuthenticationModel> login({required LoginParams loginParams});
+}
+
+@LazySingleton(as: AuthenticationRemoteDataSource)
+class AuthenticationRemoteDataSourceImplementation
+    extends AuthenticationRemoteDataSource {
+  final ApiServices apiServices;
+
+  AuthenticationRemoteDataSourceImplementation({required this.apiServices});
+
+  @override
+  Future<AuthenticationModel> login({required LoginParams loginParams}) async {
+    dynamic data = await apiServices.post(
+      endPoint: EndPoints.login,
+      data: {'phone': loginParams.email, 'password': loginParams.password},
+    );
+
+    AuthenticationModel authenticationModel = AuthenticationModel.fromJson(
+      data.data,
+    );
+    return authenticationModel;
+  }
+}
