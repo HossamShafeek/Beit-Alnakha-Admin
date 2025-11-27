@@ -24,7 +24,7 @@ class LoginTextsFieldsSection extends StatelessWidget {
             hintStyleColor: AppColors.grey88,
             textInputType: TextInputType.emailAddress,
             controller: loginCubit.emailController,
-            backgroundColor: AppColors.secondaryTwo,
+            backgroundColor: AppColors.secondaryBlack,
             prefixIcon: SizedBox(
               width: context.getIconsSizeForTextField,
               height: context.getIconsSizeForTextField,
@@ -57,7 +57,7 @@ class LoginTextsFieldsSection extends StatelessWidget {
             textStyleColor: AppColors.white,
             hintStyleColor: AppColors.grey88,
             passwordVisibilityColor: AppColors.white,
-            backgroundColor: AppColors.secondaryTwo,
+            backgroundColor: AppColors.secondaryBlack,
             textInputType: TextInputType.visiblePassword,
             paddingForBottom: 0,
             obscureText: true,

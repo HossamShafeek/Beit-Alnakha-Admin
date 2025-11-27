@@ -36,7 +36,7 @@ class CustomContainerButton extends StatelessWidget {
         width: size ?? AppSize.size48,
         height: size ?? AppSize.size48,
         decoration: BoxDecoration(
-          color: backgroundColor ?? AppColors.primary,
+          color: backgroundColor ?? AppColors.secondaryBlack,
           borderRadius: BorderRadius.circular(radius ?? AppSize.size12),
         ),
         child: SvgPicture.asset(

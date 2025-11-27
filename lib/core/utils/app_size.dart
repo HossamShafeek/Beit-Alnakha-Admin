@@ -23,6 +23,7 @@ abstract class AppSize {
   static const double size26 = 26;
   static const double size28 = 28;
   static const double size40 = 40;
+  static const double size45 = 45;
   static const double size80 = 80;
   static const double size75 = 75;
   static const double size1 = 1;
@@ -33,4 +34,6 @@ abstract class AppSize {
   static const double size22 = 22;
   static const double size18 = 18;
   static const double size8 = 8;
+  static const double sizeForSearchField = 300;
+  static const double sizeForCustomDateRangePicker = 240;
 }

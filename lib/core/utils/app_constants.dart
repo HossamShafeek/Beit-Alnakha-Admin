@@ -12,6 +12,7 @@ class AppConstants {
   static const String pathForSvg = 'assets/svg/';
   static const String pathForLottie = 'assets/lottie/';
   static const String onboardingKey = 'onboarding';
+  static  GlobalKey<ScaffoldState> layoutKey = GlobalKey<ScaffoldState>();
 
   static final OutlineInputBorder focusedBorder = OutlineInputBorder(
     borderRadius: BorderRadius.circular(AppSize.size12),

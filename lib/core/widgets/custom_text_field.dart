@@ -107,7 +107,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
               }
             },
             style: AppStyles.regular16(context).copyWith(
-           color:      widget.textStyleColor??AppColors.secondaryBlack
+           color:      widget.textStyleColor??AppColors.primaryBlack
             ),
             maxLines:widget.maxLinesEqualNull ? null : widget.maxLines ?? 1,
             controller: widget.controller,

@@ -1,3 +1,4 @@
+import 'package:beit_alnakha_admin/core/utils/app_strings.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:beit_alnakha_admin/core/animations/scale_transition_animation.dart';
 import 'package:beit_alnakha_admin/core/utils/app_assets.dart';
@@ -13,7 +14,7 @@ class CustomDateRangePicker extends StatefulWidget {
     this.title,
     this.validator,
     required this.controller,
-    required this.hintText,
+     this.hintText,
     this.suffixIcon,
     this.prefixIcon,
     this.maxLength,
@@ -32,7 +33,7 @@ class CustomDateRangePicker extends StatefulWidget {
   final String? Function(String?)? validator;
   final Widget? suffixIcon;
   final Widget? prefixIcon;
-  final String hintText;
+  final String? hintText;
   final String? title;
   final int? maxLength;
   final TextInputType? textInputType;
@@ -158,7 +159,7 @@ class _CustomDateRangePickerState extends State<CustomDateRangePicker> {
                 vertical: AppSize.size12,
                 horizontal: AppSize.size16,
               ),
-              hintText: widget.hintText,
+              hintText: widget.hintText??AppStrings.selectStartAndEndDate,
               errorStyle: AppStyles.medium12(
                 context,
               ).copyWith(color: AppColors.red),
@@ -182,11 +183,21 @@ class _CustomDateRangePickerState extends State<CustomDateRangePicker> {
                 context,
               ).copyWith(color: AppColors.grey7A),
               fillColor: widget.backgroundColor ?? AppColors.white,
-              border: AppConstants.enabledBorder,
-              enabledBorder: AppConstants.enabledBorder,
-              focusedBorder: AppConstants.enabledBorder,
-              errorBorder: AppConstants.errorBorder,
-              focusedErrorBorder: AppConstants.errorBorder,
+              border: AppConstants.enabledBorder.copyWith(
+                borderRadius: BorderRadius.circular(AppSize.size24),
+              ),
+              enabledBorder: AppConstants.enabledBorder.copyWith(
+                borderRadius: BorderRadius.circular(AppSize.size24),
+              ),
+              focusedBorder: AppConstants.enabledBorder.copyWith(
+                borderRadius: BorderRadius.circular(AppSize.size24),
+              ),
+              errorBorder: AppConstants.errorBorder.copyWith(
+                borderRadius: BorderRadius.circular(AppSize.size24),
+              ),
+              focusedErrorBorder: AppConstants.errorBorder.copyWith(
+                borderRadius: BorderRadius.circular(AppSize.size24),
+              ),
             ),
           ),
         ],

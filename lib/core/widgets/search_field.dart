@@ -14,12 +14,14 @@ class SearchField extends StatelessWidget {
     this.onChanged,
     this.onSubmitted,
     this.focusNode,
+     this.hintText
   });
 
   final TextEditingController controller;
   final Function(String?)? onChanged;
   final Function(String?)? onSubmitted;
   final FocusNode? focusNode;
+  final String? hintText ;
 
   @override
   Widget build(BuildContext context) {
@@ -36,7 +38,7 @@ class SearchField extends StatelessWidget {
       decoration: InputDecoration(
         contentPadding: EdgeInsets.zero,
         enabled: true,
-        hintText: AppStrings.searchHintTextByName,
+        hintText: hintText ?? AppStrings.searchHintTextByName,
         prefixIcon: SizedBox(
           width: AppSize.size24,
           height: AppSize.size24,
@@ -51,11 +53,15 @@ class SearchField extends StatelessWidget {
         filled: true,
         hintStyle: AppStyles.regular16(
           context,
-        ).copyWith(color: AppColors.grey7A),
+        ).copyWith(color: AppColors.grey88),
         fillColor: AppColors.white,
         border: AppConstants.enabledBorder,
-        enabledBorder: AppConstants.enabledBorder,
-        focusedBorder: AppConstants.focusedBorder,
+        enabledBorder: AppConstants.enabledBorder.copyWith(
+          borderRadius: BorderRadius.circular(AppSize.size24),
+        ),
+        focusedBorder: AppConstants.focusedBorder.copyWith(
+          borderRadius: BorderRadius.circular(AppSize.size24),
+        ),
       ),
     );
   }

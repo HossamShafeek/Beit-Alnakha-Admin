@@ -13,7 +13,7 @@ class CustomErrorText extends StatelessWidget {
       child: Text(
         error,
         textAlign: TextAlign.center,
-        style: AppStyles.semiBold16(context).copyWith(color: AppColors.black),
+        style: AppStyles.semiBold16(context).copyWith(color: AppColors.primaryBlack),
       ),
     );
   }

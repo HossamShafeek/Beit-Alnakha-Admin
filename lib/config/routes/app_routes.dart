@@ -1,6 +1,16 @@
-import 'package:beit_alnakha_admin/features/Requests/presentation/views/requests_view.dart';
+import 'package:beit_alnakha_admin/features/agents/presentation/views/agents_view.dart';
+import 'package:beit_alnakha_admin/features/chefs/presentation/views/chefs_view.dart';
+import 'package:beit_alnakha_admin/features/codes/presentation/views/codes_view.dart';
+import 'package:beit_alnakha_admin/features/customers/presentation/views/customers_view.dart';
+import 'package:beit_alnakha_admin/features/departments/presentation/views/departments_view.dart';
+import 'package:beit_alnakha_admin/features/drivers/presentation/views/drivers_view.dart';
+import 'package:beit_alnakha_admin/features/features/presentation/views/features_view.dart';
+import 'package:beit_alnakha_admin/features/influencers/presentation/views/influencers_view.dart';
 import 'package:beit_alnakha_admin/features/layout/presentation/cubits/side_bar_cubit/side_bar_cubit.dart';
 import 'package:beit_alnakha_admin/features/layout/presentation/views/shell_route.dart';
+import 'package:beit_alnakha_admin/features/meals/presentation/views/meals_view.dart';
+import 'package:beit_alnakha_admin/features/requests/presentation/views/requests_view.dart';
+import 'package:beit_alnakha_admin/features/settings/presentation/views/settings_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
@@ -62,6 +72,118 @@ final GoRouter router = GoRouter(
               context: context,
               state: state,
               child: const RequestsView(),
+            );
+          },
+        ),
+
+        GoRoute(
+          path: Routes.customersView,
+          name: Routes.customersView,
+          pageBuilder: (context, state) {
+            return _buildPageWithSlideTransition(
+              context: context,
+              state: state,
+              child: const CustomersView(),
+            );
+          },
+        ),
+
+        GoRoute(
+          path: Routes.driversView,
+          name: Routes.driversView,
+          pageBuilder: (context, state) {
+            return _buildPageWithSlideTransition(
+              context: context,
+              state: state,
+              child: const DriversView(),
+            );
+          },
+        ),
+        GoRoute(
+          path: Routes.agentsView,
+          name: Routes.agentsView,
+          pageBuilder: (context, state) {
+            return _buildPageWithSlideTransition(
+              context: context,
+              state: state,
+              child: const AgentsView(),
+            );
+          },
+        ),
+        GoRoute(
+          path: Routes.influencersView,
+          name: Routes.influencersView,
+          pageBuilder: (context, state) {
+            return _buildPageWithSlideTransition(
+              context: context,
+              state: state,
+              child: const InfluencersView(),
+            );
+          },
+        ),
+        GoRoute(
+          path: Routes.chefsView,
+          name: Routes.chefsView,
+          pageBuilder: (context, state) {
+            return _buildPageWithSlideTransition(
+              context: context,
+              state: state,
+              child: const ChefsView(),
+            );
+          },
+        ),
+        GoRoute(
+          path: Routes.departmentsView,
+          name: Routes.departmentsView,
+          pageBuilder: (context, state) {
+            return _buildPageWithSlideTransition(
+              context: context,
+              state: state,
+              child: const DepartmentsView(),
+            );
+          },
+        ),
+        GoRoute(
+          path: Routes.mealsView,
+          name: Routes.mealsView,
+          pageBuilder: (context, state) {
+            return _buildPageWithSlideTransition(
+              context: context,
+              state: state,
+              child: const MealsView(),
+            );
+          },
+        ),
+        GoRoute(
+          path: Routes.featuresView,
+          name: Routes.featuresView,
+          pageBuilder: (context, state) {
+            return _buildPageWithSlideTransition(
+              context: context,
+              state: state,
+              child: const FeaturesView(),
+            );
+          },
+        ),
+        GoRoute(
+          path: Routes.codesView,
+          name: Routes.codesView,
+          pageBuilder: (context, state) {
+            return _buildPageWithSlideTransition(
+              context: context,
+              state: state,
+              child: const CodesView(),
+            );
+          },
+        ),
+        GoRoute(
+          path: Routes.settingsView,
+          name: Routes.settingsView,
+          pageBuilder: (context, state) {
+            return _buildPageWithSlideTransition(
+              context: context,
+              state: state,
+              child: const SettingsView(),
             );
           },
         ),

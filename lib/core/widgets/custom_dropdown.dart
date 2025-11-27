@@ -68,7 +68,7 @@ class _CustomDropdownState extends State<CustomDropdown> {
                 widget.title!,
                 style: AppStyles.regular16(
                   context,
-                ).copyWith(color: AppColors.black2A),
+                ).copyWith(color: AppColors.primaryBlack),
               ),
             },
             TextFormField(
@@ -102,6 +102,9 @@ class _CustomDropdownState extends State<CustomDropdown> {
                   items: widget.items,
                 ).then((value) {
                   isPopupOpen = false;
+                  if (value != null) {
+                    widget.controller.text = value;
+                  }
                 });
               },
               style: AppStyles.regular16(context),
@@ -142,11 +145,21 @@ class _CustomDropdownState extends State<CustomDropdown> {
                   context,
                 ).copyWith(color: AppColors.grey7A),
                 fillColor: AppColors.white,
-                border: AppConstants.enabledBorder,
-                enabledBorder: AppConstants.enabledBorder,
-                focusedBorder: AppConstants.enabledBorder,
-                errorBorder: AppConstants.errorBorder,
-                focusedErrorBorder: AppConstants.errorBorder,
+                border: AppConstants.enabledBorder.copyWith(
+                  borderRadius: BorderRadius.circular(AppSize.size24),
+                ),
+                enabledBorder: AppConstants.enabledBorder.copyWith(
+                  borderRadius: BorderRadius.circular(AppSize.size24),
+                ),
+                focusedBorder: AppConstants.enabledBorder.copyWith(
+                  borderRadius: BorderRadius.circular(AppSize.size24),
+                ),
+                errorBorder: AppConstants.errorBorder.copyWith(
+                  borderRadius: BorderRadius.circular(AppSize.size24),
+                ),
+                focusedErrorBorder: AppConstants.errorBorder.copyWith(
+                  borderRadius: BorderRadius.circular(AppSize.size24),
+                ),
               ),
             ),
           ],

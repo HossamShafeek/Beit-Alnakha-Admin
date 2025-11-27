@@ -17,13 +17,13 @@ class LogoutSidBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
-      color: AppColors.secondaryBlack,
+      color: AppColors.primaryBlack,
       borderRadius: BorderRadius.circular(AppSize.size16),
       clipBehavior: Clip.antiAlias,
       child: Align(
         alignment: Alignment.bottomCenter,
         child: Padding(
-          padding: const EdgeInsets.only(bottom: AppSize.size40),
+          padding: const EdgeInsets.only(bottom: AppSize.size40, left: AppSize.size16, right: AppSize.size16),
           child: InkWell(
             borderRadius: BorderRadius.circular(AppSize.size16),
             radius: AppSize.size16,
@@ -52,7 +52,7 @@ class LogoutSidBar extends StatelessWidget {
               height: AppSize.size48,
               width: double.infinity,
               decoration: BoxDecoration(
-                color: AppColors.secondaryTwo,
+                color: AppColors.secondaryBlack,
                 borderRadius: BorderRadius.circular(AppSize.size16),
               ),
               child: Row(
@@ -63,16 +63,19 @@ class LogoutSidBar extends StatelessWidget {
                   if (smallSideBar) const Gap(0) else const Gap(AppSize.size16),
                   if (smallSideBar)
                     SvgPicture.asset(AppAssets.logout)
-                  else ...{
+                  else ...[
                     SvgPicture.asset(AppAssets.logout),
                     const Gap(AppSize.size10),
-                    Text(
-                      AppStrings.logout,
-                      style: AppStyles.medium15(
-                        context,
-                      ).copyWith(color: AppColors.primary),
+                    Flexible(
+                      child: Text(
+                        AppStrings.logout,
+                        maxLines: 1,
+                        style: AppStyles.medium15(
+                          context,
+                        ).copyWith(color: AppColors.primary),
+                      ),
                     ),
-                  },
+                  ],
                 ],
               ),
             ),

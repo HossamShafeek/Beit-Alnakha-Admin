@@ -11,7 +11,7 @@ class ResponsiveFontSize {
     double lowerLimit = fontSize * 0.8;
     double upperLimit = fontSize * 1.08;
 
-    return responsiveFontSize.clamp(lowerLimit, upperLimit);
+    return fontSize;
   }
 
   static double getScaleFactor(context) {

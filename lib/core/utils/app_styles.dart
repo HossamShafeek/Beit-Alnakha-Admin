@@ -41,7 +41,7 @@ abstract class AppStyles {
 
   static TextStyle regular16(BuildContext context) {
     return TextStyle(
-      color: AppColors.black46,
+      color: AppColors.primaryBlack,
       fontFamily: 'cairo',
       fontSize: ResponsiveFontSize.getResponsiveFontSize(context, 16),
       fontWeight: FontWeight.w400,
@@ -50,7 +50,7 @@ abstract class AppStyles {
 
   static TextStyle regular24(BuildContext context) {
     return TextStyle(
-      color: AppColors.black2A,
+      color: AppColors.primaryBlack,
       fontFamily: 'cairo',
       fontSize: ResponsiveFontSize.getResponsiveFontSize(context, 24),
       fontWeight: FontWeight.w400,
@@ -59,7 +59,7 @@ abstract class AppStyles {
 
   static TextStyle regular20(BuildContext context) {
     return TextStyle(
-      color: AppColors.black2A,
+      color: AppColors.primaryBlack,
       fontFamily: 'cairo',
       fontSize: ResponsiveFontSize.getResponsiveFontSize(context, 20),
       fontWeight: FontWeight.w400,
@@ -68,7 +68,7 @@ abstract class AppStyles {
 
   static TextStyle regular18(BuildContext context) {
     return TextStyle(
-      color: AppColors.black2A,
+      color: AppColors.primaryBlack,
       fontFamily: 'cairo',
       fontSize: ResponsiveFontSize.getResponsiveFontSize(context, 18),
       fontWeight: FontWeight.w400,
@@ -77,7 +77,7 @@ abstract class AppStyles {
 
   static TextStyle medium12(BuildContext context) {
     return TextStyle(
-      color: AppColors.black2A,
+      color: AppColors.primaryBlack,
       fontFamily: 'cairo',
       fontSize: ResponsiveFontSize.getResponsiveFontSize(context, 12),
       fontWeight: FontWeight.w500,
@@ -86,7 +86,7 @@ abstract class AppStyles {
 
   static TextStyle medium14(BuildContext context) {
     return TextStyle(
-      color: AppColors.black2A,
+      color: AppColors.primaryBlack,
       fontFamily: 'cairo',
       fontSize: ResponsiveFontSize.getResponsiveFontSize(context, 14),
       fontWeight: FontWeight.w500,
@@ -95,7 +95,7 @@ abstract class AppStyles {
 
   static TextStyle medium16(BuildContext context) {
     return TextStyle(
-      color: AppColors.black2A,
+      color: AppColors.primaryBlack,
       fontFamily: 'cairo',
       fontSize: ResponsiveFontSize.getResponsiveFontSize(context, 16),
       fontWeight: FontWeight.w500,
@@ -113,7 +113,7 @@ abstract class AppStyles {
 
   static TextStyle medium18(BuildContext context) {
     return TextStyle(
-      color: AppColors.black46,
+      color: AppColors.primaryBlack,
       fontFamily: 'cairo',
       fontSize: ResponsiveFontSize.getResponsiveFontSize(context, 18),
       fontWeight: FontWeight.w500,
@@ -122,7 +122,7 @@ abstract class AppStyles {
 
   static TextStyle medium20(BuildContext context) {
     return TextStyle(
-      color: AppColors.black2A,
+      color: AppColors.primaryBlack,
       fontFamily: 'cairo',
       fontSize: ResponsiveFontSize.getResponsiveFontSize(context, 20),
       fontWeight: FontWeight.w500,
@@ -131,7 +131,7 @@ abstract class AppStyles {
 
   static TextStyle medium22(BuildContext context) {
     return TextStyle(
-      color: AppColors.black2A,
+      color: AppColors.primaryBlack,
       fontFamily: 'cairo',
       fontSize: ResponsiveFontSize.getResponsiveFontSize(context, 22),
       fontWeight: FontWeight.w500,
@@ -140,14 +140,21 @@ abstract class AppStyles {
 
   static TextStyle medium17(BuildContext context) {
     return TextStyle(
-      color: AppColors.black,
+      color: AppColors.primaryBlack,
       fontFamily: 'cairo',
       fontSize: ResponsiveFontSize.getResponsiveFontSize(context, 17),
       fontWeight: FontWeight.w500,
     );
   }
 
-  static TextStyle semiBold14(BuildContext context) {
+  static TextStyle semiBold12(BuildContext context) {
+    return TextStyle(
+      color: AppColors.white,
+      fontFamily: 'cairo',
+      fontSize: ResponsiveFontSize.getResponsiveFontSize(context, 12),
+      fontWeight: FontWeight.w600,
+    );
+  }  static TextStyle semiBold14(BuildContext context) {
     return TextStyle(
       color: AppColors.white,
       fontFamily: 'cairo',
@@ -176,7 +183,7 @@ abstract class AppStyles {
 
   static TextStyle semiBold18(BuildContext context) {
     return TextStyle(
-      color: AppColors.black,
+      color: AppColors.primaryBlack,
       fontFamily: 'cairo',
       fontSize: ResponsiveFontSize.getResponsiveFontSize(context, 18),
       fontWeight: FontWeight.w600,
@@ -185,7 +192,7 @@ abstract class AppStyles {
 
   static TextStyle semiBold20(BuildContext context) {
     return TextStyle(
-      color: AppColors.black46,
+      color: AppColors.primaryBlack,
       fontFamily: 'cairo',
       fontSize: ResponsiveFontSize.getResponsiveFontSize(context, 20),
       fontWeight: FontWeight.w600,
@@ -194,7 +201,7 @@ abstract class AppStyles {
 
   static TextStyle semiBold24(BuildContext context) {
     return TextStyle(
-      color: AppColors.black46,
+      color: AppColors.primaryBlack,
       fontFamily: 'cairo',
       fontSize: ResponsiveFontSize.getResponsiveFontSize(context, 24),
       fontWeight: FontWeight.w600,
@@ -221,7 +228,7 @@ abstract class AppStyles {
 
   static TextStyle bold20(BuildContext context) {
     return TextStyle(
-      color: AppColors.black46,
+      color: AppColors.primaryBlack,
       fontFamily: 'cairo',
       fontSize: ResponsiveFontSize.getResponsiveFontSize(context, 20),
       fontWeight: FontWeight.w700,
@@ -238,9 +245,17 @@ abstract class AppStyles {
     );
   }
 
+  static TextStyle bold24(BuildContext context) {
+    return TextStyle(
+      color: AppColors.white,
+      fontFamily: 'cairo',
+      fontSize: ResponsiveFontSize.getResponsiveFontSize(context, 24),
+      fontWeight: FontWeight.w700,
+    );
+  }
   static TextStyle bold12(BuildContext context) {
     return TextStyle(
-      color: AppColors.black2A,
+      color: AppColors.primaryBlack,
       fontFamily: 'cairo',
       fontSize: ResponsiveFontSize.getResponsiveFontSize(context, 12),
       fontWeight: FontWeight.w700,

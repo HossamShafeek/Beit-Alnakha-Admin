@@ -13,39 +13,19 @@ class SideBarCubit extends Cubit<SideBarStates> {
 
   static SideBarCubit get(BuildContext context) => BlocProvider.of(context);
 
+  int currentIndex = 0;
+
   int getCurrentIndex(BuildContext context) {
     final location = GoRouterState.of(context).uri.toString();
-    if (location.startsWith(Routes.requestsView)) {
-      return 0;
-    } else if (location.startsWith(Routes.customersView)) {
-      return 1;
-    } else if (location.startsWith(Routes.driversView)) {
-      return 2;
-    }else if (location.startsWith(Routes.agentsView)) {
-      return 3;
-    }else if (location.startsWith(Routes.chefsView)) {
-      return 4;
-    }else if (location.startsWith(Routes.departmentsView)) {
-      return 5;
-    }else if (location.startsWith(Routes.mealsView)) {
-      return 6;
-    }else if (location.startsWith(Routes.featuresView)) {
-      return 7;
-    }else if (location.startsWith(Routes.codesView)) {
-      return 8;
-    }else if (location.startsWith(Routes.settingsView)) {
-      return 9;
-    }
-    return 0;
+     currentIndex = routes.indexWhere((route) => location.startsWith(route));
+    return currentIndex ;
   }
 
-  bool isBottomNavVisible = true;
+  bool smallSideBar = false;
 
-  void setBottomNavVisible(bool visible) {
-    if (isBottomNavVisible != visible) {
-      isBottomNavVisible = visible;
-      emit(SideBarChangeVisibilityState(visible));
-    }
+  void toggleSideBar() {
+    smallSideBar = !smallSideBar;
+    emit(ChangeSideBarSizeState());
   }
 
   final List<String> icons = [
@@ -53,6 +33,7 @@ class SideBarCubit extends Cubit<SideBarStates> {
     AppAssets.customers,
     AppAssets.drivers,
     AppAssets.agents,
+    AppAssets.influencers,
     AppAssets.chefs,
     AppAssets.departments,
     AppAssets.meals,
@@ -65,6 +46,7 @@ class SideBarCubit extends Cubit<SideBarStates> {
     AppAssets.customersFill,
     AppAssets.driversFill,
     AppAssets.agentsFill,
+    AppAssets.influencersFill,
     AppAssets.chefsFill,
     AppAssets.departmentsFill,
     AppAssets.mealsFill,
@@ -78,6 +60,7 @@ class SideBarCubit extends Cubit<SideBarStates> {
     AppStrings.customers,
     AppStrings.drivers,
     AppStrings.agents,
+    AppStrings.influencers,
     AppStrings.chefs,
     AppStrings.departments,
     AppStrings.meals,
@@ -86,16 +69,45 @@ class SideBarCubit extends Cubit<SideBarStates> {
     AppStrings.settings,
   ];
 
+   final List<String> manageTitles = [
+    AppStrings.manageRequests,
+    AppStrings.manageCustomers,
+    AppStrings.manageDrivers,
+    AppStrings.manageAgents,
+    AppStrings.manageInfluencers,
+    AppStrings.manageChefs,
+    AppStrings.manageMeals,
+    AppStrings.manageFeatures,
+    AppStrings.manageCodesAndPoints,
+    AppStrings.manageDepartments,
+    AppStrings.manageSettings,
+  ];
+
+  final List<String> subtitles = [
+    AppStrings.requestsDescription,
+    AppStrings.customersDescription,
+    AppStrings.driversDescription,
+    AppStrings.agentsDescription,
+    AppStrings.influencersDescription,
+    AppStrings.chefsDescription,
+    AppStrings.mealsDescription,
+    AppStrings.featuresDescription,
+    AppStrings.codesAndPointsDescription,
+    AppStrings.departmentsDescription,
+    AppStrings.settingsDescription,
+  ];
+
   final routes = [
     Routes.requestsView,
     Routes.customersView,
     Routes.driversView,
     Routes.agentsView,
+    Routes.influencersView,
     Routes.chefsView,
     Routes.departmentsView,
     Routes.mealsView,
     Routes.featuresView,
     Routes.codesView,
-    Routes.settingsView
+    Routes.settingsView,
   ];
 }

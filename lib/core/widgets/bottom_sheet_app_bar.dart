@@ -19,13 +19,13 @@ class BottomSheetAppBar extends StatelessWidget {
             title,
             style: AppStyles.semiBold17(
               context,
-            ).copyWith(color: AppColors.black),
+            ).copyWith(color: AppColors.primaryBlack),
           ),
           GestureDetector(
             onTap: () {
               Navigator.pop(context);
             },
-            child: Icon(Icons.close_rounded, color: AppColors.black),
+            child: Icon(Icons.close_rounded, color: AppColors.primaryBlack),
           ),
         ],
       ),

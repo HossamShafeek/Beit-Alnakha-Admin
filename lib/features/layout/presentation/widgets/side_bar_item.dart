@@ -31,11 +31,11 @@ class SideBarItem extends StatelessWidget {
       padding: EdgeInsets.only(
         bottom: AppSize.size12,
         top: isLastItem ? AppSize.size12 : 0,
-        left: smallSideBar ? 0 : AppSize.size16,
-        right: smallSideBar ? 0 : AppSize.size16,
+        left:  AppSize.size16,
+        right:  AppSize.size16,
       ),
       child: Material(
-        color: isActive ? AppColors.primary : AppColors.secondaryBlack,
+        color: isActive ? AppColors.primary : AppColors.primaryBlack,
         borderRadius: BorderRadius.circular(AppSize.size16),
         clipBehavior: Clip.antiAlias,
         child: InkWell(
@@ -73,15 +73,18 @@ class SideBarItem extends StatelessWidget {
                       BlendMode.srcIn,
                     ),
                   ),
-                if (!smallSideBar) ...{
+                if (!smallSideBar) ...[
                   const SizedBox(width: AppSize.size8),
-                  Text(
-                    title,
-                    style: AppStyles.medium15(context).copyWith(
-                      color: isActive ? AppColors.white : AppColors.greyAA,
+                  Flexible(
+                    child: Text(
+                      title,
+                      maxLines: 1,
+                      style: AppStyles.medium15(context).copyWith(
+                        color: isActive ? AppColors.white : AppColors.greyAA,
+                      ),
                     ),
                   ),
-                },
+                ],
               ],
             ),
           ),

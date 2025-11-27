@@ -4,6 +4,7 @@ class Routes {
   static const String customersView = '/customers_view';
   static const String driversView = '/drivers_view';
   static const String agentsView = '/agents_view';
+  static const String influencersView = '/influencers_view';
   static const String chefsView = '/chefs_view';
   static const String departmentsView = '/departments_view';
   static const String mealsView = '/meals_view';
