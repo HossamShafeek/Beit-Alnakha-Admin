@@ -1,0 +1,32 @@
+import 'package:beit_alnakha_admin/core/helper/enums.dart';
+import 'package:beit_alnakha_admin/core/helper/menu_action_extension.dart';
+import 'package:beit_alnakha_admin/core/utils/app_size.dart';
+import 'package:beit_alnakha_admin/core/utils/app_styles.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+
+List<PopupMenuEntry<MenuActionEnum>> buildPopupMenuItems(
+  BuildContext context,
+  List<MenuActionEnum> actions,
+) {
+  return actions.map((action) {
+    return PopupMenuItem<MenuActionEnum>(
+      value: action,
+      child: Row(
+        children: [
+          SvgPicture.asset(
+            action.icon,
+            height: AppSize.size24,
+            width: AppSize.size24,
+            //colorFilter: ColorFilter.mode(action.color, BlendMode.srcIn),
+          ),
+          const SizedBox(width: AppSize.size8),
+          Text(
+            action.title,
+            style: AppStyles.medium16(context).copyWith(color: action.color),
+          ),
+        ],
+      ),
+    );
+  }).toList();
+}

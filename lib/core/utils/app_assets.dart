@@ -64,6 +64,8 @@ abstract class AppAssets {
   static const String add = '${AppConstants.pathForSvg}add.svg';
   static const String points = '${AppConstants.pathForSvg}points.svg';
   static const String money = '${AppConstants.pathForSvg}money.svg';
+  static const String whatsApp = '${AppConstants.pathForSvg}whats_app.svg';
+  static const String addNote = '${AppConstants.pathForSvg}add_note.svg';
 
   // Other Images
   static const String logo = '${AppConstants.pathForImages}logo.png';

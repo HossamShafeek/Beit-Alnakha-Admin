@@ -1,11 +1,11 @@
 import 'package:beit_alnakha_admin/core/helper/extensions_helper.dart';
 import 'package:beit_alnakha_admin/core/utils/app_size.dart';
 import 'package:beit_alnakha_admin/core/widgets/custom_divider_widget.dart';
-import 'package:beit_alnakha_admin/features/customers/presentation/widgets/cutomers_view/customers_data_table.dart';
-import 'package:beit_alnakha_admin/features/customers/presentation/widgets/cutomers_view/customers_data_table_pagination.dart';
-import 'package:beit_alnakha_admin/features/customers/presentation/widgets/cutomers_view/customers_filter_section_mobile.dart';
-import 'package:beit_alnakha_admin/features/customers/presentation/widgets/cutomers_view/customers_statistics_data.dart';
-import 'package:beit_alnakha_admin/features/customers/presentation/widgets/cutomers_view/customers_tab_bar.dart';
+import 'package:beit_alnakha_admin/features/customers/presentation/widgets/customers_data_table.dart';
+import 'package:beit_alnakha_admin/features/customers/presentation/widgets/customers_data_table_pagination.dart';
+import 'package:beit_alnakha_admin/features/customers/presentation/widgets/customers_filter_section_mobile.dart';
+import 'package:beit_alnakha_admin/features/customers/presentation/widgets/customers_statistics_data.dart';
+import 'package:beit_alnakha_admin/features/customers/presentation/widgets/customers_tab_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 

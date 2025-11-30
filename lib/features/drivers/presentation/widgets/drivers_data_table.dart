@@ -1,3 +1,5 @@
+import 'package:beit_alnakha_admin/core/functions/build_popup_menu_items.dart';
+import 'package:beit_alnakha_admin/core/helper/enums.dart';
 import 'package:beit_alnakha_admin/core/responsive_helper/responsive_app_extensions.dart';
 import 'package:beit_alnakha_admin/core/utils/app_assets.dart';
 import 'package:beit_alnakha_admin/core/utils/app_colors.dart';
@@ -5,6 +7,7 @@ import 'package:beit_alnakha_admin/core/utils/app_size.dart';
 import 'package:beit_alnakha_admin/core/utils/app_strings.dart';
 import 'package:beit_alnakha_admin/core/utils/app_styles.dart';
 import 'package:beit_alnakha_admin/core/widgets/custom_data_table.dart';
+import 'package:beit_alnakha_admin/core/widgets/custom_popup_menu_button.dart';
 import 'package:beit_alnakha_admin/core/widgets/custom_switch.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -158,10 +161,25 @@ class DriversDataTable extends StatelessWidget {
                           value: value.isActive,
                           onChanged: (value) {},
                         ),
-                        IconButton(
-                          splashRadius: AppSize.size20,
-                          onPressed: () {},
-                          icon: SvgPicture.asset(AppAssets.more),
+                        CustomPopupMenuButton(
+                          onSelected: (value) {},
+                          items: buildPopupMenuItems(context, [
+                            MenuActionEnum.viewDetails,
+                            MenuActionEnum.edit,
+                            MenuActionEnum.whatsappContact,
+                          ]),
+                          child: Padding(
+                            padding: const EdgeInsets.all(AppSize.size6),
+                            child: SvgPicture.asset(
+                              AppAssets.more,
+                              height: AppSize.size24,
+                              width: AppSize.size24,
+                              colorFilter: const ColorFilter.mode(
+                                AppColors.secondaryBlack,
+                                BlendMode.srcIn,
+                              ),
+                            ),
+                          ),
                         ),
                       ],
                     ),

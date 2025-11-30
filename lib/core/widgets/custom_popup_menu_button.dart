@@ -1,3 +1,5 @@
+import 'package:beit_alnakha_admin/core/responsive_helper/pop_on_resize.dart';
+import 'package:beit_alnakha_admin/core/utils/app_size.dart';
 import 'package:flutter/material.dart';
 
 class CustomPopupMenuButton<T> extends StatefulWidget {
@@ -7,11 +9,12 @@ class CustomPopupMenuButton<T> extends StatefulWidget {
     required this.items,
     this.onSelected,
     this.offset = const Offset(0, 5),
-    this.shape,
+    this.shape ,
     this.useRootNavigator = true,
     this.elevation,
     this.color,
     this.constraints,
+    this.splashRadius,
   });
 
   /// بدل child
@@ -23,6 +26,7 @@ class CustomPopupMenuButton<T> extends StatefulWidget {
   final bool useRootNavigator;
   final ShapeBorder? shape;
   final double? elevation;
+  final double? splashRadius;
   final Color? color;
   final BoxConstraints? constraints;
 
@@ -32,19 +36,19 @@ class CustomPopupMenuButton<T> extends StatefulWidget {
 }
 
 class _CustomPopupMenuButtonState<T> extends State<CustomPopupMenuButton<T>> {
-  bool _isOpen = false;
   double? lastWidth;
 
   void _openMenu() async {
     final RenderBox renderBox = context.findRenderObject() as RenderBox;
     final Offset position = renderBox.localToGlobal(Offset.zero);
 
-    _isOpen = true;
 
     final value = await showMenu<T>(
       context: context,
       useRootNavigator: widget.useRootNavigator,
-      shape: widget.shape,
+      shape: widget.shape??const RoundedRectangleBorder(
+        borderRadius: BorderRadius.all(Radius.circular(AppSize.size12)),
+      ),
       elevation: widget.elevation,
       color: widget.color,
       constraints: widget.constraints,
@@ -57,35 +61,21 @@ class _CustomPopupMenuButtonState<T> extends State<CustomPopupMenuButton<T>> {
       items: widget.items,
     );
 
-    _isOpen = false;
+
 
     if (value != null) {
       widget.onSelected?.call(value);
     }
   }
 
-  void _handleResize(double currentWidth) {
-    if (_isOpen && lastWidth != null && currentWidth != lastWidth) {
-      Navigator.of(context, rootNavigator: true).maybePop();
-      _isOpen = false;
-    }
-    lastWidth = currentWidth;
-  }
-
   @override
   Widget build(BuildContext context) {
-    return LayoutBuilder(
-      builder: (context, constraints) {
-        WidgetsBinding.instance.addPostFrameCallback((_) {
-          _handleResize(MediaQuery.of(context).size.width);
-        });
-
-        return GestureDetector(
-          behavior: HitTestBehavior.translucent,
-          onTap: _openMenu,
-          child: widget.child,
-        );
-      },
+    return PopOnResize(
+      child: InkWell(
+        borderRadius: BorderRadius.circular(widget.splashRadius??AppSize.size24),
+        onTap: _openMenu,
+        child: widget.child,
+      ),
     );
   }
 }

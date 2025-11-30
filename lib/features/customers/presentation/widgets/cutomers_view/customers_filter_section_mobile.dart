@@ -1,8 +1,8 @@
 import 'package:beit_alnakha_admin/core/utils/app_size.dart';
 import 'package:beit_alnakha_admin/core/utils/app_strings.dart';
 import 'package:beit_alnakha_admin/core/utils/app_styles.dart';
-import 'package:beit_alnakha_admin/features/customers/presentation/widgets/customers_date_range_picker.dart';
-import 'package:beit_alnakha_admin/features/customers/presentation/widgets/customers_search_field.dart';
+import 'package:beit_alnakha_admin/features/customers/presentation/widgets/cutomers_view/customers_date_range_picker.dart';
+import 'package:beit_alnakha_admin/features/customers/presentation/widgets/cutomers_view/customers_search_field.dart';
 import 'package:flutter/material.dart';
 
 class CustomersFilterSectionMobile extends StatelessWidget {
