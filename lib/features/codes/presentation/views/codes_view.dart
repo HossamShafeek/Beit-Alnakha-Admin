@@ -14,6 +14,7 @@ class _CodesViewState extends State<CodesView> {
     return Scaffold(
       appBar: AppBar(title: const Text('Codes')),
       body: AdaptiveLayout(
+        useFullScreenWidth: true,
         mobileLayout: (context) => const Center(child: Text('Codes')),
         tabletLayout: (context)  => const Center(child: Text('Codes')),
         desktopLayout: (context) => const Center(child: Text('Codes')),

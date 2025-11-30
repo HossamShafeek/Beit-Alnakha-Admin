@@ -14,6 +14,7 @@ class _SettingsViewState extends State<SettingsView> {
     return Scaffold(
       appBar: AppBar(title: const Text('Settings')),
       body: AdaptiveLayout(
+        useFullScreenWidth: true,
         mobileLayout: (context) => const Center(child: Text('Settings')),
         tabletLayout: (context)  => const Center(child: Text('Settings')),
         desktopLayout: (context) => const Center(child: Text('Settings')),

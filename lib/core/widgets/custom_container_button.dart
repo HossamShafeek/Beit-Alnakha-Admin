@@ -44,7 +44,7 @@ class CustomContainerButton extends StatelessWidget {
           width: AppSize.size24,
           height: AppSize.size24,
           colorFilter: ColorFilter.mode(
-            iconColor ?? AppColors.primary,
+            iconColor ?? AppColors.white,
             BlendMode.srcIn,
           ),
         ),

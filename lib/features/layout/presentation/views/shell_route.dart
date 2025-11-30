@@ -23,7 +23,7 @@ class ShellRout extends StatelessWidget {
         bottom: false,
         child: Row(
           children: [
-            if(context.width>ScreenWidthBreakpoints.tablet)...[
+            if(context.width>=ScreenWidthBreakpoints.tablet)...[
               SideBarWidget(),
             ],
             Expanded(

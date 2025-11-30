@@ -40,7 +40,8 @@ class CustomDropdown extends StatefulWidget {
 }
 
 class _CustomDropdownState extends State<CustomDropdown> {
-  double screenWidth = 0;
+  double? lastWidth;
+
   bool isPopupOpen = false;
 
   @override
@@ -50,15 +51,15 @@ class _CustomDropdownState extends State<CustomDropdown> {
         double currentScreenWidth = context.width;
 
         WidgetsBinding.instance.addPostFrameCallback((_) {
-          if (screenWidth != currentScreenWidth) {
-            screenWidth = currentScreenWidth; // تحديث قيمة `screenWidth`
+          if (lastWidth != null && currentScreenWidth != lastWidth) {
             if (isPopupOpen) {
-              // ✅ لو القائمة مفتوحة، نقوم بإغلاقها
-              Navigator.of(context).maybePop();
+              Navigator.of(context, rootNavigator: true).pop();
               isPopupOpen = false;
             }
           }
+          lastWidth = currentScreenWidth;
         });
+
         return Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           spacing: widget.title == null ? 0 : AppSize.size6,

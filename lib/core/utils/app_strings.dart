@@ -14,13 +14,15 @@ class AppStrings {
   static const String pleaseEnterPassword = 'من فضلك أدخل كلمة السر';
   static const String confirmPassword = 'تأكيد كلمة السر';
   static const String enterConfirmPassword = 'أدخل تأكيد كلمة السر...';
-  static const String pleaseEnterConfirmPassword = 'من فضلك أدخل تأكيد كلمة السر';
+  static const String pleaseEnterConfirmPassword =
+      'من فضلك أدخل تأكيد كلمة السر';
   static const String passwordIsTooShort = 'كلمة السر قصيرة جداََ';
-  static const String  passwordsDoNotMatch = 'كلمة السر غير متطابقة';
+  static const String passwordsDoNotMatch = 'كلمة السر غير متطابقة';
   static const String username = 'اسم المستخدم';
   static const String enterUsername = 'أدخل اسم المستخدم...';
   static const String pleaseEnterUsername = 'من فضلك أدخل اسم المستخدم';
   static const String loggedInSuccessfully = 'تم تسجيل الدخول بنجاح';
+
   // Layout
 
   static const String requests = 'الطلبات';
@@ -47,20 +49,32 @@ class AppStrings {
   static const String manageDepartments = 'إدارة الأقسام';
   static const String manageSettings = 'إدارة الإعدادات';
 
-  static const String requestsDescription = 'تتبع جميع الطلبات الواردة من داخل وخارج المطعم، مع التحكم الكامل في حالة الطلب، والملاحظات، والمميزات المرفقة.';
-  static const String customersDescription = 'راقب نشاط العملاء، حدّث بياناتهم، أو تواصل معهم مباشرة لإدارة تجربة مثالية داخل التطبيق. ';
-  static const String driversDescription = 'تتبّع حالة السائقين، مواقعهم الحالية، الطلبات الجارية، ونسب الإنجاز والأرباح. ';
-  static const String agentsDescription = 'متابعة أداء الوكلاء، مراقبة الكودات الترويجية، ومكافآت النقاط لكل وكيل.';
-  static const String influencersDescription = 'متابعة أداء المشاهير، مراقبة الكودات الترويجية، ومكافآت النقاط لكل مشهور.';
-  static const String chefsDescription = 'يمكنك من هنا تحكم في الوجبات التي تظهر لكل شيف حسب تخصصه أو القسم الذي يعمل فيه.';
-  static const String mealsDescription = 'يمكنك من هنا إدارة جميع الوجبات المعروضة في التطبيق، إضافة وجبات جديدة، تعديل الأسعار، وتفعيل أو إلغاء عرضها في المنيو.';
-  static const String featuresDescription = 'يمكنك من هنا إدارة جميع المميزات الإضافية التي يمكن ربطها بالوجبات مثل “أضواء موجهة”، “جلسة ملكية”، “عروض خاصة”، وغيرها.';
-  static const String codesAndPointsDescription = 'يمكنك إدارة جميع أكواد الخصم، ورصيد النقاط لكل عميل، وتحديد المكافآت أو الإجراءات عند بلوغهم مستوى معين.';
-  static const String departmentsDescription = 'يمكن إضافة أو تعديل أو حذف الأقسام الرئيسية التي تظهر في واجهة المستخدم.';
-  static const String settingsDescription = 'تحكم بجميع إعدادات النظام، من معلومات التطبيق إلى إعدادات التوصيل والدفع.';
+  static const String requestsDescription =
+      'تتبع جميع الطلبات الواردة من داخل وخارج المطعم، مع التحكم الكامل في حالة الطلب، والملاحظات، والمميزات المرفقة.';
+  static const String customersDescription =
+      'راقب نشاط العملاء، حدّث بياناتهم، أو تواصل معهم مباشرة لإدارة تجربة مثالية داخل التطبيق. ';
+  static const String driversDescription =
+      'تتبّع حالة السائقين، مواقعهم الحالية، الطلبات الجارية، ونسب الإنجاز والأرباح. ';
+  static const String agentsDescription =
+      'متابعة أداء الوكلاء، مراقبة الكودات الترويجية، ومكافآت النقاط لكل وكيل.';
+  static const String influencersDescription =
+      'متابعة أداء المشاهير، مراقبة الكودات الترويجية، ومكافآت النقاط لكل مشهور.';
+  static const String chefsDescription =
+      'يمكنك من هنا تحكم في الوجبات التي تظهر لكل شيف حسب تخصصه أو القسم الذي يعمل فيه.';
+  static const String mealsDescription =
+      'يمكنك من هنا إدارة جميع الوجبات المعروضة في التطبيق، إضافة وجبات جديدة، تعديل الأسعار، وتفعيل أو إلغاء عرضها في المنيو.';
+  static const String featuresDescription =
+      'يمكنك من هنا إدارة جميع المميزات الإضافية التي يمكن ربطها بالوجبات مثل “أضواء موجهة”، “جلسة ملكية”، “عروض خاصة”، وغيرها.';
+  static const String codesAndPointsDescription =
+      'يمكنك إدارة جميع أكواد الخصم، ورصيد النقاط لكل عميل، وتحديد المكافآت أو الإجراءات عند بلوغهم مستوى معين.';
+  static const String departmentsDescription =
+      'يمكن إضافة أو تعديل أو حذف الأقسام الرئيسية التي تظهر في واجهة المستخدم.';
+  static const String settingsDescription =
+      'تحكم بجميع إعدادات النظام، من معلومات التطبيق إلى إعدادات التوصيل والدفع.';
 
   // Requests View
-  static const String searchWithCustomerNameOrOrderId = 'ابحث برقم الطلب أو باسم الزبون…';
+  static const String searchWithCustomerNameOrOrderId =
+      'ابحث برقم الطلب أو باسم الزبون…';
   static const String requestsMenu = 'قائمة الطلبات';
   static const String requestType = 'نوع الطلب';
   static const String totalRequests = 'إجمالي الطلبات';
@@ -68,6 +82,9 @@ class AppStrings {
   static const String preparing = 'قيد التحضير';
   static const String prepared = 'تم التجهيز';
   static const String delivering = 'قيد التوصيل';
+  static const String delivery = 'توصيل';
+  static const String inside = 'داخلي';
+  static const String outside = 'خارجي';
   static const String delivered = 'تم تسليمها';
   static const String deliveredForTabBar = 'تم التسليم';
   static const String canceled = 'ملغية';
@@ -83,7 +100,11 @@ class AppStrings {
   static const String updateStatus = 'تحديث الحالة';
   static const String addNote = 'إضافة ملاحظة';
 
-
+  static List<String> requestsTypeForDropDown = [
+    AppStrings.all,
+    AppStrings.inside,
+    AppStrings.delivery,
+  ];
 
   static List<String> requestsStatus = [
     totalRequests,
@@ -119,7 +140,7 @@ class AppStrings {
   static const String allCustomers = 'إجمالي العملاء';
   static const String newCustomers = 'العملاء الجدد';
   static const String activeCustomers = 'العملاء النشطون';
-  static const String  vipCustomers = 'كبار الزوار';
+  static const String vipCustomers = 'كبار الزوار';
   static const String blockedCustomers = 'العملاء المحظورون';
   static const String influencer = 'مستثمر';
   static const String clientName = 'اسم العميل';
@@ -128,7 +149,6 @@ class AppStrings {
   static const String points = 'النقاط';
   static const String lastRequest = 'آخر طلب';
   static const String searchWithClientName = 'ابحث باسم العميل…';
-
 
   static List<String> customersStatus = [
     allCustomers,
@@ -160,8 +180,6 @@ class AppStrings {
   static const String driversMenu = 'قائمة السائقين';
   static const String allDrivers = 'إجمالي السائقين';
   static const String activeNow = 'النشطون  الآن';
-  static const String insideDelivery = 'التوصيل الداخلي';
-  static const String outSideDelivery = 'التوصيل الخارجي';
   static const String addDriver = 'إضافة سائق';
   static const String active = 'نشط';
   static const String inactive = 'متوقف';
@@ -171,19 +189,15 @@ class AppStrings {
   static const String deliveryType = 'نوع التوصيل';
   static const String searchWithDriverName = 'ابحث باسم السائق…';
 
-  static List<String> driversStatus = [
-    allDrivers,
-    activeNow,
-    insideDelivery,
-    outSideDelivery,
+  static List<String> driversStatus = [allDrivers, activeNow, inside, outside];
+
+  static List<String> deliveryTypeForDropDown = [
+    AppStrings.all,
+    AppStrings.inside,
+    AppStrings.outside,
   ];
 
-  static List<String> driversStatusForTabBar = [
-    all,
-    active,
-    busy,
-    inactive,
-  ];
+  static List<String> driversStatusForTabBar = [all, active, busy, inactive];
   static List<String> columnsNameForDriversDataTable = [
     hash,
     driverName,
@@ -215,11 +229,7 @@ class AppStrings {
     totalPoints,
   ];
 
-  static List<String> agentsStatusForTabBar = [
-    all,
-    active,
-    inactive,
-  ];
+  static List<String> agentsStatusForTabBar = [all, active, inactive];
   static List<String> columnsNameForAgentsDataTable = [
     hash,
     agentName,
@@ -239,7 +249,7 @@ class AppStrings {
   static const String all = 'الكل';
   static const String iraqCurrency = 'د.ع';
   static const String whatsAppContact = 'التواصل واتساب';
-  static const String viewDetails    = 'عرض التفاصيل ';
+  static const String viewDetails = 'عرض التفاصيل ';
   static const String areYouSureLogout = 'هل أنت متأكد من تسجيل الخروج؟';
   static const String searchHintTextByName = 'ابحث بالاسم...';
   static const String phoneNumber = 'رقم الهاتف';
@@ -248,10 +258,8 @@ class AppStrings {
   static const String doNotStartNumberWithZero = 'لا تبدء رقم الهاتف بصفر';
   static const String pleaseEnterPhoneNumberValid =
       'من فضلك ادخل رقم هاتف صحيح';
-  static const String downloadedSuccessfullyInPath =
-      'تم تنزيل الملف في المسار';
-  static const String downloadedSuccessfully =
-      'تم تنزيل الملف بنجاح';
+  static const String downloadedSuccessfullyInPath = 'تم تنزيل الملف في المسار';
+  static const String downloadedSuccessfully = 'تم تنزيل الملف بنجاح';
 
   // Errors Messages
   static const String connectionTimeoutErrorMessage =

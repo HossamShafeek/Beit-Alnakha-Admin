@@ -14,6 +14,7 @@ class _DepartmentsViewState extends State<DepartmentsView> {
     return Scaffold(
       appBar: AppBar(title: const Text('Departments')),
       body: AdaptiveLayout(
+        useFullScreenWidth: true,
         mobileLayout: (context) => const Center(child: Text('Departments')),
         tabletLayout: (context)  => const Center(child: Text('Departments')),
         desktopLayout: (context) => const Center(child: Text('Departments')),

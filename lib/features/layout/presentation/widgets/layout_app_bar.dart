@@ -31,7 +31,7 @@ class LayoutAppBar extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             spacing:  AppSize.size16,
             children: [
-              if(context.width <= ScreenWidthBreakpoints.tablet)...[
+              if(context.width < ScreenWidthBreakpoints.tablet)...[
                 CustomContainerButton(imagePath: AppAssets.menu, onTap: (){
                   AppConstants.layoutKey.currentState?.openDrawer();
                 },iconColor: AppColors.white,),

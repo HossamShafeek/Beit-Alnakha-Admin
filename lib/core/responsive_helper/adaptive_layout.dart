@@ -1,3 +1,6 @@
+import 'dart:developer';
+
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:beit_alnakha_admin/core/responsive_helper/screen_width_breakpoints.dart';
 
@@ -22,12 +25,15 @@ class AdaptiveLayout extends StatelessWidget {
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (context, constraints) {
+
         final width = useFullScreenWidth
             ? MediaQuery.of(context)
                   .size
                   .width // عرض الشاشة الكامل
             : constraints.maxWidth; // العرض المتاح فقط
-
+        if(kDebugMode){
+          log('========== Screen width: $width ==========');
+        }
         if (width < ScreenWidthBreakpoints.tablet) {
           return mobileLayout(context);
         } else if (width < ScreenWidthBreakpoints.desktop) {

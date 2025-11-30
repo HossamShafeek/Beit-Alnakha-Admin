@@ -14,7 +14,7 @@ class CustomDateRangePicker extends StatefulWidget {
     this.title,
     this.validator,
     required this.controller,
-     this.hintText,
+    this.hintText,
     this.suffixIcon,
     this.prefixIcon,
     this.maxLength,
@@ -27,6 +27,7 @@ class CustomDateRangePicker extends StatefulWidget {
     this.backgroundColor,
     this.height,
     this.onDateRangeSelected,
+    this.onClearDateRange,
   });
 
   final TextEditingController controller;
@@ -45,6 +46,7 @@ class CustomDateRangePicker extends StatefulWidget {
   final bool? onTapOutsideUnFocus;
   final Color? backgroundColor;
   final String? Function(DateTimeRange?)? onDateRangeSelected;
+  final VoidCallback? onClearDateRange;
 
   @override
   State<CustomDateRangePicker> createState() => _CustomDateRangePickerState();
@@ -143,7 +145,9 @@ class _CustomDateRangePickerState extends State<CustomDateRangePicker> {
                 if (value != null) {
                   widget.controller.text =
                       '${value.start.day}/${value.start.month}/${value.start.year},${value.end.day}/${value.end.month}/${value.end.year}';
-                  widget.onDateRangeSelected!(value);
+                  if (widget.onDateRangeSelected != null) {
+                    widget.onDateRangeSelected!(value);                  }
+                  setState(() {});
                 }
               });
             },
@@ -159,11 +163,10 @@ class _CustomDateRangePickerState extends State<CustomDateRangePicker> {
                 vertical: AppSize.size12,
                 horizontal: AppSize.size16,
               ),
-              hintText: widget.hintText??AppStrings.selectStartAndEndDate,
+              hintText: widget.hintText ?? AppStrings.selectStartAndEndDate,
               errorStyle: AppStyles.medium12(
                 context,
               ).copyWith(color: AppColors.red),
-              suffixIcon: widget.suffixIcon,
               prefixIcon:
                   widget.prefixIcon ??
                   SizedBox(
@@ -177,6 +180,23 @@ class _CustomDateRangePickerState extends State<CustomDateRangePicker> {
                       ),
                     ),
                   ),
+              suffixIcon: widget.suffixIcon ?? ( widget.controller.text.isNotEmpty?  InkWell(
+                            radius: AppSize.size24,
+                            borderRadius: BorderRadius.circular(AppSize.size24),
+                            onTap: () {
+                                widget.controller.clear();
+                                setState(() {});
+                                if (widget.onClearDateRange != null) {
+                                  widget.onClearDateRange!();
+                                }
+                            },
+                            child: Icon(
+                              Icons.close_rounded,
+                              size: AppSize.size24,
+                              color: AppColors.grey7A,
+                            ),
+                          ):SizedBox.shrink())
+                       ,
               filled: true,
               isDense: true,
               hintStyle: AppStyles.regular16(

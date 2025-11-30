@@ -14,6 +14,7 @@ class _FeaturesViewState extends State<FeaturesView> {
     return Scaffold(
       appBar: AppBar(title: const Text('Features')),
       body: AdaptiveLayout(
+        useFullScreenWidth: true,
         mobileLayout: (context) => const Center(child: Text('Features')),
         tabletLayout: (context)  => const Center(child: Text('Features')),
         desktopLayout: (context) => const Center(child: Text('Features')),

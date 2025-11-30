@@ -1,15 +1,15 @@
-import 'package:beit_alnakha_admin/features/agents/presentation/views/agents_view.dart';
+import 'package:beit_alnakha_admin/features/agents/presentation/views/agents_layout.dart';
 import 'package:beit_alnakha_admin/features/chefs/presentation/views/chefs_view.dart';
 import 'package:beit_alnakha_admin/features/codes/presentation/views/codes_view.dart';
-import 'package:beit_alnakha_admin/features/customers/presentation/views/customers_view.dart';
+import 'package:beit_alnakha_admin/features/customers/presentation/views/customers_layout.dart';
 import 'package:beit_alnakha_admin/features/departments/presentation/views/departments_view.dart';
-import 'package:beit_alnakha_admin/features/drivers/presentation/views/drivers_view.dart';
+import 'package:beit_alnakha_admin/features/drivers/presentation/views/drivers_layout.dart';
 import 'package:beit_alnakha_admin/features/features/presentation/views/features_view.dart';
 import 'package:beit_alnakha_admin/features/influencers/presentation/views/influencers_view.dart';
 import 'package:beit_alnakha_admin/features/layout/presentation/cubits/side_bar_cubit/side_bar_cubit.dart';
 import 'package:beit_alnakha_admin/features/layout/presentation/views/shell_route.dart';
 import 'package:beit_alnakha_admin/features/meals/presentation/views/meals_view.dart';
-import 'package:beit_alnakha_admin/features/requests/presentation/views/requests_view.dart';
+import 'package:beit_alnakha_admin/features/requests/presentation/views/requests_layout.dart';
 import 'package:beit_alnakha_admin/features/settings/presentation/views/settings_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -71,7 +71,7 @@ final GoRouter router = GoRouter(
             return _buildPageWithSlideTransition(
               context: context,
               state: state,
-              child: const RequestsView(),
+              child: const RequestsLayout(),
             );
           },
         ),
@@ -95,7 +95,7 @@ final GoRouter router = GoRouter(
             return _buildPageWithSlideTransition(
               context: context,
               state: state,
-              child: const DriversView(),
+              child: const DriversLayout(),
             );
           },
         ),
@@ -106,7 +106,7 @@ final GoRouter router = GoRouter(
             return _buildPageWithSlideTransition(
               context: context,
               state: state,
-              child: const AgentsView(),
+              child: const AgentsLayout(),
             );
           },
         ),

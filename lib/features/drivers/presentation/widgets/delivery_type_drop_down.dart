@@ -10,8 +10,8 @@ import 'package:beit_alnakha_admin/core/widgets/custom_popup_menu_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class RequestsTypeDropDown extends StatelessWidget {
-  const RequestsTypeDropDown({super.key});
+class DeliveryTypeDropDown extends StatelessWidget {
+  const DeliveryTypeDropDown({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -21,9 +21,14 @@ class RequestsTypeDropDown extends StatelessWidget {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(AppSize.size12),
         ),
-        items:  AppStrings.requestsTypeForDropDown
-              .map((e) => PopupMenuItem<String>(value: e, child: Text(e, style: AppStyles.medium16(context))))
-              .toList(),
+        items: AppStrings.deliveryTypeForDropDown
+            .map(
+              (e) => PopupMenuItem<String>(
+                value: e,
+                child: Text(e, style: AppStyles.medium16(context)),
+              ),
+            )
+            .toList(),
         child: CustomContainerButton(
           imagePath: AppAssets.status,
           size: AppSize.size48,
@@ -31,16 +36,16 @@ class RequestsTypeDropDown extends StatelessWidget {
       );
     } else {
       return SizedBox(
-        width: 150,
+        width: 160,
         child: CustomDropdown(
           controller: TextEditingController(),
-          hintText: AppStrings.requestType,
+          hintText: AppStrings.deliveryType,
           prefixIcon: FittedBox(
             fit: BoxFit.scaleDown,
             child: SvgPicture.asset(AppAssets.status),
           ),
-          items: AppStrings.requestsTypeForDropDown
-              .map((e) => PopupMenuItem<String>(value: e, child: Text(e, style: AppStyles.medium16(context))))
+          items: AppStrings.deliveryTypeForDropDown
+              .map((e) => PopupMenuItem<String>(value: e, child: Text(e,style:  AppStyles.medium16(context))))
               .toList(),
         ),
       );

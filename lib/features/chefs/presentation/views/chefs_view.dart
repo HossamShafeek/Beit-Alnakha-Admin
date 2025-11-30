@@ -14,6 +14,7 @@ class _ChefsViewState extends State<ChefsView> {
     return Scaffold(
       appBar: AppBar(title: const Text('Chefs')),
       body: AdaptiveLayout(
+        useFullScreenWidth: true,
         mobileLayout: (context) => const Center(child: Text('Chefs')),
         tabletLayout: (context)  => const Center(child: Text('Chefs')),
         desktopLayout: (context) => const Center(child: Text('Chefs')),

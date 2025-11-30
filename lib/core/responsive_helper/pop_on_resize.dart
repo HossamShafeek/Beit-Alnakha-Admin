@@ -10,23 +10,31 @@ class PopOnResize extends StatefulWidget {
 
 class _PopOnResizeState extends State<PopOnResize> {
   double? _lastWidth;
-  bool _popped = false;
 
   @override
-  Widget build(BuildContext context) {
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+
     final width = MediaQuery.of(context).size.width;
 
-    if (!_popped && _lastWidth != null && _lastWidth != width) {
-      _popped = true;
+    if (_lastWidth != null && width != _lastWidth) {
       WidgetsBinding.instance.addPostFrameCallback((_) {
-        if (mounted && Navigator.of(context).canPop()) {
-          Navigator.of(context).pop();
+        if (!mounted) return;
+
+        final nav = Navigator.of(context, rootNavigator: true);
+
+
+        if (nav.canPop()) {
+          nav.maybePop();
         }
       });
     }
 
     _lastWidth = width;
+  }
 
+  @override
+  Widget build(BuildContext context) {
     return widget.child;
   }
 }

@@ -35,5 +35,5 @@ abstract class AppSize {
   static const double size18 = 18;
   static const double size8 = 8;
   static const double sizeForSearchField = 300;
-  static const double sizeForCustomDateRangePicker = 240;
+  static const double sizeForCustomDateRangePicker = 260;
 }

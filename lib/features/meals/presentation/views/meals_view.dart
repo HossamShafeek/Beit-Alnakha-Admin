@@ -14,6 +14,7 @@ class _MealsViewState extends State<MealsView> {
     return Scaffold(
       appBar: AppBar(title: const Text('Meals')),
       body: AdaptiveLayout(
+        useFullScreenWidth: true,
         mobileLayout: (context) => const Center(child: Text('Meals')),
         tabletLayout: (context)  => const Center(child: Text('Meals')),
         desktopLayout: (context) => const Center(child: Text('Meals')),

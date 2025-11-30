@@ -14,6 +14,7 @@ class _InfluencersViewState extends State<InfluencersView> {
     return Scaffold(
       appBar: AppBar(title: const Text('Influencers')),
       body: AdaptiveLayout(
+        useFullScreenWidth: true,
         mobileLayout: (context) => const Center(child: Text('Influencers')),
         tabletLayout: (context)  => const Center(child: Text('Influencers')),
         desktopLayout: (context) => const Center(child: Text('Influencers')),
