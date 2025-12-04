@@ -17,6 +17,8 @@ class CustomListTile extends StatelessWidget {
     this.trailingTitle,
     this.horizontalTitleGap,
     this.expandedTitle = false,
+    this.paddingForTop,
+    this.paddingForBottom,
   });
 
   final String title;
@@ -29,11 +31,16 @@ class CustomListTile extends StatelessWidget {
   final Widget? trailing;
   final double? horizontalTitleGap;
   final bool? expandedTitle;
+  final double? paddingForTop;
+  final double? paddingForBottom;
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: AppSize.size8),
+      padding: EdgeInsets.only(
+        top: paddingForTop ?? 0,
+        bottom: paddingForBottom ?? 0,
+      ),
       child: Material(
         borderRadius: BorderRadius.circular(AppSize.size12),
         child: ListTile(
@@ -76,7 +83,7 @@ class CustomListTile extends StatelessWidget {
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
 
-                    style: AppStyles.medium14(
+                    style: AppStyles.medium16(
                       context,
                     ).copyWith(color: AppColors.grey7A),
                   ),
@@ -87,7 +94,7 @@ class CustomListTile extends StatelessWidget {
                       maxLines: 1,
                       textDirection: TextDirection.ltr,
                       overflow: TextOverflow.ellipsis,
-                      style: AppStyles.medium14(
+                      style: AppStyles.medium16(
                         context,
                       ).copyWith(color: AppColors.black5B),
                     ),
@@ -97,7 +104,7 @@ class CustomListTile extends StatelessWidget {
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
 
-                  style: AppStyles.medium14(
+                  style: AppStyles.medium16(
                     context,
                   ).copyWith(color: AppColors.grey7A),
                 ),
@@ -109,7 +116,7 @@ class CustomListTile extends StatelessWidget {
                         maxLines: 1,
                         textDirection: TextDirection.ltr,
                         overflow: TextOverflow.ellipsis,
-                        style: AppStyles.medium14(
+                        style: AppStyles.medium16(
                           context,
                         ).copyWith(color: AppColors.black5B),
                       ),

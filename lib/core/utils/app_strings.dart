@@ -99,6 +99,9 @@ class AppStrings {
   static const String action = 'إجراء';
   static const String updateStatus = 'تحديث الحالة';
   static const String addNote = 'إضافة ملاحظة';
+  static const String joinDate = 'تاريخ الانضمام';
+  static const String userStatus = 'حالة المستخدم';
+  static const String requestsHistory = 'سجل الطلبات';
 
   static List<String> requestsTypeForDropDown = [
     AppStrings.all,
@@ -149,6 +152,11 @@ class AppStrings {
   static const String points = 'النقاط';
   static const String lastRequest = 'آخر طلب';
   static const String searchWithClientName = 'ابحث باسم العميل…';
+  static const String ordersCount = 'عدد الطلبات';
+  static const String totalAmountSpent = 'إجمالي المبالغ المنفقة';
+  static const String pointsCount = 'عدد النقاط';
+  static const String averageRequestTime = 'متوسط وقت الطلب';
+
 
   static List<String> customersStatus = [
     allCustomers,
@@ -173,6 +181,19 @@ class AppStrings {
     points,
     lastRequest,
     action,
+  ];
+
+  static List<String> customerDetailsStatus = [
+    ordersCount,
+    totalAmountSpent,
+    pointsCount,
+    averageRequestTime,
+  ];
+  static List<String> requestsHistoryStatusForTabBar = [
+    all,
+    preparing,
+    prepared,
+    canceled,
   ];
 
   // Drivers View
@@ -241,7 +262,12 @@ class AppStrings {
   ];
 
   // Common
+  static const String address = 'العنوان';
+  static const String search = 'ابحث';
   static const String selectStartAndEndDate = 'حدد تاريخ البداية والنهاية';
+  static const String days = 'أيام';
+  static const String fullName = 'الاسم الكامل';
+  static const String allWithoutAl = 'كل';
   static const String edit = 'تعديل';
   static const String delete = 'حذف';
   static const String cancel = 'إلغاء';

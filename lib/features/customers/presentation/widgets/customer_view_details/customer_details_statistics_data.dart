@@ -1,40 +1,31 @@
 import 'package:beit_alnakha_admin/core/helper/money_helper.dart';
-import 'package:beit_alnakha_admin/core/responsive_helper/responsive_app_extensions.dart';
 import 'package:beit_alnakha_admin/core/responsive_helper/responsive_pattern_layout.dart';
 import 'package:beit_alnakha_admin/core/responsive_helper/screen_width_breakpoints.dart';
 import 'package:beit_alnakha_admin/core/utils/app_assets.dart';
-import 'package:beit_alnakha_admin/core/utils/app_size.dart';
 import 'package:beit_alnakha_admin/core/utils/app_strings.dart';
 import 'package:beit_alnakha_admin/core/widgets/statistics_data_item.dart';
 import 'package:flutter/material.dart';
 
-class CustomersStatisticsData extends StatelessWidget {
-  const CustomersStatisticsData({super.key});
+class CustomerDetailsStatisticsData extends StatelessWidget {
+  const CustomerDetailsStatisticsData({super.key});
 
   final List<String> customersStatusIcon = const [
-    AppAssets.users,
-    AppAssets.user,
-    AppAssets.activeUser,
-    AppAssets.blockUser,
+    AppAssets.ordersVector,
+    AppAssets.moneyVector,
+    AppAssets.pointsVector,
+    AppAssets.phoneVector,
   ];
 
-  final List<int> requestsStatusValues = const [1000, 300, 100, 600];
+  final List<int> customerDetailsStatusValues = const [10, 50000, 500, 5];
 
   @override
   Widget build(BuildContext context) {
     return ResponsivePatternLayout(
-      padding: EdgeInsets.symmetric(
-        horizontal: context.withFormFactor(
-          onMobile: AppSize.size16,
-          onTablet: AppSize.size24,
-          onDesktop: AppSize.size24,
-        ),
-      ),
       patternBuilder: (width) {
         if (width >= ScreenWidthBreakpoints.desktop) {
           return [4];
         } else {
-          return [ 2, 2];
+          return [2, 2];
         }
       },
       children: customersStatusIcon
@@ -42,14 +33,25 @@ class CustomersStatisticsData extends StatelessWidget {
           .entries
           .map(
             (e) => StatisticsDataItem(
+              disableColor: true,
+              imagePath: e.value,
 
-                imagePath: e.value,
-                subtitle: AppStrings.customersStatus[e.key],
-                title: MoneyHelper.formatMoney(requestsStatusValues[e.key]),
-              ),
-
+              subtitle: AppStrings.customerDetailsStatus[e.key],
+              title:_formattedTitle(e.key),
+            ),
           )
           .toList(),
     );
+  }
+  String _formattedTitle(int index) {
+    final value = customerDetailsStatusValues[index];
+    switch (index) {
+      case 1:
+        return '${MoneyHelper.formatMoney(value)} ${AppStrings.iraqCurrency}';
+      case 3:
+        return '${AppStrings.allWithoutAl} ${MoneyHelper.formatMoney(value)} ${AppStrings.days}';
+        default:
+          return value.toString();
+    }
   }
 }

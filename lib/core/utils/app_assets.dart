@@ -29,7 +29,6 @@ abstract class AppAssets {
   static const String settingsFill =
       '${AppConstants.pathForSvg}settings_fill.svg';
   static const String settings = '${AppConstants.pathForSvg}settings.svg';
-  static const String dateDone = '${AppConstants.pathForSvg}date_done.svg';
   static const String date = '${AppConstants.pathForSvg}date.svg';
   static const String search = '${AppConstants.pathForSvg}search.svg';
   static const String arrowRight = '${AppConstants.pathForSvg}arrow_right.svg';
@@ -63,9 +62,19 @@ abstract class AppAssets {
   static const String motorcycle = '${AppConstants.pathForSvg}motorcycle.svg';
   static const String add = '${AppConstants.pathForSvg}add.svg';
   static const String points = '${AppConstants.pathForSvg}points.svg';
-  static const String money = '${AppConstants.pathForSvg}money.svg';
+  static const String moneyCircleFill = '${AppConstants.pathForSvg}money_circle_fill.svg';
+  static const String moneyCircle = '${AppConstants.pathForSvg}money_circle.svg';
   static const String whatsApp = '${AppConstants.pathForSvg}whats_app.svg';
+  static const String whatsAppFill = '${AppConstants.pathForSvg}whats_app_fill.svg';
   static const String addNote = '${AppConstants.pathForSvg}add_note.svg';
+  static const String ordersVector = '${AppConstants.pathForSvg}orders_vector.svg';
+  static const String moneyVector = '${AppConstants.pathForSvg}money_vector.svg';
+  static const String phoneVector = '${AppConstants.pathForSvg}phone_vector.svg';
+  static const String pointsVector = '${AppConstants.pathForSvg}points_vector.svg';
+  static const String address = '${AppConstants.pathForSvg}address.svg';
+  static const String city = '${AppConstants.pathForSvg}city.svg';
+  static const String dateTime = '${AppConstants.pathForSvg}date_time.svg';
+  static const String orderFill = '${AppConstants.pathForSvg}order_fill.svg';
 
   // Other Images
   static const String logo = '${AppConstants.pathForImages}logo.png';

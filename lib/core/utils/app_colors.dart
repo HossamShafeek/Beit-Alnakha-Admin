@@ -27,6 +27,7 @@ class AppColors {
   static const Color black54 = Colors.black54;
   static final Color whiteWithOpacity1 = Colors.white.withValues(alpha: 0.1);
   static const Color grey = Colors.grey;
+  static const Color greyFA = Color(0xffFAFAFA);
   static final Color grey50 = Colors.grey[50]!;
   static final Color grey100 = Colors.grey[100]!;
   static final Color grey200 = Colors.grey[200]!;

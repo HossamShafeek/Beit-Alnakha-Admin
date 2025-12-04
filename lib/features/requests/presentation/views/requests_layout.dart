@@ -1,4 +1,5 @@
 import 'package:beit_alnakha_admin/core/responsive_helper/adaptive_layout.dart';
+import 'package:beit_alnakha_admin/core/responsive_helper/responsive_app_extensions.dart';
 import 'package:beit_alnakha_admin/core/utils/app_size.dart';
 import 'package:beit_alnakha_admin/core/utils/app_strings.dart';
 import 'package:beit_alnakha_admin/features/requests/presentation/views/requests_view_desktop.dart';
@@ -13,7 +14,13 @@ class RequestsLayout extends StatelessWidget {
     return DefaultTabController(
       length: AppStrings.requestsStatusForTabBar.length,
       child: Padding(
-        padding: const EdgeInsets.only(bottom: AppSize.size16),
+        padding: EdgeInsets.only(
+          bottom: context.withFormFactor(
+            onMobile: AppSize.size16,
+            onTablet: AppSize.size24,
+            onDesktop: AppSize.size24,
+          ),
+        ),
         child: AdaptiveLayout(
           useFullScreenWidth: true,
           mobileLayout:(context) =>  RequestsViewMobile(),

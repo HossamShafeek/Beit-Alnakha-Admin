@@ -14,7 +14,7 @@ class AgentsStatisticsData extends StatelessWidget {
   final List<String> agentsStatusIcon = const [
     AppAssets.users,
     AppAssets.activeUser,
-    AppAssets.money,
+    AppAssets.moneyCircleFill,
     AppAssets.points,
   ];
 
@@ -39,13 +39,11 @@ class AgentsStatisticsData extends StatelessWidget {
       },
       children: agentsStatusIcon.asMap().entries.map((e) {
         return StatisticsDataItem(
-          statisticModel: StatisticModel(
             imagePath: e.value,
             subtitle: AppStrings.agentsStatus[e.key],
             title: e.key == 2
                 ? '${MoneyHelper.formatMoney(agentsStatusValues[e.key])} ${AppStrings.iraqCurrency}'
                 : MoneyHelper.formatMoney(agentsStatusValues[e.key]),
-          ),
         );
       }).toList(),
     );

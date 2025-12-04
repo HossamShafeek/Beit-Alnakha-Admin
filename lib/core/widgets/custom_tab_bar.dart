@@ -5,31 +5,41 @@ import 'package:beit_alnakha_admin/core/utils/app_styles.dart';
 import 'package:flutter/material.dart';
 
 class CustomTabBar extends StatefulWidget {
-  const CustomTabBar({super.key, required this.titles, this.onTap});
+  const CustomTabBar({
+    super.key,
+    required this.titles,
+    this.onTap,
+     this.paddingForLeft,
+     this.paddingForRight,
+  });
 
   final List<String> titles;
-  final  void Function(int index)? onTap;
+  final void Function(int index)? onTap;
+  final double? paddingForLeft;
+  final double? paddingForRight;
 
   @override
   State<CustomTabBar> createState() => _CustomTabBarState();
 }
 
 class _CustomTabBarState extends State<CustomTabBar> {
-
   int currentIndex = 0;
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding:  EdgeInsets.only(left: context.withFormFactor(
-        onMobile: AppSize.size16,
-        onTablet: AppSize.size24,
-        onDesktop: AppSize.size24,
-      ),right: context.withFormFactor(
-        onMobile: AppSize.size8,
-        onTablet: AppSize.size16,
-        onDesktop: AppSize.size16,
-      )),
+      padding: EdgeInsets.only(
+        left: widget.paddingForLeft??context.withFormFactor(
+          onMobile: AppSize.size16,
+          onTablet: AppSize.size24,
+          onDesktop: AppSize.size24,
+        ),
+        right:widget.paddingForRight??context.withFormFactor(
+          onMobile: AppSize.size8,
+          onTablet: AppSize.size16,
+          onDesktop: AppSize.size16,
+        ),
+      ),
       child: SizedBox(
         height: AppSize.size40,
         width: double.infinity,
@@ -47,9 +57,7 @@ class _CustomTabBarState extends State<CustomTabBar> {
           indicatorPadding: const EdgeInsets.symmetric(
             horizontal: AppSize.size8,
           ),
-          labelPadding: const EdgeInsets.symmetric(
-            horizontal: AppSize.size8,
-          ),
+          labelPadding: const EdgeInsets.symmetric(horizontal: AppSize.size8),
           indicator: BoxDecoration(
             borderRadius: BorderRadius.circular(AppSize.size10),
             color: AppColors.primary,
@@ -64,24 +72,25 @@ class _CustomTabBarState extends State<CustomTabBar> {
           unselectedLabelStyle: AppStyles.medium14(context),
           dividerHeight: 0,
           indicatorWeight: 0,
-          tabs: widget.titles.
-          map(
+          tabs: widget.titles
+              .map(
                 (status) => Container(
-              clipBehavior: Clip.antiAlias,
-              alignment: Alignment.center,
-              padding: EdgeInsets.symmetric(horizontal:  currentIndex ==
-                  widget.titles.indexOf(status)?16: AppSize.size16),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(AppSize.size10),
-                color:
-                currentIndex ==
-                    widget.titles.indexOf(status)
-                    ? AppColors.transparent
-                    : AppColors.grey100,
-              ),
-              child: Text(status),
-            ),
-          )
+                  clipBehavior: Clip.antiAlias,
+                  alignment: Alignment.center,
+                  padding: EdgeInsets.symmetric(
+                    horizontal: currentIndex == widget.titles.indexOf(status)
+                        ? 16
+                        : AppSize.size16,
+                  ),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(AppSize.size10),
+                    color: currentIndex == widget.titles.indexOf(status)
+                        ? AppColors.transparent
+                        : AppColors.grey100,
+                  ),
+                  child: Text(status),
+                ),
+              )
               .toList(),
         ),
       ),

@@ -1,6 +1,7 @@
 import 'package:beit_alnakha_admin/features/agents/presentation/views/agents_layout.dart';
 import 'package:beit_alnakha_admin/features/chefs/presentation/views/chefs_view.dart';
 import 'package:beit_alnakha_admin/features/codes/presentation/views/codes_view.dart';
+import 'package:beit_alnakha_admin/features/customers/presentation/views/customer_details_view_layout.dart';
 import 'package:beit_alnakha_admin/features/customers/presentation/views/customers_layout.dart';
 import 'package:beit_alnakha_admin/features/departments/presentation/views/departments_view.dart';
 import 'package:beit_alnakha_admin/features/drivers/presentation/views/drivers_layout.dart';
@@ -86,6 +87,22 @@ final GoRouter router = GoRouter(
               child: const CustomersView(),
             );
           },
+          routes: [
+            GoRoute(
+              path: '${Routes.customersDetailsView}/:id',
+              name: Routes.customersDetailsView,
+              pageBuilder: (context, state) {
+                String customerId = state.pathParameters['id'] ?? '';
+                return _buildPageWithSlideTransition(
+                  context: context,
+                  state: state,
+                  child:  CustomerDetailsViewLayout(
+                    customerId: customerId,
+                  ),
+                );
+              },
+            ),
+          ],
         ),
 
         GoRoute(

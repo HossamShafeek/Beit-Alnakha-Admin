@@ -42,12 +42,12 @@ class DriversStatisticsData extends StatelessWidget {
           .entries
           .map(
             (e) => StatisticsDataItem(
-              statisticModel: StatisticModel(
+
                 imagePath: e.value,
                 subtitle: AppStrings.driversStatus[e.key],
                 title: MoneyHelper.formatMoney(requestsStatusValues[e.key]),
               ),
-            ),
+
           )
           .toList(),
     );

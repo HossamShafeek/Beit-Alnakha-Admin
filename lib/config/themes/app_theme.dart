@@ -29,10 +29,11 @@ ThemeData appTheme(BuildContext context) {
     scaffoldBackgroundColor: AppColors.white,
     appBarTheme: AppBarTheme(
       backgroundColor: AppColors.white,
-      elevation: 0,
-      titleTextStyle: AppStyles.medium16(
+      elevation: 0.8,
+      shadowColor: AppColors.greyE7,
+      titleTextStyle: AppStyles.medium20(
         context,
-      ).copyWith(color: AppColors.black46),
+      ).copyWith(color: AppColors.secondaryBlack),
     ),
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
       type: BottomNavigationBarType.fixed,

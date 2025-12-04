@@ -45,12 +45,10 @@ class RequestsStatisticsData extends StatelessWidget {
           .entries
           .map(
             (e) => StatisticsDataItem(
-              statisticModel: StatisticModel(
                 imagePath: e.value,
                 subtitle: AppStrings.requestsStatus[e.key],
                 title: MoneyHelper.formatMoney(requestsStatusValues[e.key]),
               ),
-            ),
           )
           .toList(),
     );

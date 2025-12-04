@@ -4,13 +4,9 @@ import 'package:beit_alnakha_admin/core/utils/app_size.dart';
 import 'package:beit_alnakha_admin/core/utils/app_styles.dart';
 
 class CustomContainerWithTitle extends StatelessWidget {
-  const CustomContainerWithTitle({
-    super.key,
-    required this.title,
-    required this.child,
-  });
+  const CustomContainerWithTitle({super.key, this.title, required this.child});
 
-  final String title;
+  final String? title;
   final Widget child;
 
   @override
@@ -25,12 +21,14 @@ class CustomContainerWithTitle extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
-            title,
-            style: AppStyles.medium14(
-              context,
-            ).copyWith(color: AppColors.black5B),
-          ),
+          if (title != null) ...[
+            Text(
+              title!,
+              style: AppStyles.medium14(
+                context,
+              ).copyWith(color: AppColors.black5B),
+            ),
+          ],
           child,
         ],
       ),

@@ -8,10 +8,17 @@ import 'package:flutter_svg/svg.dart';
 class StatisticsDataItem extends StatelessWidget {
   const StatisticsDataItem({
     super.key,
-    required this.statisticModel,
+   required this.title,
+   required this.subtitle,
+   required this.imagePath,
+    this.disableColor=false,
   });
 
-  final StatisticModel statisticModel;
+
+  final String title;
+  final String subtitle;
+  final String imagePath;
+  final bool disableColor;
 
 
   @override
@@ -30,10 +37,10 @@ class StatisticsDataItem extends StatelessWidget {
             radius: 27,
             backgroundColor: AppColors.whiteWithOpacity1,
             child: SvgPicture.asset(
-              statisticModel.imagePath,
+              imagePath,
               height: AppSize.size32,
               width: AppSize.size32,
-              colorFilter: ColorFilter.mode(AppColors.white, BlendMode.srcIn),
+              colorFilter:disableColor?null: ColorFilter.mode(AppColors.white, BlendMode.srcIn),
             ),
           ),
           Expanded(
@@ -43,7 +50,7 @@ class StatisticsDataItem extends StatelessWidget {
               spacing: AppSize.size8,
               children: [
                 Text(
-                  statisticModel.title,
+                  title,
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                   style: AppStyles.bold22(
@@ -51,7 +58,7 @@ class StatisticsDataItem extends StatelessWidget {
                   ).copyWith(height: 1, color: AppColors.white),
                 ),
                 Text(
-                  statisticModel.subtitle,
+                  subtitle,
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                   style: AppStyles.regular14(

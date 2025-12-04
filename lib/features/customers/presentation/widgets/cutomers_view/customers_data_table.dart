@@ -1,3 +1,6 @@
+import 'dart:developer';
+
+import 'package:beit_alnakha_admin/config/routes/routes.dart';
 import 'package:beit_alnakha_admin/core/functions/build_popup_menu_items.dart';
 import 'package:beit_alnakha_admin/core/helper/enums.dart';
 import 'package:beit_alnakha_admin/core/responsive_helper/responsive_app_extensions.dart';
@@ -11,6 +14,7 @@ import 'package:beit_alnakha_admin/core/widgets/custom_popup_menu_button.dart';
 import 'package:beit_alnakha_admin/core/widgets/custom_switch.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:go_router/go_router.dart';
 
 class CustomersDataTable extends StatelessWidget {
   const CustomersDataTable({super.key});
@@ -162,7 +166,19 @@ class CustomersDataTable extends StatelessWidget {
                               onChanged: (value) {},
                             ),
                             CustomPopupMenuButton(
-                              onSelected: (value) {},
+                              onSelected: (value) {
+                                if(value == MenuActionEnum.viewDetails){
+                                  context.pushNamed(Routes.customersDetailsView,
+                                    pathParameters: {
+                                      'id': '112000',
+                                    }
+                                  );
+                                }else if(value == MenuActionEnum.edit){
+                                  log('edit');
+                                }else if(value == MenuActionEnum.delete){
+                                  log('delete');
+                                }
+                              },
                               items: buildPopupMenuItems(context, [
                                 MenuActionEnum.viewDetails,
                                 MenuActionEnum.edit,

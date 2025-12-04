@@ -9,6 +9,7 @@ class ResponsivePatternLayout extends StatelessWidget {
     this.rowSpacing = 8,
     this.padding,
     this.itemHeight,
+    this.useFullScreenWidth = false,
   });
 
   final List<Widget> children;
@@ -18,17 +19,28 @@ class ResponsivePatternLayout extends StatelessWidget {
   final EdgeInsets? padding;
   final double? itemHeight;
 
+
+  final bool useFullScreenWidth;
+
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (context, constraints) {
-        final double width = constraints.maxWidth;
+
+        final double width = useFullScreenWidth
+            ? MediaQuery.of(context).size.width
+            : constraints.maxWidth;
+
         final pattern = patternBuilder(width);
+
         List<Widget> rows = [];
         int index = 0;
+
         for (final count in pattern) {
           if (index >= children.length) break;
+
           List<Widget> rowItems = [];
+
           for (int i = 0; i < count && index < children.length; i++) {
             final child = children[index++];
             rowItems.add(
@@ -39,9 +51,12 @@ class ResponsivePatternLayout extends StatelessWidget {
               ),
             );
           }
+
           rows.add(Row(spacing: spacing, children: rowItems));
         }
+
         final content = Column(spacing: rowSpacing, children: rows);
+
         return padding != null
             ? Padding(padding: padding!, child: content)
             : content;
