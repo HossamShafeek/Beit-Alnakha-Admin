@@ -79,7 +79,6 @@ abstract class AppAssets {
   static const String dollar = '${AppConstants.pathForSvg}dollar.svg';
   static const String table = '${AppConstants.pathForSvg}table.svg';
   static const String offer = '${AppConstants.pathForSvg}offer.svg';
-  static const String car = '${AppConstants.pathForSvg}car.svg';
 
   // Other Images
   static const String logo = '${AppConstants.pathForImages}logo.png';

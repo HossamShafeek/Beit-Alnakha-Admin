@@ -19,6 +19,7 @@ class CustomListTile extends StatelessWidget {
     this.expandedTitle = false,
     this.paddingForTop,
     this.paddingForBottom,
+    this.trailingTitleColor,
   });
 
   final String title;
@@ -26,6 +27,7 @@ class CustomListTile extends StatelessWidget {
   final VoidCallback? onTap;
   final String? svgIconPath;
   final Color? iconColor;
+  final Color? trailingTitleColor;
   final Color? backgroundIconColor;
   final Color? backgroundColor;
   final Widget? trailing;
@@ -96,7 +98,7 @@ class CustomListTile extends StatelessWidget {
                       overflow: TextOverflow.ellipsis,
                       style: AppStyles.medium16(
                         context,
-                      ).copyWith(color: AppColors.black5B),
+                      ).copyWith(color:trailingTitleColor?? AppColors.black5B),
                     ),
               ] else ...[
                 Text(
@@ -118,7 +120,7 @@ class CustomListTile extends StatelessWidget {
                         overflow: TextOverflow.ellipsis,
                         style: AppStyles.medium16(
                           context,
-                        ).copyWith(color: AppColors.black5B),
+                        ).copyWith(color: trailingTitleColor??AppColors.black5B),
                       ),
                 ),
               ],

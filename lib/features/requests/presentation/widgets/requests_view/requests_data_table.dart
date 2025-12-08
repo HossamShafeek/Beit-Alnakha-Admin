@@ -1,3 +1,4 @@
+import 'package:beit_alnakha_admin/config/routes/routes.dart';
 import 'package:beit_alnakha_admin/core/functions/build_popup_menu_items.dart';
 import 'package:beit_alnakha_admin/core/helper/enums.dart';
 import 'package:beit_alnakha_admin/core/responsive_helper/responsive_app_extensions.dart';
@@ -11,6 +12,7 @@ import 'package:beit_alnakha_admin/core/widgets/custom_popup_menu_button.dart';
 import 'package:beit_alnakha_admin/core/widgets/status_container_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:go_router/go_router.dart';
 
 class RequestsDataTable extends StatelessWidget {
   const RequestsDataTable({super.key});
@@ -48,12 +50,12 @@ class RequestsDataTable extends StatelessWidget {
                 [
                   RequestsModel(
                     id: '1',
-                    customerName: 'محمد علي' ,
+                    customerName: 'محمد علي',
                     date: '10:32 ص – اليوم',
                     requestType: 'داخلي',
                     status: 'جديد',
                     tableNumber: '1',
-                    delegate: 'محمد علي' ,
+                    delegate: 'محمد علي',
                   ),
                   RequestsModel(
                     id: '1',
@@ -143,24 +145,24 @@ class RequestsDataTable extends StatelessWidget {
                     cells: [
                       textDataCell(context: context, text: '${index + 1}'),
                       textDataCell(context: context, text: value.id),
-                      textDataCell(
-                        context: context,
-                        text: value.customerName,
-                      ),
+                      textDataCell(context: context, text: value.customerName),
                       textDataCell(context: context, text: value.date),
-                      textDataCell(
-                        context: context,
-                        text: value.requestType,
+                      textDataCell(context: context, text: value.requestType),
+                      widgetDataCell(
+                        widget: StatusContainerWidget(status: value.status),
                       ),
-                      widgetDataCell(widget: StatusContainerWidget(status: value.status)),
-                      textDataCell(
-                        context: context,
-                        text: value.tableNumber,
-                      ),
+                      textDataCell(context: context, text: value.tableNumber),
                       textDataCell(context: context, text: value.delegate),
                       widgetDataCell(
-                        widget:     CustomPopupMenuButton(
-                          onSelected: (value) {},
+                        widget: CustomPopupMenuButton(
+                          onSelected: (value) {
+                            if (value == MenuActionEnum.viewDetails) {
+                              context.pushNamed(
+                                Routes.requestsDetailsView,
+                                pathParameters: {'requestId': '963212'},
+                              );
+                            }
+                          },
                           items: buildPopupMenuItems(context, [
                             MenuActionEnum.viewDetails,
                             MenuActionEnum.edit,
@@ -211,5 +213,3 @@ class RequestsModel {
     required this.delegate,
   });
 }
-
-

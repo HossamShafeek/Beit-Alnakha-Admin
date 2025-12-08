@@ -170,7 +170,7 @@ class CustomersDataTable extends StatelessWidget {
                                 if(value == MenuActionEnum.viewDetails){
                                   context.pushNamed(Routes.customersDetailsView,
                                     pathParameters: {
-                                      'id': '112000',
+                                      'customerId': '112000',
                                     }
                                   );
                                 }else if(value == MenuActionEnum.edit){

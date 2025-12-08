@@ -1,9 +1,9 @@
 import 'package:beit_alnakha_admin/core/helper/extensions_helper.dart';
 import 'package:beit_alnakha_admin/core/utils/app_size.dart';
-import 'package:beit_alnakha_admin/features/customers/presentation/widgets/customer_view_details/customer_details_data_section.dart';
-import 'package:beit_alnakha_admin/features/customers/presentation/widgets/customer_view_details/customer_details_statistics_data.dart';
-import 'package:beit_alnakha_admin/features/customers/presentation/widgets/customer_view_details/requests_history_list_view.dart';
-import 'package:beit_alnakha_admin/features/customers/presentation/widgets/customer_view_details/requests_tab_bar.dart';
+import 'package:beit_alnakha_admin/features/customers/presentation/widgets/customer_details_view/customer_details_data_section.dart';
+import 'package:beit_alnakha_admin/features/customers/presentation/widgets/customer_details_view/customer_details_statistics_data.dart';
+import 'package:beit_alnakha_admin/features/customers/presentation/widgets/customer_details_view/requests_history_list_view.dart';
+import 'package:beit_alnakha_admin/features/customers/presentation/widgets/customer_details_view/requests_tab_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 

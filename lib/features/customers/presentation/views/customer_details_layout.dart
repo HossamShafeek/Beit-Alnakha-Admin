@@ -5,8 +5,8 @@ import 'package:beit_alnakha_admin/features/customers/presentation/views/custome
 import 'package:beit_alnakha_admin/features/customers/presentation/views/customer_details_view_mobile.dart';
 import 'package:flutter/material.dart';
 
-class CustomerDetailsViewLayout extends StatelessWidget {
-  const CustomerDetailsViewLayout({
+class CustomerDetailsLayout extends StatelessWidget {
+  const CustomerDetailsLayout({
     super.key,
     required this.customerId,
 

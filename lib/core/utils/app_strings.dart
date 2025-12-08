@@ -73,7 +73,7 @@ class AppStrings {
       'تحكم بجميع إعدادات النظام، من معلومات التطبيق إلى إعدادات التوصيل والدفع.';
 
   // Requests View
-  static const String searchWithCustomerNameOrOrderId =
+  static const String searchWithCustomerNameOrRequestsId =
       'ابحث برقم الطلب أو باسم الزبون…';
   static const String requestsMenu = 'قائمة الطلبات';
   static const String requestType = 'نوع الطلب';
@@ -102,6 +102,25 @@ class AppStrings {
   static const String joinDate = 'تاريخ الانضمام';
   static const String userStatus = 'حالة المستخدم';
   static const String requestsHistory = 'سجل الطلبات';
+  static const String requestsDetails = 'تفاصيل الطلب';
+  static const String summaryOfRequestAndPoints = 'ملخص الطلب والنقاط';
+  static const String requestNumber = 'رقم الطلب';
+  static const String requestsType = 'نوع الطلب';
+  static const String paymentType = 'طريقة الدفع';
+  static const String discountUserCode = 'كود خصم مستخدم';
+  static const String customerData = 'بيانات العميل';
+  static const String deliveryMethod = 'طريقة التوصيل';
+  static const String mealsDetails = 'تفاصيل الوجبات';
+  static const String meal = 'الوجبة';
+  static const String quantity = 'الكمية';
+  static const String type = 'النوع';
+  static const String price = 'السعر';
+  static const String total = 'الإجمالي';
+  static const String feature = 'الميزة';
+  static const String time = 'المدة';
+  static const String changeStatus = 'تغيير الحالة';
+  static const String youAreSureChangeRequestStatus = 'هل أنت متاكد من تغيير حالة الطلب ؟';
+
 
   static List<String> requestsTypeForDropDown = [
     AppStrings.all,
@@ -109,7 +128,16 @@ class AppStrings {
     AppStrings.delivery,
   ];
 
-  static List<String> requestsStatus = [
+  static List<String> requestsStatusForPopupMenu = [
+    AppStrings.newText,
+    AppStrings.preparing,
+    AppStrings.prepared,
+    AppStrings.delivering,
+    AppStrings.deliveredForTabBar,
+    AppStrings.canceledForTabBar,
+  ];
+
+  static List<String> requestsStatusForStatistics = [
     totalRequests,
     preparing,
     delivering,
@@ -137,6 +165,19 @@ class AppStrings {
     action,
   ];
 
+  static List<String> columnsNameForMealsDetailsDataTable = [
+    meal,
+    quantity,
+    type,
+    price,
+    total,
+  ];
+  static List<String> columnsNameForFeaturesDataTable = [
+    feature,
+    time,
+    price,
+  ];
+
   // Customers View
 
   static const String customersMenu = 'قائمة العملاء';
@@ -152,7 +193,7 @@ class AppStrings {
   static const String points = 'النقاط';
   static const String lastRequest = 'آخر طلب';
   static const String searchWithClientName = 'ابحث باسم العميل…';
-  static const String ordersCount = 'عدد الطلبات';
+  static const String requestsCount = 'عدد الطلبات';
   static const String totalAmountSpent = 'إجمالي المبالغ المنفقة';
   static const String pointsCount = 'عدد النقاط';
   static const String averageRequestTime = 'متوسط وقت الطلب';
@@ -184,7 +225,7 @@ class AppStrings {
   ];
 
   static List<String> customerDetailsStatus = [
-    ordersCount,
+    requestsCount,
     totalAmountSpent,
     pointsCount,
     averageRequestTime,

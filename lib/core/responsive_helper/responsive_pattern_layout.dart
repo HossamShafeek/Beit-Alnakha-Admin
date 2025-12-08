@@ -52,7 +52,9 @@ class ResponsivePatternLayout extends StatelessWidget {
             );
           }
 
-          rows.add(Row(spacing: spacing, children: rowItems));
+          rows.add(Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              spacing: spacing, children: rowItems));
         }
 
         final content = Column(spacing: rowSpacing, children: rows);

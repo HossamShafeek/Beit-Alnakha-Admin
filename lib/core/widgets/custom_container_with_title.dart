@@ -20,13 +20,14 @@ class CustomContainerWithTitle extends StatelessWidget {
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
+        spacing: AppSize.size8,
         children: [
           if (title != null) ...[
             Text(
               title!,
-              style: AppStyles.medium14(
+              style: AppStyles.medium16(
                 context,
-              ).copyWith(color: AppColors.black5B),
+              ).copyWith(color: AppColors.secondaryBlack),
             ),
           ],
           child,

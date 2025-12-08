@@ -1,6 +1,6 @@
 import 'package:beit_alnakha_admin/core/utils/app_size.dart';
 import 'package:beit_alnakha_admin/core/utils/app_strings.dart';
-import 'package:beit_alnakha_admin/features/customers/presentation/widgets/customer_view_details/requests_history_list_view_item.dart';
+import 'package:beit_alnakha_admin/features/customers/presentation/widgets/customer_details_view/requests_history_list_view_item.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 

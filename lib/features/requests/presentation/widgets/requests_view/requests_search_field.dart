@@ -12,7 +12,7 @@ class RequestsSearchField extends StatelessWidget {
       width: AppSize.sizeForSearchField,
       child: SearchField(
         controller: TextEditingController(),
-        hintText: AppStrings.searchWithCustomerNameOrOrderId,
+        hintText: AppStrings.searchWithCustomerNameOrRequestsId,
       ),
     );
   }

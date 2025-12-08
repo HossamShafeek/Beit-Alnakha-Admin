@@ -10,11 +10,15 @@ class CustomDataTable extends StatelessWidget {
     required this.rows,
     this.physics,
     this.shrinkWrap,
+    this.columnColor,
+    this.horizontalDividerColor,
   });
 
   final List<DataColumn> columns;
   final List<DataRow> rows;
   final ScrollPhysics? physics;
+  final Color ? columnColor;
+  final Color ? horizontalDividerColor;
   final bool? shrinkWrap;
 
   @override
@@ -38,7 +42,7 @@ class CustomDataTable extends StatelessWidget {
 
                     horizontalInside: BorderSide(
                       width: 2,
-                      color: AppColors.white,
+                      color: horizontalDividerColor??AppColors.greyF5,
                     ),
                   ),
                   clipBehavior: Clip.antiAlias,
@@ -47,7 +51,7 @@ class CustomDataTable extends StatelessWidget {
                     border: Border.all(width: 2, color: AppColors.greyF5),
                     borderRadius: BorderRadius.circular(AppSize.size16),
                   ),
-                  headingRowColor: WidgetStatePropertyAll(AppColors.greyF5),
+                  headingRowColor: WidgetStatePropertyAll(columnColor??AppColors.greyF5),
                   showBottomBorder: true,
                   columns: columns,
                   rows: rows,

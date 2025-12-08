@@ -46,7 +46,7 @@ class RequestsStatisticsData extends StatelessWidget {
           .map(
             (e) => StatisticsDataItem(
                 imagePath: e.value,
-                subtitle: AppStrings.requestsStatus[e.key],
+                subtitle: AppStrings.requestsStatusForStatistics[e.key],
                 title: MoneyHelper.formatMoney(requestsStatusValues[e.key]),
               ),
           )

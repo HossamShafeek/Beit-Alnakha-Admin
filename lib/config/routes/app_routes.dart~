@@ -78,8 +78,8 @@ final GoRouter router = GoRouter(
           },
           routes: [
             GoRoute(
-              path: '${Routes.requestsDetailsView}/:requestId',
-              name: Routes.requestsDetailsView,
+              path: '${Routes.customersDetailsView}/:requestId',
+              name: Routes.customersDetailsView,
               pageBuilder: (context, state) {
                 String requestId = state.pathParameters['requestId'] ?? '';
                 return _buildPageWithSlideTransition(
