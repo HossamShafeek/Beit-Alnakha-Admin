@@ -39,8 +39,8 @@ class CustomerDetailsDataSectionBody extends StatelessWidget {
         ),
         CustomListTile(
           svgIconPath: AppAssets.city,
-          title: AppStrings.city,
-          trailingTitle: 'الوراق',
+          title: AppStrings.governorate,
+          trailingTitle: 'الجيزة',
         ),
         CustomListTile(
           svgIconPath: AppAssets.date,

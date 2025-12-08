@@ -15,6 +15,7 @@ class TextContainerWithIcon extends StatelessWidget {
     this.textStyle,
     this.width,
     this.height,
+    this.alignment,
     this.disabledMaxLine=false,
   });
 
@@ -26,6 +27,7 @@ class TextContainerWithIcon extends StatelessWidget {
   final TextStyle? textStyle;
   final double? width;
   final double? height;
+  final AlignmentGeometry? alignment;
   final bool disabledMaxLine;
 
   @override
@@ -33,6 +35,7 @@ class TextContainerWithIcon extends StatelessWidget {
     return Container(
       width:width ,
       height: height,
+      alignment: alignment,
       padding: EdgeInsets.symmetric(
         horizontal: AppSize.size12,
         vertical: (AppSize.size4),
@@ -42,7 +45,7 @@ class TextContainerWithIcon extends StatelessWidget {
         borderRadius: BorderRadius.circular(AppSize.size8),
       ),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.start,
         spacing: AppSize.size4,
         mainAxisSize: MainAxisSize.min,
         children: [

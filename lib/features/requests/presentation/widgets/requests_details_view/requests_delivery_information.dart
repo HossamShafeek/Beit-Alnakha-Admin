@@ -8,43 +8,43 @@ import 'package:beit_alnakha_admin/core/widgets/custom_list_tile.dart';
 import 'package:beit_alnakha_admin/core/widgets/text_container_with_icon.dart';
 import 'package:flutter/material.dart';
 
-class RequestDetailsCustomerData extends StatelessWidget {
-  const RequestDetailsCustomerData({super.key});
+class RequestsDeliveryInformation extends StatelessWidget {
+  const RequestsDeliveryInformation ({super.key});
 
   @override
   Widget build(BuildContext context) {
     return CustomContainerWithTitle(
-      title: AppStrings.customerData,
+      title: AppStrings.deliveryInformation,
       child: Column(
         spacing: AppSize.size8,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           CustomListTile(
-            title: AppStrings.fullName,
+            title: AppStrings.driverName,
             svgIconPath: AppAssets.username,
-            trailingTitle: 'حسام شفيق',
+            trailingTitle: 'الشيخ محمود',
           ),
           CustomListTile(
-            title: AppStrings.whatsAppNumber,
-            svgIconPath: AppAssets.whatsApp,
-            trailingTitle: '01010040257',
-            trailingTitleColor: AppColors.primary,
+            title: AppStrings.governorate,
+            svgIconPath: AppAssets.city,
+            trailingTitle: 'الجيزة',
           ),
           CustomListTile(
-            title: AppStrings.address,
-            svgIconPath: AppAssets.address,
-            trailingTitle: 'بغداد – المنصور',
+            title: AppStrings.region,
+            svgIconPath: AppAssets.region,
+            trailingTitle: 'الوراق',
           ),
           CustomListTile(
-            title: AppStrings.deliveryMethod,
-            svgIconPath: AppAssets.car,
-            trailingTitle: '-',
+            title: AppStrings.price,
+            svgIconPath: AppAssets.dollar,
+            trailingTitle: '1000.00 ${AppStrings.iraqCurrency}',
           ),
           TextContainerWithIcon(
             height: 106,
-            disabledMaxLine: true,
-            width: double.infinity,
             alignment: Alignment.topRight,
-            text: 'من فضلكم بدون مايونيز، والتوصيل بسرعة إذا أمكن.'*10,
+            width: double.infinity,
+            disabledMaxLine: true,
+            text: 'الزبون لم يجب على الاتصال الأول',
             backgroundColor: AppColors.white,
             textStyle: AppStyles.medium16(
               context,

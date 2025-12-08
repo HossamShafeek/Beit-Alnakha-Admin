@@ -4,6 +4,7 @@ import 'package:beit_alnakha_admin/core/utils/app_size.dart';
 import 'package:beit_alnakha_admin/core/utils/app_strings.dart';
 import 'package:beit_alnakha_admin/core/widgets/custom_back_button.dart';
 import 'package:beit_alnakha_admin/features/requests/presentation/views/requests_details_view_desktop.dart';
+import 'package:beit_alnakha_admin/features/requests/presentation/views/requests_details_view_mobile.dart';
 import 'package:beit_alnakha_admin/features/requests/presentation/widgets/requests_details_view/requests_change_status_popup_menu.dart';
 import 'package:flutter/material.dart';
 
@@ -21,8 +22,9 @@ class RequestsDetailsLayout extends StatelessWidget {
         leading: CustomBackButton(),
         title: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          spacing: AppSize.size12,
           children: [
-            Text('${AppStrings.requestsDetails} - $requestId'),
+            Flexible(child: Text('${AppStrings.requestsDetails} - $requestId')),
             RequestsChangeStatusPopupMenu(),
           ],
         ),
@@ -37,8 +39,8 @@ class RequestsDetailsLayout extends StatelessWidget {
         ),
         child: AdaptiveLayout(
           useFullScreenWidth: true,
-          mobileLayout: (context) => RequestsDetailsViewDesktop(),
-          tabletLayout: (context) => RequestsDetailsViewDesktop(),
+          mobileLayout: (context) => RequestsDetailsViewMobile(),
+          tabletLayout: (context) => RequestsDetailsViewMobile(),
           desktopLayout: (context) => RequestsDetailsViewDesktop(),
         ),
       ),

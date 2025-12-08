@@ -94,7 +94,8 @@ class CustomListTile extends StatelessWidget {
                     Text(
                       trailingTitle ?? '',
                       maxLines: 1,
-                      textDirection: TextDirection.ltr,
+                      textDirection: TextDirection.rtl,
+                      textAlign: TextAlign.justify,
                       overflow: TextOverflow.ellipsis,
                       style: AppStyles.medium16(
                         context,
@@ -116,7 +117,7 @@ class CustomListTile extends StatelessWidget {
                       Text(
                         trailingTitle ?? '',
                         maxLines: 1,
-                        textDirection: TextDirection.ltr,
+                        textDirection: TextDirection.rtl,
                         overflow: TextOverflow.ellipsis,
                         style: AppStyles.medium16(
                           context,

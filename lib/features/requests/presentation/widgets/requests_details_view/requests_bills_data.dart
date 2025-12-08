@@ -1,0 +1,73 @@
+import 'package:beit_alnakha_admin/core/helper/money_helper.dart';
+import 'package:beit_alnakha_admin/core/utils/app_colors.dart';
+import 'package:beit_alnakha_admin/core/utils/app_size.dart';
+import 'package:beit_alnakha_admin/core/utils/app_strings.dart';
+import 'package:beit_alnakha_admin/core/utils/app_styles.dart';
+import 'package:beit_alnakha_admin/core/widgets/custom_container_with_title.dart';
+import 'package:beit_alnakha_admin/core/widgets/custom_divider_widget.dart';
+import 'package:beit_alnakha_admin/core/widgets/title_and_value_widget.dart';
+import 'package:flutter/material.dart';
+
+class RequestsBillsData extends StatelessWidget {
+  const RequestsBillsData({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return CustomContainerWithTitle(
+      title: AppStrings.bills,
+      child: Container(
+        padding: EdgeInsets.all(AppSize.size12),
+        decoration: BoxDecoration(
+          color: AppColors.white,
+          borderRadius: BorderRadius.circular(AppSize.size12),
+        ),
+        child: Column(crossAxisAlignment: CrossAxisAlignment.start,
+
+          children: [
+            TitleAndValueWidget(
+              title: AppStrings.requestAmount,
+              subtitle: MoneyHelper.formatMoney(20500),
+            ),
+            TitleAndValueWidget(
+              title: AppStrings.deliveryCost,
+              subtitle: MoneyHelper.formatMoney(500),
+            ),
+            TitleAndValueWidget(
+              title: AppStrings.totalBeforeDiscount,
+              subtitle: MoneyHelper.formatMoney(20000),
+            ),
+            TitleAndValueWidget(
+              title: AppStrings.restaurantCommission,
+              subtitle: MoneyHelper.formatMoney(18000),
+            ),
+            TitleAndValueWidget(
+              title: AppStrings.driverCommission,
+              subtitle: MoneyHelper.formatMoney(1000),
+            ),
+            TitleAndValueWidget(
+              title: AppStrings.agentCommission,
+              subtitle: MoneyHelper.formatMoney(1000),
+            ),
+            TitleAndValueWidget(
+              title: '${AppStrings.couponDiscount} (10%)',
+              subtitle: '${MoneyHelper.formatMoney(2000)} -',
+              colorSubtitle: AppColors.red,
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: AppSize.size12),
+              child: CustomDividerWidget(
+                color: AppColors.grey200,
+              ),
+            ),
+            TitleAndValueWidget(
+              title: AppStrings.total,
+              subtitle: MoneyHelper.formatMoney(16000),
+              titleTextStyle: AppStyles.bold16(context).copyWith(color: AppColors.secondaryBlack),
+              subtitleTextStyle: AppStyles.bold16(context).copyWith(color: AppColors.secondaryBlack),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}

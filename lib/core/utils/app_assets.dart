@@ -73,6 +73,7 @@ abstract class AppAssets {
   static const String pointsVector = '${AppConstants.pathForSvg}points_vector.svg';
   static const String address = '${AppConstants.pathForSvg}address.svg';
   static const String city = '${AppConstants.pathForSvg}city.svg';
+  static const String region = '${AppConstants.pathForSvg}region.svg';
   static const String dateTime = '${AppConstants.pathForSvg}date_time.svg';
   static const String orderFill = '${AppConstants.pathForSvg}order_fill.svg';
   static const String hash = '${AppConstants.pathForSvg}hash.svg';

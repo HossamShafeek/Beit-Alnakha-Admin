@@ -104,6 +104,8 @@ class AppStrings {
   static const String requestsHistory = 'سجل الطلبات';
   static const String requestsDetails = 'تفاصيل الطلب';
   static const String summaryOfRequestAndPoints = 'ملخص الطلب والنقاط';
+  static const String deliveryInformation = 'معلومات التوصيل';
+  static const String bills = 'الفواتير';
   static const String requestNumber = 'رقم الطلب';
   static const String requestsType = 'نوع الطلب';
   static const String paymentType = 'طريقة الدفع';
@@ -120,6 +122,14 @@ class AppStrings {
   static const String time = 'المدة';
   static const String changeStatus = 'تغيير الحالة';
   static const String youAreSureChangeRequestStatus = 'هل أنت متاكد من تغيير حالة الطلب ؟';
+  static const String requestAmount = 'قيمة الطلب';
+  static const String deliveryCost = 'رسوم التوصيل';
+  static const String totalBeforeDiscount = 'المجموع الكلي قبل الخصم';
+  static const String restaurantCommission = 'حصة المطعم';
+  static const String driverCommission = 'حصة السائق';
+  static const String agentCommission = 'حصة الوكيل (ترويجي)';
+  static const String couponDiscount = 'خصم الكوبون';
+
 
 
   static List<String> requestsTypeForDropDown = [
@@ -189,7 +199,8 @@ class AppStrings {
   static const String influencer = 'مستثمر';
   static const String clientName = 'اسم العميل';
   static const String whatsAppNumber = 'رقم الواتساب';
-  static const String city = 'المدينة';
+  static const String governorate = 'المحافظة';
+  static const String region = 'المنطقة';
   static const String points = 'النقاط';
   static const String lastRequest = 'آخر طلب';
   static const String searchWithClientName = 'ابحث باسم العميل…';
@@ -217,7 +228,7 @@ class AppStrings {
     hash,
     clientName,
     whatsAppNumber,
-    city,
+    governorate,
     requests,
     points,
     lastRequest,
@@ -265,7 +276,7 @@ class AppStrings {
     driverName,
     deliveryType,
     phoneNumber,
-    city,
+    governorate,
     requests,
     action,
   ];
