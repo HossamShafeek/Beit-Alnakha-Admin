@@ -1,4 +1,4 @@
-import 'package:beit_alnakha_admin/core/helper/money_helper.dart';
+import 'package:beit_alnakha_admin/core/helper/extensions_helper.dart';
 import 'package:beit_alnakha_admin/core/utils/app_colors.dart';
 import 'package:beit_alnakha_admin/core/utils/app_size.dart';
 import 'package:beit_alnakha_admin/core/utils/app_strings.dart';
@@ -26,31 +26,31 @@ class RequestsBillsData extends StatelessWidget {
           children: [
             TitleAndValueWidget(
               title: AppStrings.requestAmount,
-              subtitle: MoneyHelper.formatMoney(20500),
+              subtitle: 20500.toFormatMoney(),
             ),
             TitleAndValueWidget(
               title: AppStrings.deliveryCost,
-              subtitle: MoneyHelper.formatMoney(500),
+              subtitle: 500.toFormatMoney(),
             ),
             TitleAndValueWidget(
               title: AppStrings.totalBeforeDiscount,
-              subtitle: MoneyHelper.formatMoney(20000),
+              subtitle:20000.toFormatMoney(),
             ),
             TitleAndValueWidget(
               title: AppStrings.restaurantCommission,
-              subtitle: MoneyHelper.formatMoney(18000),
+              subtitle: 18000.toFormatMoney(),
             ),
             TitleAndValueWidget(
               title: AppStrings.driverCommission,
-              subtitle: MoneyHelper.formatMoney(1000),
+              subtitle: 1000.toFormatMoney(),
             ),
             TitleAndValueWidget(
               title: AppStrings.agentCommission,
-              subtitle: MoneyHelper.formatMoney(1000),
+              subtitle: 1000.toFormatMoney(),
             ),
             TitleAndValueWidget(
               title: '${AppStrings.couponDiscount} (10%)',
-              subtitle: '${MoneyHelper.formatMoney(2000)} -',
+              subtitle: '${2000.toFormatMoney()} -',
               colorSubtitle: AppColors.red,
             ),
             Padding(
@@ -61,7 +61,7 @@ class RequestsBillsData extends StatelessWidget {
             ),
             TitleAndValueWidget(
               title: AppStrings.total,
-              subtitle: MoneyHelper.formatMoney(16000),
+              subtitle: 16000.toFormatMoney(),
               titleTextStyle: AppStyles.bold16(context).copyWith(color: AppColors.secondaryBlack),
               subtitleTextStyle: AppStyles.bold16(context).copyWith(color: AppColors.secondaryBlack),
             ),

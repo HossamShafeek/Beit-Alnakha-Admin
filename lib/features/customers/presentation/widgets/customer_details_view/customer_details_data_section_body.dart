@@ -24,37 +24,37 @@ class CustomerDetailsDataSectionBody extends StatelessWidget {
       children: [
         CustomListTile(
           svgIconPath: AppAssets.username,
-          title: AppStrings.fullName,
+          titleText: AppStrings.fullName,
           trailingTitle: 'حسام شفيق',
         ),
         CustomListTile(
           svgIconPath: AppAssets.address,
-          title: AppStrings.address,
+          titleText: AppStrings.address,
           trailingTitle: 'الوراق',
         ),
         CustomListTile(
           svgIconPath: AppAssets.call,
-          title: AppStrings.phoneNumber,
+          titleText: AppStrings.phoneNumber,
           trailingTitle: '07777777777',
         ),
         CustomListTile(
           svgIconPath: AppAssets.city,
-          title: AppStrings.governorate,
+          titleText: AppStrings.governorate,
           trailingTitle: 'الجيزة',
         ),
         CustomListTile(
           svgIconPath: AppAssets.date,
-          title: AppStrings.joinDate,
+          titleText: AppStrings.joinDate,
           trailing: TextContainerWithIcon(text: '11/11/2022'),
         ),
         CustomListTile(
           svgIconPath: AppAssets.dateTime,
-          title: AppStrings.lastRequest,
+          titleText: AppStrings.lastRequest,
           trailing: TextContainerWithIcon(text: '11/11/2022'),
         ),
         CustomListTile(
           svgIconPath: AppAssets.status,
-          title: AppStrings.userStatus,
+          titleText: AppStrings.userStatus,
           trailing: CustomSwitch(value: true, onChanged: (value) {}),
         ),
       ],

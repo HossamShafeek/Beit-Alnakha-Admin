@@ -121,7 +121,8 @@ class AppStrings {
   static const String feature = 'الميزة';
   static const String time = 'المدة';
   static const String changeStatus = 'تغيير الحالة';
-  static const String youAreSureChangeRequestStatus = 'هل أنت متاكد من تغيير حالة الطلب ؟';
+  static const String youAreSureChangeRequestStatus =
+      'هل أنت متاكد من تغيير حالة الطلب ؟';
   static const String requestAmount = 'قيمة الطلب';
   static const String deliveryCost = 'رسوم التوصيل';
   static const String totalBeforeDiscount = 'المجموع الكلي قبل الخصم';
@@ -129,8 +130,6 @@ class AppStrings {
   static const String driverCommission = 'حصة السائق';
   static const String agentCommission = 'حصة الوكيل (ترويجي)';
   static const String couponDiscount = 'خصم الكوبون';
-
-
 
   static List<String> requestsTypeForDropDown = [
     AppStrings.all,
@@ -182,11 +181,7 @@ class AppStrings {
     price,
     total,
   ];
-  static List<String> columnsNameForFeaturesDataTable = [
-    feature,
-    time,
-    price,
-  ];
+  static List<String> columnsNameForFeaturesDataTable = [feature, time, price];
 
   // Customers View
 
@@ -209,8 +204,7 @@ class AppStrings {
   static const String pointsCount = 'عدد النقاط';
   static const String averageRequestTime = 'متوسط وقت الطلب';
 
-
-  static List<String> customersStatus = [
+  static List<String> customersStatusForStatistics = [
     allCustomers,
     newCustomers,
     activeCustomers,
@@ -245,6 +239,8 @@ class AppStrings {
     all,
     preparing,
     prepared,
+    delivering,
+    deliveredForTabBar,
     canceled,
   ];
 
@@ -257,12 +253,20 @@ class AppStrings {
   static const String active = 'نشط';
   static const String inactive = 'متوقف';
   static const String busy = 'مشغول';
+  static const String driverStatus = 'حالة السائق';
   static const String driverName = 'اسم السائق';
   static const String driverPhone = 'رقم الهاتف';
   static const String deliveryType = 'نوع التوصيل';
   static const String searchWithDriverName = 'ابحث باسم السائق…';
+  static const String totalDeliveryProfit = 'إجمالي أرباح التوصيل';
+  static const String accountStatement = 'كشف حساب';
 
-  static List<String> driversStatus = [allDrivers, activeNow, inside, outside];
+  static List<String> driversStatusForStatistics = [
+    allDrivers,
+    activeNow,
+    inside,
+    outside,
+  ];
 
   static List<String> deliveryTypeForDropDown = [
     AppStrings.all,
@@ -281,6 +285,20 @@ class AppStrings {
     action,
   ];
 
+  static List<String> driverDetailsStatusForTabBar = [
+    all,
+    delivering,
+    deliveredForTabBar,
+    canceled,
+  ];
+
+  static List<String> driverDetailsStatusForStatistics = [
+    totalRequests,
+    totalPoints,
+    canceled,
+    totalAmountSpent,
+  ];
+
   // Agents View
 
   static const String addAgent = 'إضافة وكيل';
@@ -294,8 +312,11 @@ class AppStrings {
   static const String agentCode = 'الكود الترويجي';
   static const String totalProfit = 'إجمالي الأرباح';
   static const String point = 'نقطة';
+  static const String agentStatus = 'حالة الوكيل';
+  static const String totalEqualAmount = 'إجمالي المبالغ المتسوية';
 
-  static List<String> agentsStatus = [
+
+  static List<String> agentsStatusForStatistics = [
     allAgents,
     activeNow,
     totalSales,
@@ -311,6 +332,13 @@ class AppStrings {
     requests,
     totalProfit,
     action,
+  ];
+
+  static List<String> agentDetailsStatusForStatistics = [
+    totalRequests,
+    totalProfit,
+    totalPoints,
+    totalEqualAmount,
   ];
 
   // Common

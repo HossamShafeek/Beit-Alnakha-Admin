@@ -35,9 +35,9 @@ class _CustomTabBarState extends State<CustomTabBar> {
           onDesktop: AppSize.size24,
         ),
         right:widget.paddingForRight??context.withFormFactor(
-          onMobile: AppSize.size8,
-          onTablet: AppSize.size16,
-          onDesktop: AppSize.size16,
+          onMobile: AppSize.size16,
+          onTablet: AppSize.size24,
+          onDesktop: AppSize.size24,
         ),
       ),
       child: SizedBox(
@@ -54,10 +54,10 @@ class _CustomTabBarState extends State<CustomTabBar> {
           dividerColor: Colors.transparent,
           indicatorColor: Colors.transparent,
 
-          indicatorPadding: const EdgeInsets.symmetric(
-            horizontal: AppSize.size8,
+          indicatorPadding: const  EdgeInsetsDirectional.only(
+            end: AppSize.size8,
           ),
-          labelPadding: const EdgeInsets.symmetric(horizontal: AppSize.size8),
+         labelPadding: const EdgeInsetsDirectional.only(end: 8),
           indicator: BoxDecoration(
             borderRadius: BorderRadius.circular(AppSize.size10),
             color: AppColors.primary,

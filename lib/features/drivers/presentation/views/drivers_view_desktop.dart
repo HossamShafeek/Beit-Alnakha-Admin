@@ -1,11 +1,11 @@
 import 'package:beit_alnakha_admin/core/helper/extensions_helper.dart';
 import 'package:beit_alnakha_admin/core/utils/app_size.dart';
 import 'package:beit_alnakha_admin/core/widgets/custom_divider_widget.dart';
-import 'package:beit_alnakha_admin/features/drivers/presentation/widgets/drivers_data_table.dart';
-import 'package:beit_alnakha_admin/features/drivers/presentation/widgets/drivers_data_table_pagination.dart';
-import 'package:beit_alnakha_admin/features/drivers/presentation/widgets/drivers_filter_section_desktop.dart';
-import 'package:beit_alnakha_admin/features/drivers/presentation/widgets/drivers_statistics_data.dart';
-import 'package:beit_alnakha_admin/features/drivers/presentation/widgets/drivers_tab_bar.dart';
+import 'package:beit_alnakha_admin/features/drivers/presentation/widgets/drivers_view/drivers_data_table.dart';
+import 'package:beit_alnakha_admin/features/drivers/presentation/widgets/drivers_view/drivers_data_table_pagination.dart';
+import 'package:beit_alnakha_admin/features/drivers/presentation/widgets/drivers_view/drivers_filter_section_desktop.dart';
+import 'package:beit_alnakha_admin/features/drivers/presentation/widgets/drivers_view/drivers_statistics_data.dart';
+import 'package:beit_alnakha_admin/features/drivers/presentation/widgets/drivers_view/drivers_tab_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 

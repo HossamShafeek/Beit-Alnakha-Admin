@@ -18,27 +18,27 @@ class RequestsSummaryAndPoints extends StatelessWidget {
         spacing: AppSize.size8,
         children: [
           CustomListTile(
-            title: AppStrings.requestsNumber,
+            titleText: AppStrings.requestsNumber,
             svgIconPath: AppAssets.hash,
             trailingTitle: '963212',
           ),
           CustomListTile(
-            title: AppStrings.date,
+            titleText: AppStrings.date,
             svgIconPath: AppAssets.date,
             trailingTitle: '12/12/2022',
           ),
           CustomListTile(
-            title: AppStrings.requestType,
+            titleText: AppStrings.requestType,
             svgIconPath: AppAssets.orders,
             trailingTitle: 'الطلب داخل المطعم (Dine-in)',
           ),
           CustomListTile(
-            title: AppStrings.tableNumber,
+            titleText: AppStrings.tableNumber,
             svgIconPath: AppAssets.table,
             trailingTitle: '8',
           ),
           CustomListTile(
-            title: AppStrings.paymentType,
+            titleText: AppStrings.paymentType,
             svgIconPath: AppAssets.dollar,
             trailing: TextContainerWithIcon(
               text: 'نقدًا عند الاستلام',
@@ -49,7 +49,7 @@ class RequestsSummaryAndPoints extends StatelessWidget {
             ),
           ),
           CustomListTile(
-            title: AppStrings.discountUserCode,
+            titleText: AppStrings.discountUserCode,
             svgIconPath: AppAssets.offer,
             trailingTitleColor: AppColors.red,
             trailingTitle: 'CHEF10 (خصم 5.000 د.ع)',

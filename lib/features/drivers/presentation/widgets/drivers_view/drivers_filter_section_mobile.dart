@@ -1,12 +1,13 @@
 import 'package:beit_alnakha_admin/core/utils/app_size.dart';
 import 'package:beit_alnakha_admin/core/utils/app_strings.dart';
 import 'package:beit_alnakha_admin/core/utils/app_styles.dart';
-import 'package:beit_alnakha_admin/features/agents/presentation/widgets/agents_search_field.dart';
-import 'package:beit_alnakha_admin/features/drivers/presentation/widgets/add_driver_button.dart';
+import 'package:beit_alnakha_admin/features/drivers/presentation/widgets/drivers_view/add_driver_button.dart';
+import 'package:beit_alnakha_admin/features/drivers/presentation/widgets/drivers_view/delivery_type_drop_down.dart';
+import 'package:beit_alnakha_admin/features/drivers/presentation/widgets/drivers_view/drivers_search_field.dart';
 import 'package:flutter/material.dart';
 
-class AgentsFilterSectionMobile extends StatelessWidget {
-  const AgentsFilterSectionMobile({super.key});
+class DriversFilterSectionMobile extends StatelessWidget {
+  const DriversFilterSectionMobile({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +23,7 @@ class AgentsFilterSectionMobile extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                AppStrings.agentsMenu,
+                AppStrings.driversMenu,
                 style: AppStyles.semiBold20(context),
               ),
             ],
@@ -30,7 +31,8 @@ class AgentsFilterSectionMobile extends StatelessWidget {
           Row(
             spacing: AppSize.size8,
             children: [
-              Expanded(child: AgentsSearchField()),
+              Expanded(child: DriversSearchField()),
+              DeliveryTypeDropDown(),
               AddDriverButton(),
             ],
           ),

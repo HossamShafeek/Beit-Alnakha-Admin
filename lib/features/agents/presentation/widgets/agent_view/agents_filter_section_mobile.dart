@@ -1,13 +1,12 @@
 import 'package:beit_alnakha_admin/core/utils/app_size.dart';
 import 'package:beit_alnakha_admin/core/utils/app_strings.dart';
 import 'package:beit_alnakha_admin/core/utils/app_styles.dart';
-import 'package:beit_alnakha_admin/features/drivers/presentation/widgets/add_driver_button.dart';
-import 'package:beit_alnakha_admin/features/drivers/presentation/widgets/delivery_type_drop_down.dart';
-import 'package:beit_alnakha_admin/features/drivers/presentation/widgets/drivers_search_field.dart';
+import 'package:beit_alnakha_admin/features/agents/presentation/widgets/agent_view/agents_search_field.dart';
+import 'package:beit_alnakha_admin/features/drivers/presentation/widgets/drivers_view/add_driver_button.dart';
 import 'package:flutter/material.dart';
 
-class DriversFilterSectionMobile extends StatelessWidget {
-  const DriversFilterSectionMobile({super.key});
+class AgentsFilterSectionMobile extends StatelessWidget {
+  const AgentsFilterSectionMobile({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +22,7 @@ class DriversFilterSectionMobile extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                AppStrings.driversMenu,
+                AppStrings.agentsMenu,
                 style: AppStyles.semiBold20(context),
               ),
             ],
@@ -31,8 +30,7 @@ class DriversFilterSectionMobile extends StatelessWidget {
           Row(
             spacing: AppSize.size8,
             children: [
-              Expanded(child: DriversSearchField()),
-              DeliveryTypeDropDown(),
+              Expanded(child: AgentsSearchField()),
               AddDriverButton(),
             ],
           ),

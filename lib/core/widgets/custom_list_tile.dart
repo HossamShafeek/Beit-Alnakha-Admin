@@ -7,7 +7,7 @@ import 'package:beit_alnakha_admin/core/utils/app_styles.dart';
 class CustomListTile extends StatelessWidget {
   const CustomListTile({
     super.key,
-    required this.title,
+     this.titleText,
     this.svgIconPath,
     this.onTap,
     this.iconColor,
@@ -20,9 +20,11 @@ class CustomListTile extends StatelessWidget {
     this.paddingForTop,
     this.paddingForBottom,
     this.trailingTitleColor,
+    this.titleWidget,
   });
 
-  final String title;
+  final String? titleText;
+  final Widget? titleWidget;
   final String? trailingTitle;
   final VoidCallback? onTap;
   final String? svgIconPath;
@@ -47,8 +49,7 @@ class CustomListTile extends StatelessWidget {
         borderRadius: BorderRadius.circular(AppSize.size12),
         child: ListTile(
           onTap: onTap,
-          // hoverColor: AppColors.primaryTwoWithOpacity10,
-          // splashColor: AppColors.primaryTwoWithOpacity10,
+          hoverColor: AppColors.grey300,
           contentPadding: EdgeInsets.symmetric(
             horizontal: AppSize.size12,
             vertical: AppSize.size4,
@@ -79,9 +80,9 @@ class CustomListTile extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               if (expandedTitle!) ...[
-                Flexible(
+              titleWidget ??  Flexible(
                   child: Text(
-                    title,
+                    titleText??'',
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
 
@@ -102,8 +103,8 @@ class CustomListTile extends StatelessWidget {
                       ).copyWith(color:trailingTitleColor?? AppColors.black5B),
                     ),
               ] else ...[
-                Text(
-                  title,
+                titleWidget??     Text(
+                  titleText??'',
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
 

@@ -1,4 +1,4 @@
-import 'package:beit_alnakha_admin/core/helper/money_helper.dart';
+import 'package:beit_alnakha_admin/core/helper/extensions_helper.dart';
 import 'package:beit_alnakha_admin/core/responsive_helper/responsive_app_extensions.dart';
 import 'package:beit_alnakha_admin/core/responsive_helper/responsive_pattern_layout.dart';
 import 'package:beit_alnakha_admin/core/responsive_helper/screen_width_breakpoints.dart';
@@ -44,8 +44,8 @@ class CustomersStatisticsData extends StatelessWidget {
             (e) => StatisticsDataItem(
 
                 imagePath: e.value,
-                subtitle: AppStrings.customersStatus[e.key],
-                title: MoneyHelper.formatMoney(requestsStatusValues[e.key]),
+                subtitle: AppStrings.customersStatusForStatistics[e.key],
+                title: requestsStatusValues[e.key].toFormatMoney(),
               ),
 
           )

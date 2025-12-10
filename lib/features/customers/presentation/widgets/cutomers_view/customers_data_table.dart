@@ -168,7 +168,7 @@ class CustomersDataTable extends StatelessWidget {
                             CustomPopupMenuButton(
                               onSelected: (value) {
                                 if(value == MenuActionEnum.viewDetails){
-                                  context.pushNamed(Routes.customersDetailsView,
+                                  context.pushNamed(Routes.customerDetailsView,
                                     pathParameters: {
                                       'customerId': '112000',
                                     }

@@ -24,6 +24,7 @@ abstract class AppAssets {
   static const String features = '${AppConstants.pathForSvg}features.svg';
   static const String codesFill = '${AppConstants.pathForSvg}codes_fill.svg';
   static const String codes = '${AppConstants.pathForSvg}codes.svg';
+  static const String coupon = '${AppConstants.pathForSvg}coupon.svg';
   static const String departmentsFill = '${AppConstants.pathForSvg}departments_fill.svg';
   static const String departments = '${AppConstants.pathForSvg}departments.svg';
   static const String settingsFill =
@@ -61,6 +62,7 @@ abstract class AppAssets {
   static const String blockUser = '${AppConstants.pathForSvg}block_user.svg';
   static const String motorcycle = '${AppConstants.pathForSvg}motorcycle.svg';
   static const String add = '${AppConstants.pathForSvg}add.svg';
+  static const String pointsFill = '${AppConstants.pathForSvg}points_fill.svg';
   static const String points = '${AppConstants.pathForSvg}points.svg';
   static const String moneyCircleFill = '${AppConstants.pathForSvg}money_circle_fill.svg';
   static const String moneyCircle = '${AppConstants.pathForSvg}money_circle.svg';
@@ -81,6 +83,11 @@ abstract class AppAssets {
   static const String table = '${AppConstants.pathForSvg}table.svg';
   static const String offer = '${AppConstants.pathForSvg}offer.svg';
   static const String car = '${AppConstants.pathForSvg}car.svg';
+  static const String dollarTwo = '${AppConstants.pathForSvg}dollar_two.svg';
+  static const String rate = '${AppConstants.pathForSvg}rate.svg';
+  static const String star = '${AppConstants.pathForSvg}star.svg';
+  static const String orderFillPrimary = '${AppConstants.pathForSvg}order_fill_primary.svg';
+  static const String moneyVectorHand = '${AppConstants.pathForSvg}money_vector_hand.svg';
 
   // Other Images
   static const String logo = '${AppConstants.pathForImages}logo.png';

@@ -1,11 +1,13 @@
 class Routes {
   static const String loginView = '/login_view';
   static const String requestsView = '/requests_view';
-  static const String requestsDetailsView = '/requests_details_view';
+  static const String requestDetailsView = '/request_details_view';
   static const String customersView = '/customers_view';
-  static const String customersDetailsView = '/customers_details_view';
+  static const String customerDetailsView = '/customer_details_view';
   static const String driversView = '/drivers_view';
+  static const String driverDetailsView = '/driver_details_view';
   static const String agentsView = '/agents_view';
+  static const String agentDetailsView = '/agent_details_view';
   static const String influencersView = '/influencers_view';
   static const String chefsView = '/chefs_view';
   static const String departmentsView = '/departments_view';

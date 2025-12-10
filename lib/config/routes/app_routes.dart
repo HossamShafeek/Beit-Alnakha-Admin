@@ -1,9 +1,11 @@
+import 'package:beit_alnakha_admin/features/agents/presentation/views/agent_details_layout.dart';
 import 'package:beit_alnakha_admin/features/agents/presentation/views/agents_layout.dart';
 import 'package:beit_alnakha_admin/features/chefs/presentation/views/chefs_view.dart';
 import 'package:beit_alnakha_admin/features/codes/presentation/views/codes_view.dart';
 import 'package:beit_alnakha_admin/features/customers/presentation/views/customer_details_layout.dart';
 import 'package:beit_alnakha_admin/features/customers/presentation/views/customers_layout.dart';
 import 'package:beit_alnakha_admin/features/departments/presentation/views/departments_view.dart';
+import 'package:beit_alnakha_admin/features/drivers/presentation/views/driver_details_layout.dart';
 import 'package:beit_alnakha_admin/features/drivers/presentation/views/drivers_layout.dart';
 import 'package:beit_alnakha_admin/features/features/presentation/views/features_view.dart';
 import 'package:beit_alnakha_admin/features/influencers/presentation/views/influencers_view.dart';
@@ -78,8 +80,8 @@ final GoRouter router = GoRouter(
           },
           routes: [
             GoRoute(
-              path: '${Routes.requestsDetailsView}/:requestId',
-              name: Routes.requestsDetailsView,
+              path: '${Routes.requestDetailsView}/:requestId',
+              name: Routes.requestDetailsView,
               pageBuilder: (context, state) {
                 String requestId = state.pathParameters['requestId'] ?? '';
                 return _buildPageWithSlideTransition(
@@ -106,8 +108,8 @@ final GoRouter router = GoRouter(
           },
           routes: [
             GoRoute(
-              path: '${Routes.customersDetailsView}/:customerId',
-              name: Routes.customersDetailsView,
+              path: '${Routes.customerDetailsView}/:customerId',
+              name: Routes.customerDetailsView,
               pageBuilder: (context, state) {
                 String customerId = state.pathParameters['customerId'] ?? '';
                 return _buildPageWithSlideTransition(
@@ -132,6 +134,22 @@ final GoRouter router = GoRouter(
               child: const DriversLayout(),
             );
           },
+          routes: [
+            GoRoute(
+              path: '${Routes.driverDetailsView}/:driverId',
+              name: Routes.driverDetailsView,
+              pageBuilder: (context, state) {
+                String driverId = state.pathParameters['driverId'] ?? '';
+                return _buildPageWithSlideTransition(
+                  context: context,
+                  state: state,
+                  child:  DriverDetailsLayout(
+                    driverId: driverId,
+                  ),
+                );
+              },
+            ),
+          ],
         ),
         GoRoute(
           path: Routes.agentsView,
@@ -143,6 +161,22 @@ final GoRouter router = GoRouter(
               child: const AgentsLayout(),
             );
           },
+          routes: [
+            GoRoute(
+              path: '${Routes.agentDetailsView}/:agentId',
+              name: Routes.agentDetailsView,
+              pageBuilder: (context, state) {
+                String agentId = state.pathParameters['agentId'] ?? '';
+                return _buildPageWithSlideTransition(
+                  context: context,
+                  state: state,
+                  child:  AgentDetailsLayout(
+                    agentId: agentId,
+                  ),
+                );
+              },
+            ),
+          ]
         ),
         GoRoute(
           path: Routes.influencersView,

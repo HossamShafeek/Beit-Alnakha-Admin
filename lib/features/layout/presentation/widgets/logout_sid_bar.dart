@@ -33,7 +33,7 @@ class LogoutSidBar extends StatelessWidget {
                 builder: (context) {
                   return CustomDialog(
                     iconSvgPath: AppAssets.logout,
-                    iconBackgroundColor: AppColors.red00WithOpacity10,
+                    iconBackgroundColor: AppColors.redWithOpacity10,
                     iconSvgColor: AppColors.red2D,
                     buttonColorForPrimaryButton: AppColors.red2D,
                     buttonTitleForPrimaryButton: AppStrings.logout,

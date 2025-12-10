@@ -1,4 +1,4 @@
-import 'package:beit_alnakha_admin/core/helper/money_helper.dart';
+import 'package:beit_alnakha_admin/core/helper/extensions_helper.dart';
 import 'package:beit_alnakha_admin/core/responsive_helper/responsive_app_extensions.dart';
 import 'package:beit_alnakha_admin/core/responsive_helper/responsive_pattern_layout.dart';
 import 'package:beit_alnakha_admin/core/responsive_helper/screen_width_breakpoints.dart';
@@ -8,17 +8,17 @@ import 'package:beit_alnakha_admin/core/utils/app_strings.dart';
 import 'package:beit_alnakha_admin/core/widgets/statistics_data_item.dart';
 import 'package:flutter/material.dart';
 
-class DriversStatisticsData extends StatelessWidget {
-  const DriversStatisticsData({super.key});
+class AgentsStatisticsData extends StatelessWidget {
+  const AgentsStatisticsData({super.key});
 
-  final List<String> requestsStatusIcon = const [
+  final List<String> agentsStatusIcon = const [
     AppAssets.users,
     AppAssets.activeUser,
-    AppAssets.motorcycle,
-    AppAssets.delivering,
+    AppAssets.moneyCircleFill,
+    AppAssets.pointsFill,
   ];
 
-  final List<int> requestsStatusValues = const [1000, 300, 100, 200];
+  final List<int> agentsStatusValues = const [1000, 300, 8450000, 20240];
 
   @override
   Widget build(BuildContext context) {
@@ -37,19 +37,15 @@ class DriversStatisticsData extends StatelessWidget {
           return [2, 2];
         }
       },
-      children: requestsStatusIcon
-          .asMap()
-          .entries
-          .map(
-            (e) => StatisticsDataItem(
-
-                imagePath: e.value,
-                subtitle: AppStrings.driversStatus[e.key],
-                title: MoneyHelper.formatMoney(requestsStatusValues[e.key]),
-              ),
-
-          )
-          .toList(),
+      children: agentsStatusIcon.asMap().entries.map((e) {
+        return StatisticsDataItem(
+            imagePath: e.value,
+            subtitle: AppStrings.agentsStatusForStatistics[e.key],
+            title: e.key == 2
+                ? agentsStatusValues[e.key].toFormatMoney().toWithIraqCurrency()
+                : agentsStatusValues[e.key].toFormatMoney(),
+        );
+      }).toList(),
     );
   }
 }

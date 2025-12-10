@@ -158,7 +158,7 @@ class RequestsDataTable extends StatelessWidget {
                           onSelected: (value) {
                             if (value == MenuActionEnum.viewDetails) {
                               context.pushNamed(
-                                Routes.requestsDetailsView,
+                                Routes.requestDetailsView,
                                 pathParameters: {'requestId': '963212'},
                               );
                             }

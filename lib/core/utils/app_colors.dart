@@ -15,12 +15,18 @@ class AppColors {
   static const Color grey88 = Color(0xff888888);
   static const Color greyAA = Color(0xffA1A1AA);
   static const Color yellow3D = Color(0xffF5B23D);
+  static final Color yellow3DWithOpacity10 = yellow3D.withValues(alpha: 0.1);
   static const Color blueE0 = Color(0xff0163E0);
+  static final Color blueE0WithOpacity10 = blueE0.withValues(alpha: 0.1);
   static const Color red2D = Color(0xffF5222D);
   static const Color orange = Colors.orange;
+  static final Color orangeWithOpacity10 = orange.withValues(alpha: 0.1);
   static const Color teal = Colors.teal;
+  static final Color tealWithOpacity10 = teal.withValues(alpha: 0.1);
   static const Color green =  Colors.green;
+  static final Color greenWithOpacity10 = green.withValues(alpha: 0.1);
   static const Color purple = Colors.purple;
+  static final Color purpleWithOpacity10 = purple.withValues(alpha: 0.1);
 
 
   static const Color white = Colors.white;
@@ -35,12 +41,7 @@ class AppColors {
   static final Color grey400 = Colors.grey[400]!;
   static const Color greyForTextFieldBackground = Color(0xffF4F4F5);
   static const Color red = Colors.red;
-  static final Color red00WithOpacity10 = Color(0xffFF0000,).withValues(alpha: 0.1);
-
-  static const Color green64 = Color(0xff17C964);
-  static final Color green64WithOpacity10 = Color(
-    0xff17C964,
-  ).withValues(alpha: 0.1);
+  static final Color redWithOpacity10 = red.withValues(alpha: 0.1);
 
   static const Color black2A = Color(0xff27272A);
   static const Color black5B = Color(0xff52525B);

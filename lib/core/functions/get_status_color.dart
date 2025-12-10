@@ -5,16 +5,16 @@ import 'package:flutter/material.dart';
 List<Color> getStatusColor(String status) {
   switch (status) {
     case AppStrings.newText:
-      return [AppColors.blueE0,AppColors.blueE0.withValues(alpha: 0.1)];
+      return [AppColors.blueE0,AppColors.blueE0WithOpacity10];
     case AppStrings.preparing:
-      return [AppColors.yellow3D,AppColors.yellow3D.withValues(alpha: 0.1)];
+      return [AppColors.yellow3D,AppColors.yellow3DWithOpacity10];
     case AppStrings.prepared:
-      return [AppColors.teal,AppColors.teal.withValues(alpha: 0.1)];
+      return [AppColors.teal,AppColors.tealWithOpacity10];
     case AppStrings.delivering:
-      return [AppColors.purple,AppColors.purple.withValues(alpha: 0.1)];
+      return [AppColors.purple,AppColors.purpleWithOpacity10];
     case AppStrings.deliveredForTabBar:
-      return [AppColors.green,AppColors.green.withValues(alpha: 0.1)];
+      return [AppColors.green,AppColors.greenWithOpacity10];
     default:
-      return [AppColors.red,AppColors.red.withValues(alpha: 0.1)];
+      return [AppColors.red,AppColors.redWithOpacity10];
   }
 }

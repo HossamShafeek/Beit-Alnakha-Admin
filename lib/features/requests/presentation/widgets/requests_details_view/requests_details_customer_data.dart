@@ -19,23 +19,23 @@ class RequestDetailsCustomerData extends StatelessWidget {
         spacing: AppSize.size8,
         children: [
           CustomListTile(
-            title: AppStrings.fullName,
+            titleText: AppStrings.fullName,
             svgIconPath: AppAssets.username,
             trailingTitle: 'حسام شفيق',
           ),
           CustomListTile(
-            title: AppStrings.whatsAppNumber,
+            titleText: AppStrings.whatsAppNumber,
             svgIconPath: AppAssets.whatsApp,
             trailingTitle: '01010040257',
             trailingTitleColor: AppColors.primary,
           ),
           CustomListTile(
-            title: AppStrings.address,
+            titleText: AppStrings.address,
             svgIconPath: AppAssets.address,
             trailingTitle: 'بغداد – المنصور',
           ),
           CustomListTile(
-            title: AppStrings.deliveryMethod,
+            titleText: AppStrings.deliveryMethod,
             svgIconPath: AppAssets.car,
             trailingTitle: '-',
           ),

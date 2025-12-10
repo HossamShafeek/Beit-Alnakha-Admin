@@ -20,22 +20,22 @@ class RequestsDeliveryInformation extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           CustomListTile(
-            title: AppStrings.driverName,
+            titleText: AppStrings.driverName,
             svgIconPath: AppAssets.username,
             trailingTitle: 'الشيخ محمود',
           ),
           CustomListTile(
-            title: AppStrings.governorate,
+            titleText: AppStrings.governorate,
             svgIconPath: AppAssets.city,
             trailingTitle: 'الجيزة',
           ),
           CustomListTile(
-            title: AppStrings.region,
+            titleText: AppStrings.region,
             svgIconPath: AppAssets.region,
             trailingTitle: 'الوراق',
           ),
           CustomListTile(
-            title: AppStrings.price,
+            titleText: AppStrings.price,
             svgIconPath: AppAssets.dollar,
             trailingTitle: '1000.00 ${AppStrings.iraqCurrency}',
           ),

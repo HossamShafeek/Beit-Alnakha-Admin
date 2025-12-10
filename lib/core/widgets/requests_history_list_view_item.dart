@@ -1,9 +1,8 @@
 import 'package:beit_alnakha_admin/core/functions/build_popup_menu_items.dart';
-import 'package:beit_alnakha_admin/core/helper/money_helper.dart';
+import 'package:beit_alnakha_admin/core/helper/extensions_helper.dart';
 import 'package:beit_alnakha_admin/core/utils/app_assets.dart';
 import 'package:beit_alnakha_admin/core/utils/app_colors.dart';
 import 'package:beit_alnakha_admin/core/utils/app_size.dart';
-import 'package:beit_alnakha_admin/core/utils/app_strings.dart';
 import 'package:beit_alnakha_admin/core/utils/app_styles.dart';
 import 'package:beit_alnakha_admin/core/widgets/custom_popup_menu_button.dart';
 import 'package:beit_alnakha_admin/core/widgets/status_container_widget.dart';
@@ -27,11 +26,13 @@ class RequestsHistoryListViewItem extends StatelessWidget {
       child: Row(
         spacing: AppSize.size12,
         children: [
-          SvgPicture.asset(AppAssets.orderFill),
+          CircleAvatar(
+              radius: AppSize.size24,
+              backgroundColor: AppColors.yellow3DWithOpacity10,
+              child: SvgPicture.asset(AppAssets.orderFillPrimary)),
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-
               children: [
                 Row(
                   spacing: AppSize.size12,
@@ -83,7 +84,7 @@ class RequestsHistoryListViewItem extends StatelessWidget {
                     ),
                   ],
                 ),
-                const Gap(AppSize.size4),
+                const Gap(AppSize.size6),
                 Row(
                   spacing: AppSize.size8,
                   children: [
@@ -100,7 +101,7 @@ class RequestsHistoryListViewItem extends StatelessWidget {
                           ),
                         ),
                         Text(
-                          '${MoneyHelper.formatMoney(30000)} ${AppStrings.iraqCurrency}',
+                          30000.toFormatMoney().toWithIraqCurrency(),
                           style: AppStyles.medium14(
                             context,
                           ).copyWith(color: AppColors.primaryBlack),

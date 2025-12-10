@@ -1,8 +1,8 @@
 import 'package:beit_alnakha_admin/core/utils/app_size.dart';
 import 'package:beit_alnakha_admin/core/utils/app_strings.dart';
 import 'package:beit_alnakha_admin/core/utils/app_styles.dart';
-import 'package:beit_alnakha_admin/features/agents/presentation/widgets/add_agent_button.dart';
-import 'package:beit_alnakha_admin/features/agents/presentation/widgets/agents_search_field.dart';
+import 'package:beit_alnakha_admin/features/agents/presentation/widgets/agent_view/add_agent_button.dart';
+import 'package:beit_alnakha_admin/features/agents/presentation/widgets/agent_view/agents_search_field.dart';
 import 'package:flutter/material.dart';
 
 class AgentsFilterSectionDesktop extends StatelessWidget {
