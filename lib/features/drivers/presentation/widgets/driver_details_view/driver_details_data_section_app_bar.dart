@@ -9,6 +9,7 @@ import 'package:beit_alnakha_admin/core/widgets/custom_container_button.dart';
 import 'package:beit_alnakha_admin/core/widgets/custom_elevated_button.dart';
 import 'package:beit_alnakha_admin/core/widgets/custom_network_image.dart';
 import 'package:beit_alnakha_admin/core/widgets/custom_popup_menu_button.dart';
+import 'package:beit_alnakha_admin/features/drivers/presentation/views/driver_account_statement_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -31,10 +32,12 @@ class DriverDetailsDataSectionAppBar extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text('حسام شفيق',
-                  maxLines:  1,
-                  overflow: TextOverflow.ellipsis,
-                  style: AppStyles.medium16(context)),
+              Text(
+                'حسام شفيق',
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+                style: AppStyles.medium16(context),
+              ),
               Row(
                 spacing: AppSize.size4,
                 children: [
@@ -50,7 +53,7 @@ class DriverDetailsDataSectionAppBar extends StatelessWidget {
                   Expanded(
                     child: Text(
                       '07777777777',
-                      maxLines:  1,
+                      maxLines: 1,
                       overflow: TextOverflow.ellipsis,
                       style: AppStyles.medium14(
                         context,
@@ -65,7 +68,9 @@ class DriverDetailsDataSectionAppBar extends StatelessWidget {
         CustomElevatedButton(
           width: 120,
           height: AppSize.size52,
-          onPressed: () {},
+          onPressed: () {
+            showAccountStatementDialog(context: context);
+          },
           textStyle: AppStyles.medium16(
             context,
           ).copyWith(color: AppColors.white),
@@ -85,4 +90,17 @@ class DriverDetailsDataSectionAppBar extends StatelessWidget {
       ],
     );
   }
+
+  void showAccountStatementDialog({required BuildContext context}) {
+    showDialog(
+      context: context,
+      builder: (context) {
+        return DriverAccountStatementView();
+      },
+    );
+  }
 }
+
+
+
+

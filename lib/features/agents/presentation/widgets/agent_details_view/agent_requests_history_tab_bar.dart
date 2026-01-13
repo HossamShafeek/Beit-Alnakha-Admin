@@ -58,7 +58,7 @@ class  _TabBarTitle extends StatelessWidget {
       AppStrings.requestsHistory,
       style: AppStyles.semiBold16(
         context,
-      ).copyWith(color: AppColors.primaryBlack),
+      ).copyWith(color: AppColors.black),
     );
   }
 }

@@ -17,7 +17,7 @@ class LogoutSidBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
-      color: AppColors.primaryBlack,
+      color: AppColors.black,
       borderRadius: BorderRadius.circular(AppSize.size16),
       clipBehavior: Clip.antiAlias,
       child: Align(

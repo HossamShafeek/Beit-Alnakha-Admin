@@ -1,7 +1,6 @@
 import 'package:beit_alnakha_admin/core/responsive_helper/responsive_app_extensions.dart';
 import 'package:beit_alnakha_admin/core/utils/app_assets.dart';
 import 'package:beit_alnakha_admin/core/utils/app_colors.dart';
-import 'package:beit_alnakha_admin/core/utils/app_size.dart';
 import 'package:beit_alnakha_admin/core/utils/app_strings.dart';
 import 'package:beit_alnakha_admin/core/widgets/custom_text_field.dart';
 import 'package:beit_alnakha_admin/features/authentication/presentation/cubits/login_cubit/login_cubit.dart';
@@ -20,6 +19,7 @@ class LoginTextsFieldsSection extends StatelessWidget {
       child: Column(
         children: [
           CustomTextField(
+            hoverColor: AppColors.primaryWithOpacity15,
             textStyleColor: AppColors.white,
             hintStyleColor: AppColors.grey88,
             textInputType: TextInputType.emailAddress,
@@ -49,6 +49,8 @@ class LoginTextsFieldsSection extends StatelessWidget {
             hintText: AppStrings.enterUsername,
           ),
           CustomTextField(
+            hoverColor: AppColors.primaryWithOpacity15,
+
             onFieldSubmitted: (value) {
               if (loginCubit.formKey.currentState!.validate()) {
                 loginCubit.login();
@@ -63,18 +65,13 @@ class LoginTextsFieldsSection extends StatelessWidget {
             obscureText: true,
             enabledPasswordVisibility: true,
 
-            prefixIcon: SizedBox(
-              width: AppSize.size20,
-              height: AppSize.size20,
-              child: Center(
-                child: SvgPicture.asset(
-                  AppAssets.lock,
-                  colorFilter: ColorFilter.mode(
-                    AppColors.white,
-                    BlendMode.srcIn,
-                  ),
-                  width: AppSize.size20,
-                  height: AppSize.size20,
+            prefixIcon: FittedBox(
+              fit: BoxFit.scaleDown,
+              child: SvgPicture.asset(
+                AppAssets.lock,
+                colorFilter: ColorFilter.mode(
+                  AppColors.white,
+                  BlendMode.srcIn,
                 ),
               ),
             ),

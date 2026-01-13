@@ -35,7 +35,7 @@ class SideBarItem extends StatelessWidget {
         right:  AppSize.size16,
       ),
       child: Material(
-        color: isActive ? AppColors.primary : AppColors.primaryBlack,
+        color: isActive ? AppColors.primary : AppColors.black,
         borderRadius: BorderRadius.circular(AppSize.size16),
         clipBehavior: Clip.antiAlias,
         child: InkWell(

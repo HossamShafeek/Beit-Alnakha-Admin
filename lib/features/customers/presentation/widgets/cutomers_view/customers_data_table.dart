@@ -12,6 +12,7 @@ import 'package:beit_alnakha_admin/core/utils/app_styles.dart';
 import 'package:beit_alnakha_admin/core/widgets/custom_data_table.dart';
 import 'package:beit_alnakha_admin/core/widgets/custom_popup_menu_button.dart';
 import 'package:beit_alnakha_admin/core/widgets/custom_switch.dart';
+import 'package:beit_alnakha_admin/features/customers/presentation/widgets/cutomers_view/delete_customer_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
@@ -176,13 +177,13 @@ class CustomersDataTable extends StatelessWidget {
                                 }else if(value == MenuActionEnum.edit){
                                   log('edit');
                                 }else if(value == MenuActionEnum.delete){
-                                  log('delete');
+                                  showDeleteCustomerDialog(context: context);
                                 }
                               },
                               items: buildPopupMenuItems(context, [
                                 MenuActionEnum.viewDetails,
-                                MenuActionEnum.edit,
                                 MenuActionEnum.delete,
+                                MenuActionEnum.whatsappContact,
                               ]),
                               child: Padding(
                                 padding: const EdgeInsets.all(AppSize.size6),
@@ -206,6 +207,14 @@ class CustomersDataTable extends StatelessWidget {
           ),
         ],
       ),
+    );
+  }
+  void showDeleteCustomerDialog({required BuildContext context}) {
+    showDialog(
+      context: context,
+      builder: (context) {
+        return DeleteCustomerDialog();
+      },
     );
   }
 }

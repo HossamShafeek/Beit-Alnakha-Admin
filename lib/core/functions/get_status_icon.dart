@@ -1,19 +1,19 @@
+import 'package:beit_alnakha_admin/core/helper/enums.dart';
 import 'package:beit_alnakha_admin/core/utils/app_assets.dart';
-import 'package:beit_alnakha_admin/core/utils/app_strings.dart';
 
-String getStatusIcon(String status) {
+String getStatusIcon(RequestStatusEnum status) {
   switch (status) {
-    case AppStrings.newText:
+    case RequestStatusEnum.newText:
       return AppAssets.newOrder;
-    case AppStrings.preparing:
+    case RequestStatusEnum.preparing:
       return AppAssets.waiting;
-    case AppStrings.prepared:
+    case RequestStatusEnum.prepared:
       return AppAssets.prepared;
-    case AppStrings.delivering:
+    case RequestStatusEnum.delivering:
       return AppAssets.delivering;
-    case AppStrings.deliveredForTabBar:
+    case RequestStatusEnum.delivered:
       return AppAssets.done;
-    default:
+   case RequestStatusEnum.cancelled:
         return AppAssets.cancelOrder;
   }
 }

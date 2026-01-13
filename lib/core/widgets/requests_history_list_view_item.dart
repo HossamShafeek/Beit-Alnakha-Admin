@@ -44,24 +44,24 @@ class RequestsHistoryListViewItem extends StatelessWidget {
                         overflow: TextOverflow.ellipsis,
                         style: AppStyles.semiBold16(
                           context,
-                        ).copyWith(color: AppColors.primaryBlack),
+                        ).copyWith(color: AppColors.black),
                       ),
                     ),
                     StatusContainerWidget(status: status),
-                    CustomPopupMenuButton(
-                      items: buildPopupMenuItems(context, []),
-                      child: Material(
-                        clipBehavior: Clip.antiAlias,
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(AppSize.size24),
-                        ),
-                        color: AppColors.grey100,
-                        child: IconButton(
-                          onPressed: () {},
-                          icon: SvgPicture.asset(AppAssets.more),
-                        ),
-                      ),
-                    ),
+                    // CustomPopupMenuButton(
+                    //   items: buildPopupMenuItems(context, []),
+                    //   child: Material(
+                    //     clipBehavior: Clip.antiAlias,
+                    //     shape: RoundedRectangleBorder(
+                    //       borderRadius: BorderRadius.circular(AppSize.size24),
+                    //     ),
+                    //     color: AppColors.grey100,
+                    //     child: IconButton(
+                    //       onPressed: () {},
+                    //       icon: SvgPicture.asset(AppAssets.more),
+                    //     ),
+                    //   ),
+                    // ),
                   ],
                 ),
                 Row(
@@ -80,7 +80,7 @@ class RequestsHistoryListViewItem extends StatelessWidget {
                       'بغداد، الكرادة',
                       style: AppStyles.medium14(
                         context,
-                      ).copyWith(color: AppColors.primaryBlack),
+                      ).copyWith(color: AppColors.black),
                     ),
                   ],
                 ),
@@ -104,7 +104,7 @@ class RequestsHistoryListViewItem extends StatelessWidget {
                           30000.toFormatMoney().toWithIraqCurrency(),
                           style: AppStyles.medium14(
                             context,
-                          ).copyWith(color: AppColors.primaryBlack),
+                          ).copyWith(color: AppColors.black),
                         ),
                       ],
                     ),
@@ -128,7 +128,7 @@ class RequestsHistoryListViewItem extends StatelessWidget {
                           '9 يونيو 2025 – 12:30 م',
                           style: AppStyles.medium14(
                             context,
-                          ).copyWith(color: AppColors.primaryBlack),
+                          ).copyWith(color: AppColors.black),
                         ),
                       ],
                     ),

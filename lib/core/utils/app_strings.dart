@@ -10,16 +10,16 @@ class AppStrings {
   static const String logout = 'تسجيل الخروج';
 
   static const String password = 'كلمة السر';
-  static const String enterPassword = 'أدخل كلمة السر...';
+  static const String enterPassword = 'أدخل كلمة السر';
   static const String pleaseEnterPassword = 'من فضلك أدخل كلمة السر';
   static const String confirmPassword = 'تأكيد كلمة السر';
-  static const String enterConfirmPassword = 'أدخل تأكيد كلمة السر...';
+  static const String enterConfirmPassword = 'أدخل تأكيد كلمة السر';
   static const String pleaseEnterConfirmPassword =
       'من فضلك أدخل تأكيد كلمة السر';
   static const String passwordIsTooShort = 'كلمة السر قصيرة جداََ';
   static const String passwordsDoNotMatch = 'كلمة السر غير متطابقة';
   static const String username = 'اسم المستخدم';
-  static const String enterUsername = 'أدخل اسم المستخدم...';
+  static const String enterUsername = 'أدخل اسم المستخدم';
   static const String pleaseEnterUsername = 'من فضلك أدخل اسم المستخدم';
   static const String loggedInSuccessfully = 'تم تسجيل الدخول بنجاح';
 
@@ -83,6 +83,7 @@ class AppStrings {
   static const String prepared = 'تم التجهيز';
   static const String delivering = 'قيد التوصيل';
   static const String delivery = 'توصيل';
+  static const String theDelivery = 'التوصيل';
   static const String inside = 'داخلي';
   static const String outside = 'خارجي';
   static const String delivered = 'تم تسليمها';
@@ -92,6 +93,7 @@ class AppStrings {
   static const String hash = '#';
   static const String requestsNumber = ' رقم الطلب';
   static const String status = 'الحالة';
+  static const String chooseStatus = 'اختر الحالة';
   static const String tableNumber = 'رقم الطاولة';
   static const String delegate = 'المندوب';
   static const String customerName = 'اسم العميل';
@@ -99,6 +101,9 @@ class AppStrings {
   static const String action = 'إجراء';
   static const String updateStatus = 'تحديث الحالة';
   static const String addNote = 'إضافة ملاحظة';
+  static const String addNoteForRequest = 'اضف محلاظتك الي الطلب الان!';
+  static const String enterYourNote = 'ادخل ملاحظتك';
+  static const String pleaseEnterYourNote = 'من فضلك ادخل ملاحظتك';
   static const String joinDate = 'تاريخ الانضمام';
   static const String userStatus = 'حالة المستخدم';
   static const String requestsHistory = 'سجل الطلبات';
@@ -130,6 +135,13 @@ class AppStrings {
   static const String driverCommission = 'حصة السائق';
   static const String agentCommission = 'حصة الوكيل (ترويجي)';
   static const String couponDiscount = 'خصم الكوبون';
+  static const String deleteRequest = 'حذف الطلب';
+  static const String youAreSureDeleteRequest =
+      'هل انت متأكد من حذف هذا الطلب؟';
+  static const String cancelReason = 'سبب الإلغاء';
+  static const String enterCancelReason = 'ادخل سبب الإلغاء';
+  static const String pleaseEnterCancelReason = 'من فضلك ادخل سبب الإلغاء';
+
 
   static List<String> requestsTypeForDropDown = [
     AppStrings.all,
@@ -203,6 +215,9 @@ class AppStrings {
   static const String totalAmountSpent = 'إجمالي المبالغ المنفقة';
   static const String pointsCount = 'عدد النقاط';
   static const String averageRequestTime = 'متوسط وقت الطلب';
+  static const String deleteCustomer = 'حذف العميل';
+  static const String youAreSureDeleteCustomer = 'هل انت متأكد من حذف هذا العميل؟';
+
 
   static List<String> customersStatusForStatistics = [
     allCustomers,
@@ -250,6 +265,7 @@ class AppStrings {
   static const String allDrivers = 'إجمالي السائقين';
   static const String activeNow = 'النشطون  الآن';
   static const String addDriver = 'إضافة سائق';
+  static const String updateDriver = 'تعديل سائق';
   static const String active = 'نشط';
   static const String inactive = 'متوقف';
   static const String busy = 'مشغول';
@@ -259,13 +275,17 @@ class AppStrings {
   static const String deliveryType = 'نوع التوصيل';
   static const String searchWithDriverName = 'ابحث باسم السائق…';
   static const String totalDeliveryProfit = 'إجمالي أرباح التوصيل';
-  static const String accountStatement = 'كشف حساب';
+  static const String deleteDriver = 'حذف السائق';
+  static const String youAreSureDeleteDriver = 'هل انت متأكد من حذف هذا السائق؟';
+  static const String pressToUploadDriverImage = 'اضغط لرفع صورة السائق هنا';
+
+
+
 
   static List<String> driversStatusForStatistics = [
     allDrivers,
     activeNow,
-    inside,
-    outside,
+    theDelivery,
   ];
 
   static List<String> deliveryTypeForDropDown = [
@@ -278,8 +298,8 @@ class AppStrings {
   static List<String> columnsNameForDriversDataTable = [
     hash,
     driverName,
-    deliveryType,
     phoneNumber,
+    points,
     governorate,
     requests,
     action,
@@ -294,7 +314,7 @@ class AppStrings {
 
   static List<String> driverDetailsStatusForStatistics = [
     totalRequests,
-    totalPoints,
+    delivered,
     canceled,
     totalAmountSpent,
   ];
@@ -302,6 +322,7 @@ class AppStrings {
   // Agents View
 
   static const String addAgent = 'إضافة وكيل';
+  static const String updateAgent = 'تعديل وكيل';
   static const String agentsMenu = 'قائمة الوكلاء';
   static const String allAgents = 'إجمالي الوكلاء';
   static const String activeAgents = 'الوكلاء النشطون';
@@ -314,6 +335,10 @@ class AppStrings {
   static const String point = 'نقطة';
   static const String agentStatus = 'حالة الوكيل';
   static const String totalEqualAmount = 'إجمالي المبالغ المتسوية';
+  static const String deleteAgent = 'حذف الوكيل';
+  static const String youAreSureDeleteAgent = 'هل انت متأكد من حذف هذا الوكيل؟';
+  static const String pressToUploadAgentImage = 'اضغط لرفع صورة الوكيل هنا';
+
 
 
   static List<String> agentsStatusForStatistics = [
@@ -348,24 +373,50 @@ class AppStrings {
   static const String days = 'أيام';
   static const String fullName = 'الاسم الكامل';
   static const String allWithoutAl = 'كل';
-  static const String edit = 'تعديل';
+  static const String add = 'إضافة';
+  static const String update = 'تعديل';
   static const String delete = 'حذف';
   static const String cancel = 'إلغاء';
   static const String viewAll = 'عرض الكل';
   static const String all = 'الكل';
+  static const String accountStatement = 'كشف حساب';
+  static const String chooseGovernorate = 'أختر المحافظة';
+  static const String chooseRegion = 'أختر المنطقة';
   static const String iraqCurrency = 'د.ع';
   static const String whatsAppContact = 'التواصل واتساب';
   static const String viewDetails = 'عرض التفاصيل ';
   static const String areYouSureLogout = 'هل أنت متأكد من تسجيل الخروج؟';
-  static const String searchHintTextByName = 'ابحث بالاسم...';
+  static const String searchHintTextByName = 'ابحث بالاسم';
   static const String phoneNumber = 'رقم الهاتف';
-  static const String enterPhoneNumber = 'ادخل رقم الهاتف...';
-  static const String pleaseEnterPhoneNumber = 'من فضلك ادخل رقم الهاتف';
+  static const String enterPhoneNumber = 'أدخل رقم الهاتف';
+  static const String pleaseEnterPhoneNumber = 'من فضلك أدخل رقم الهاتف';
   static const String doNotStartNumberWithZero = 'لا تبدء رقم الهاتف بصفر';
   static const String pleaseEnterPhoneNumberValid =
-      'من فضلك ادخل رقم هاتف صحيح';
+      'من فضلك أدخل رقم هاتف صحيح';
   static const String downloadedSuccessfullyInPath = 'تم تنزيل الملف في المسار';
   static const String downloadedSuccessfully = 'تم تنزيل الملف بنجاح';
+  static const String uploadImageDescription = '(يفضل حجم: 512x512 px – صيغة PNG أو JPG)';
+  static const String settleSelectedPoints = 'تسوية النقاط المختارة';
+  static const String confirmPointsSettlement = 'تأكيد تسوية النقاط';
+  static const String  settlementNumber = 'رقم التسوية';
+  static const String transactionDate = 'تاريخ العملية';
+  static const String totalSelectedPoints = 'مجموع النقاط المختارة';
+  static const String pointsValue = 'قيمة النقاط';
+  static const String  transactionNumber  = 'رقم العملية';
+  static const String transactionType = 'نوع العملية';
+  static const String earnedPoints = 'النقاط المكتسبة';
+  static const String unsettled = 'غير مسوّاة';
+  static const String settled = 'مسوّاة';
+
+  static List<String> columnsNameForAccountStatementDataTable = [
+    transactionNumber,
+    transactionType,
+    earnedPoints,
+    date,
+    price,
+    status,
+  ];
+
 
   // Errors Messages
   static const String connectionTimeoutErrorMessage =

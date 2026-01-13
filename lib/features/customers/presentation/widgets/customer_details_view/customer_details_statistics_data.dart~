@@ -1,4 +1,4 @@
-import 'package:beit_alnakha_admin/core/helper/money_helper.dart';
+import 'package:beit_alnakha_admin/core/helper/extensions_helper.dart';
 import 'package:beit_alnakha_admin/core/responsive_helper/responsive_pattern_layout.dart';
 import 'package:beit_alnakha_admin/core/responsive_helper/screen_width_breakpoints.dart';
 import 'package:beit_alnakha_admin/core/utils/app_assets.dart';
@@ -16,7 +16,7 @@ class CustomerDetailsStatisticsData extends StatelessWidget {
     AppAssets.phoneVector,
   ];
 
-  final List<int> customerDetailsStatusValues = const [10, 50000, 500, 5];
+  final List<int> customerDetailsStatusValues = const [10, 50000, 5000, 5];
 
   @override
   Widget build(BuildContext context) {
@@ -47,11 +47,11 @@ class CustomerDetailsStatisticsData extends StatelessWidget {
     final value = customerDetailsStatusValues[index];
     switch (index) {
       case 1:
-        return '${MoneyHelper.formatMoney(value)} ${AppStrings.iraqCurrency}';
+        return value.toFormatMoney().toWithIraqCurrency();
       case 3:
-        return '${AppStrings.allWithoutAl} ${MoneyHelper.formatMoney(value)} ${AppStrings.days}';
+        return '${AppStrings.allWithoutAl} ${value.toFormatMoney()} ${AppStrings.days}';
         default:
-          return value.toString();
+          return value.toFormatMoney();
     }
   }
 }

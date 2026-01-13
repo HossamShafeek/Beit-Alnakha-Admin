@@ -5,6 +5,7 @@ import 'package:beit_alnakha_admin/core/utils/app_colors.dart';
 import 'package:beit_alnakha_admin/core/utils/app_strings.dart';
 import 'package:beit_alnakha_admin/core/widgets/custom_container_button.dart';
 import 'package:beit_alnakha_admin/core/widgets/custom_elevated_button.dart';
+import 'package:beit_alnakha_admin/features/agents/presentation/views/add_agent_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -18,17 +19,32 @@ class AddAgentButton extends StatelessWidget {
         imagePath: AppAssets.add,
         iconColor: AppColors.white,
         backgroundColor: AppColors.primary,
-        onTap: () {},
+        onTap: () {
+          showAddAgentDialog(context: context);
+        },
       );
-    }else{
-    return CustomElevatedButton(
-      width: 160,
-      onPressed: () {},
-      title: AppStrings.addAgent,
-      icon: SvgPicture.asset(
-        AppAssets.add,
-        colorFilter: ColorFilter.mode(AppColors.white, BlendMode.srcIn),
-      ),
+    } else {
+      return CustomElevatedButton(
+        width: 160,
+        onPressed: () {
+          showAddAgentDialog(context: context);
+        },
+        title: AppStrings.addAgent,
+        icon: SvgPicture.asset(
+          AppAssets.add,
+          colorFilter: ColorFilter.mode(AppColors.white, BlendMode.srcIn),
+        ),
+      );
+    }
+  }
+
+  void showAddAgentDialog({required BuildContext context}) {
+    showDialog(
+      context: context,
+      builder: (context) {
+        return AddAgentView();
+      },
     );
-  }}
+  }
 }
+

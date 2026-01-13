@@ -46,7 +46,7 @@ class LayoutAppBar extends StatelessWidget {
                       overflow: TextOverflow.ellipsis,
                       maxLines: 1,
                       style: AppStyles.bold22(context).copyWith(
-                        color: AppColors.primaryBlack ,
+                        color: AppColors.black ,
                       ),
                     ),
                     Text(

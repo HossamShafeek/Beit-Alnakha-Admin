@@ -27,7 +27,7 @@ class StatisticsDataItem extends StatelessWidget {
       width: double.infinity,
       padding: EdgeInsets.all(AppSize.size12),
       decoration: BoxDecoration(
-        color: AppColors.primaryBlack,
+        color: AppColors.black,
         borderRadius: BorderRadius.circular(AppSize.size16),
       ),
       child: Row(

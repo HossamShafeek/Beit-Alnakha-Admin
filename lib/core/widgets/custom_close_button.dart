@@ -15,7 +15,7 @@ class CustomCloseButton extends StatelessWidget {
       icon: Icon(
         Icons.close_rounded,
         size: AppSize.size24,
-        color: AppColors.black46,
+        color: AppColors.black,
       ),
       splashRadius: AppSize.size24,
     );

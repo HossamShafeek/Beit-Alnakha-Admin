@@ -73,7 +73,7 @@ DataCell textDataCell({required BuildContext context, required String text,TextD
         textDirection:textDirection?? TextDirection.rtl,
         style: AppStyles.semiBold14(
           context,
-        ).copyWith(color: AppColors.primaryBlack),
+        ).copyWith(color: AppColors.black),
       ),
     ),
   );

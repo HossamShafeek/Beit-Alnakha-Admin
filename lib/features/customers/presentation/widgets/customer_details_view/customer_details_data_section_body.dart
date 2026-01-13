@@ -1,5 +1,6 @@
 import 'package:beit_alnakha_admin/core/responsive_helper/responsive_pattern_layout.dart';
 import 'package:beit_alnakha_admin/core/utils/app_assets.dart';
+import 'package:beit_alnakha_admin/core/utils/app_colors.dart';
 import 'package:beit_alnakha_admin/core/utils/app_strings.dart';
 import 'package:beit_alnakha_admin/core/widgets/custom_list_tile.dart';
 import 'package:beit_alnakha_admin/core/widgets/custom_switch.dart';
@@ -36,6 +37,7 @@ class CustomerDetailsDataSectionBody extends StatelessWidget {
           svgIconPath: AppAssets.call,
           titleText: AppStrings.phoneNumber,
           trailingTitle: '07777777777',
+          trailingTitleColor: AppColors.primary,
         ),
         CustomListTile(
           svgIconPath: AppAssets.city,

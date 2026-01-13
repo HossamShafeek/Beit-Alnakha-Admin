@@ -2,7 +2,6 @@ import 'package:beit_alnakha_admin/core/utils/app_size.dart';
 import 'package:beit_alnakha_admin/core/utils/app_strings.dart';
 import 'package:beit_alnakha_admin/core/utils/app_styles.dart';
 import 'package:beit_alnakha_admin/features/drivers/presentation/widgets/drivers_view/add_driver_button.dart';
-import 'package:beit_alnakha_admin/features/drivers/presentation/widgets/drivers_view/delivery_type_drop_down.dart';
 import 'package:beit_alnakha_admin/features/drivers/presentation/widgets/drivers_view/drivers_search_field.dart';
 import 'package:flutter/material.dart';
 
@@ -32,7 +31,7 @@ class DriversFilterSectionMobile extends StatelessWidget {
             spacing: AppSize.size8,
             children: [
               Expanded(child: DriversSearchField()),
-              DeliveryTypeDropDown(),
+            //  DeliveryTypeDropDown(),
               AddDriverButton(),
             ],
           ),

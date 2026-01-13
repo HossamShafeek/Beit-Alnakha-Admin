@@ -5,6 +5,7 @@ abstract class AppSize {
   static const double size4 = 4;
   static const double size16 = 16;
   static const double size14 = 14;
+  static const double size13 = 13;
   static const double size20 = 20;
   static const double size12 = 12;
   static const double size100 = 100;

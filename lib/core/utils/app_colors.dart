@@ -4,7 +4,8 @@ class AppColors {
   static const Color transparent = Colors.transparent;
 
   static const Color primary = Color(0xffAF8E42);
-  static const Color primaryBlack = Color(0xff010101);
+  static final Color primaryWithOpacity15 = primary.withValues(alpha: 0.15);
+  static const Color black = Color(0xff010101);
   static const Color secondaryBlack = Color(0xff1D1A11);
 
   static final Color loginBackgroundColor = Color(0xffE8ECF7);

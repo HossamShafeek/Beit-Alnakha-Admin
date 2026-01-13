@@ -16,7 +16,7 @@ class CustomerDetailsStatisticsData extends StatelessWidget {
     AppAssets.phoneVector,
   ];
 
-  final List<int> customerDetailsStatusValues = const [10, 50000, 500, 5];
+  final List<int> customerDetailsStatusValues = const [1000, 50000, 5000, 5];
 
   @override
   Widget build(BuildContext context) {
@@ -49,9 +49,9 @@ class CustomerDetailsStatisticsData extends StatelessWidget {
       case 1:
         return value.toFormatMoney().toWithIraqCurrency();
       case 3:
-        return '${AppStrings.allWithoutAl} ${value.toFormatMoney} ${AppStrings.days}';
+        return '${AppStrings.allWithoutAl} ${value.toFormatMoney()} ${AppStrings.days}';
         default:
-          return value.toString();
+          return value.toFormatMoney();
     }
   }
 }

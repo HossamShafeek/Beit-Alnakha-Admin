@@ -9,6 +9,7 @@ import 'package:beit_alnakha_admin/core/widgets/custom_container_button.dart';
 import 'package:beit_alnakha_admin/core/widgets/custom_elevated_button.dart';
 import 'package:beit_alnakha_admin/core/widgets/custom_network_image.dart';
 import 'package:beit_alnakha_admin/core/widgets/custom_popup_menu_button.dart';
+import 'package:beit_alnakha_admin/features/agents/presentation/views/agent_account_statement_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -65,13 +66,16 @@ class AgentDetailsDataSectionAppBar extends StatelessWidget {
         CustomElevatedButton(
           width: 120,
           height: AppSize.size52,
-          onPressed: () {},
+          onPressed: () {
+            showAccountStatementDialog(context: context);
+          },
           textStyle: AppStyles.medium16(
             context,
           ).copyWith(color: AppColors.white),
           title: AppStrings.accountStatement,
         ),
         CustomPopupMenuButton(
+
           items: buildPopupMenuItems(context, [
             MenuActionEnum.edit,
             MenuActionEnum.delete,
@@ -83,6 +87,14 @@ class AgentDetailsDataSectionAppBar extends StatelessWidget {
           ),
         ),
       ],
+    );
+  }
+  void showAccountStatementDialog({required BuildContext context}) {
+    showDialog(
+      context: context,
+      builder: (context) {
+        return AgentAccountStatementView();
+      },
     );
   }
 }

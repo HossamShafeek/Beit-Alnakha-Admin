@@ -10,7 +10,7 @@ extension MenuActionEnumExtension on MenuActionEnum {
       case MenuActionEnum.viewDetails:
         return AppStrings.viewDetails;
       case MenuActionEnum.edit:
-        return AppStrings.edit;
+        return AppStrings.update;
       case MenuActionEnum.delete:
         return AppStrings.delete;
       case MenuActionEnum.whatsappContact:

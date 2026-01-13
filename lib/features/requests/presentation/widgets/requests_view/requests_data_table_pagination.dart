@@ -11,7 +11,9 @@ class RequestsDataTablePagination extends StatelessWidget {
       child: PaginationNumberWidget(
         pageCount: 9999,
         currentPage: 50,
-        onPageChanged: (page) {},
+        onPageChanged: (page) {
+         // print(page);
+        },
       ),
     );
   }

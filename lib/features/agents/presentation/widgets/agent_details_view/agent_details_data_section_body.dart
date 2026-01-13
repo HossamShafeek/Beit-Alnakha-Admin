@@ -38,6 +38,7 @@ class AgentDetailsDataSectionBody extends StatelessWidget {
           svgIconPath: AppAssets.call,
           titleText: AppStrings.phoneNumber,
           trailingTitle: '07777777777',
+          trailingTitleColor: AppColors.primary,
         ),
         CustomListTile(
           svgIconPath: AppAssets.points,

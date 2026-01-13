@@ -1,6 +1,3 @@
-import 'package:beit_alnakha_admin/config/routes/routes.dart';
-import 'package:beit_alnakha_admin/core/functions/build_popup_menu_items.dart';
-import 'package:beit_alnakha_admin/core/helper/enums.dart';
 import 'package:beit_alnakha_admin/core/responsive_helper/responsive_app_extensions.dart';
 import 'package:beit_alnakha_admin/core/utils/app_assets.dart';
 import 'package:beit_alnakha_admin/core/utils/app_colors.dart';
@@ -8,11 +5,10 @@ import 'package:beit_alnakha_admin/core/utils/app_size.dart';
 import 'package:beit_alnakha_admin/core/utils/app_strings.dart';
 import 'package:beit_alnakha_admin/core/utils/app_styles.dart';
 import 'package:beit_alnakha_admin/core/widgets/custom_data_table.dart';
-import 'package:beit_alnakha_admin/core/widgets/custom_popup_menu_button.dart';
 import 'package:beit_alnakha_admin/core/widgets/status_container_widget.dart';
+import 'package:beit_alnakha_admin/features/requests/presentation/widgets/requests_view/show_requests_popup_menu.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:go_router/go_router.dart';
 
 class RequestsDataTable extends StatelessWidget {
   const RequestsDataTable({super.key});
@@ -154,34 +150,17 @@ class RequestsDataTable extends StatelessWidget {
                       textDataCell(context: context, text: value.tableNumber),
                       textDataCell(context: context, text: value.delegate),
                       widgetDataCell(
-                        widget: CustomPopupMenuButton(
-                          onSelected: (value) {
-                            if (value == MenuActionEnum.viewDetails) {
-                              context.pushNamed(
-                                Routes.requestDetailsView,
-                                pathParameters: {'requestId': '963212'},
-                              );
-                            }
-                          },
-                          items: buildPopupMenuItems(context, [
-                            MenuActionEnum.viewDetails,
-                            MenuActionEnum.edit,
-                            MenuActionEnum.updateStatus,
-                            MenuActionEnum.addNote,
-                            MenuActionEnum.delete,
-                          ]),
+                        widget: InkWell(
+                          borderRadius: BorderRadius.circular(AppSize.size24),
+                          radius: AppSize.size24,
                           child: Padding(
-                            padding: const EdgeInsets.all(AppSize.size6),
-                            child: SvgPicture.asset(
-                              AppAssets.more,
-                              height: AppSize.size24,
-                              width: AppSize.size24,
-                              colorFilter: const ColorFilter.mode(
-                                AppColors.secondaryBlack,
-                                BlendMode.srcIn,
-                              ),
-                            ),
+                            padding: const EdgeInsets.all(AppSize.size8),
+                            child: SvgPicture.asset(AppAssets.more),
                           ),
+                          onTapDown: (value) {
+                            final position = value.globalPosition;
+                            showRequestsPopupMenu(context, position);
+                          },
                         ),
                       ),
                     ],

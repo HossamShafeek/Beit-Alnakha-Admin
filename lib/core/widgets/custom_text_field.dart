@@ -34,6 +34,9 @@ class CustomTextField extends StatefulWidget {
     this.passwordVisibilityColor,
     this.textStyleColor,
     this.hintStyleColor,
+    this.enabledBorder,
+    this.focusedBorder,
+    this.hoverColor,
   });
 
   final TextEditingController controller;
@@ -59,8 +62,11 @@ class CustomTextField extends StatefulWidget {
   final Color? passwordVisibilityColor;
   final Color? textStyleColor;
   final Color? hintStyleColor;
+  final Color? hoverColor;
   final TextDirection? textDirection;
   final TextAlign? textAlign;
+  final InputBorder? enabledBorder;
+  final InputBorder? focusedBorder;
 
   @override
   State<CustomTextField> createState() => _CustomTextFieldState();
@@ -95,6 +101,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
             ),
           },
           TextFormField(
+
             textDirection: widget.textDirection,
             textAlign: widget.textAlign?? TextAlign.start,
             onChanged: widget.onChanged,
@@ -107,7 +114,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
               }
             },
             style: AppStyles.regular16(context).copyWith(
-           color:      widget.textStyleColor??AppColors.primaryBlack
+           color:      widget.textStyleColor??AppColors.black
             ),
             maxLines:widget.maxLinesEqualNull ? null : widget.maxLines ?? 1,
             controller: widget.controller,
@@ -120,7 +127,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
             decoration: InputDecoration(
               enabled: true,
               contentPadding: EdgeInsets.symmetric(
-                vertical: AppSize.size10,
+                vertical: AppSize.size13,
                 horizontal: AppSize.size16,
               ),
               hintText: widget.hintText,
@@ -137,9 +144,10 @@ class _CustomTextFieldState extends State<CustomTextField> {
                 context,
               ).copyWith(color: widget.hintStyleColor??AppColors.grey88),
               fillColor: widget.backgroundColor ?? AppColors.white,
-              border: AppConstants.enabledBorder,
-              enabledBorder: AppConstants.enabledBorder,
-              focusedBorder: AppConstants.focusedBorder,
+              hoverColor:  widget.hoverColor ?? AppColors.grey200,
+              border: widget.enabledBorder ?? AppConstants.removeBorder,
+              enabledBorder: widget.enabledBorder ?? AppConstants.removeBorder,
+              focusedBorder:widget.focusedBorder ?? AppConstants.focusedBorder,
               errorBorder: AppConstants.errorBorder,
               focusedErrorBorder: AppConstants.errorBorder,
             ),
@@ -173,7 +181,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
           _obscureText ? AppAssets.hide : AppAssets.show,
           key: ValueKey<bool>(_obscureText),
           colorFilter: ColorFilter.mode(
-            widget.passwordVisibilityColor??  AppColors.black46,
+            widget.passwordVisibilityColor??  AppColors.grey7A,
             BlendMode.srcIn,
           ),
         ),

@@ -34,11 +34,11 @@ class RequestDetailsCustomerData extends StatelessWidget {
             svgIconPath: AppAssets.address,
             trailingTitle: 'بغداد – المنصور',
           ),
-          CustomListTile(
-            titleText: AppStrings.deliveryMethod,
-            svgIconPath: AppAssets.car,
-            trailingTitle: '-',
-          ),
+          // CustomListTile(
+          //   titleText: AppStrings.deliveryMethod,
+          //   svgIconPath: AppAssets.car,
+          //   trailingTitle: '-',
+          // ),
           TextContainerWithIcon(
             height: 106,
             disabledMaxLine: true,

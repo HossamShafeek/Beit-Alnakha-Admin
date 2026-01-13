@@ -14,7 +14,7 @@ class DotBottomSheet extends StatelessWidget {
         alignment: Alignment.center,
         padding: EdgeInsets.symmetric(vertical: AppSize.size8),
         decoration: BoxDecoration(
-          color: AppColors.greyD8,
+          color: AppColors.greyAA,
           borderRadius: BorderRadius.circular(AppSize.size12),
         ),
       ),

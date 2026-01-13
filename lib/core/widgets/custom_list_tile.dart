@@ -32,6 +32,7 @@ class CustomListTile extends StatelessWidget {
   final Color? trailingTitleColor;
   final Color? backgroundIconColor;
   final Color? backgroundColor;
+
   final Widget? trailing;
   final double? horizontalTitleGap;
   final bool? expandedTitle;
@@ -49,7 +50,7 @@ class CustomListTile extends StatelessWidget {
         borderRadius: BorderRadius.circular(AppSize.size12),
         child: ListTile(
           onTap: onTap,
-          hoverColor: AppColors.grey300,
+          hoverColor: AppColors.grey200,
           contentPadding: EdgeInsets.symmetric(
             horizontal: AppSize.size12,
             vertical: AppSize.size4,

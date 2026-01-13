@@ -109,8 +109,8 @@ class PaginationNumberWidget extends StatelessWidget {
             child: Text(
               '$page',
               style: AppStyles.semiBold16(context).copyWith(
-                height: 1.3,
-                color: isSelected ? Colors.white : AppColors.primaryBlack,
+                height: 1.35,
+                color: isSelected ? Colors.white : AppColors.black,
               ),
             ),
           ),
@@ -139,7 +139,14 @@ class PaginationNumberWidget extends StatelessWidget {
                 ),
               ),
         const SizedBox(width: AppSize.size8),
-        ..._buildPageNumbers(context),
+        Directionality(
+          textDirection: TextDirection.ltr,
+          child: Row(
+            children: [
+              ..._buildPageNumbers(context),
+            ],
+          ),
+        ),
         const SizedBox(width: AppSize.size8),
         // Next
         loading

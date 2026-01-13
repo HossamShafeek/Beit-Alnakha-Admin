@@ -1,7 +1,7 @@
 import 'package:beit_alnakha_admin/core/helper/extensions_helper.dart';
 import 'package:beit_alnakha_admin/core/utils/app_size.dart';
-import 'package:beit_alnakha_admin/features/drivers/presentation/widgets/driver_details_view/deliver_details_data_section.dart';
-import 'package:beit_alnakha_admin/features/drivers/presentation/widgets/driver_details_view/deliver_details_statistics_data.dart';
+import 'package:beit_alnakha_admin/features/drivers/presentation/widgets/driver_details_view/driver_details_data_section.dart';
+import 'package:beit_alnakha_admin/features/drivers/presentation/widgets/driver_details_view/driver_details_statistics_data.dart';
 import 'package:beit_alnakha_admin/features/drivers/presentation/widgets/driver_details_view/driver_requests_history_list_view.dart';
 import 'package:beit_alnakha_admin/features/drivers/presentation/widgets/driver_details_view/driver_requests_history_tab_bar.dart';
 import 'package:flutter/material.dart';

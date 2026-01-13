@@ -12,6 +12,8 @@ import 'package:beit_alnakha_admin/core/utils/app_styles.dart';
 import 'package:beit_alnakha_admin/core/widgets/custom_data_table.dart';
 import 'package:beit_alnakha_admin/core/widgets/custom_popup_menu_button.dart';
 import 'package:beit_alnakha_admin/core/widgets/custom_switch.dart';
+import 'package:beit_alnakha_admin/features/drivers/presentation/views/update_driver_view.dart';
+import 'package:beit_alnakha_admin/features/drivers/presentation/widgets/drivers_view/delete_driver_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
@@ -52,92 +54,82 @@ class DriversDataTable extends StatelessWidget {
             [
               DriversModel(
                 driverName: 'محمد علي',
+                points: 5000,
                 phoneNumber: '+96407123456789',
                 city: 'بغداد',
                 requests: '15',
-                deliveryType: 'خارجي',
-
                 isActive: true,
               ),
               DriversModel(
                 driverName: 'محمد علي',
+                points: 5000,
                 phoneNumber: '+96407123456789',
                 city: 'بغداد',
                 requests: '15',
-                deliveryType: 'خارجي',
-
                 isActive: true,
               ),
               DriversModel(
                 driverName: 'محمد علي',
+                points: 5000,
                 phoneNumber: '+96407123456789',
                 city: 'بغداد',
                 requests: '15',
-                deliveryType: 'خارجي',
-
                 isActive: false,
               ),
               DriversModel(
                 driverName: 'محمد علي',
+                points: 5000,
                 phoneNumber: '+96407123456789',
                 city: 'بغداد',
                 requests: '15',
-                deliveryType: 'خارجي',
-
                 isActive: true,
               ),
               DriversModel(
                 driverName: 'محمد علي',
+                points: 5000,
                 phoneNumber: '+96407123456789',
                 city: 'بغداد',
                 requests: '15',
-                deliveryType: 'خارجي',
-
                 isActive: false,
               ),
               DriversModel(
                 driverName: 'محمد علي',
+                points: 5000,
                 phoneNumber: '+96407123456789',
                 city: 'بغداد',
                 requests: '15',
-                deliveryType: 'خارجي',
-
                 isActive: true,
               ),
               DriversModel(
                 driverName: 'محمد علي',
+                points: 5000,
                 phoneNumber: '+96407123456789',
                 city: 'بغداد',
                 requests: '15',
-                deliveryType: 'خارجي',
-
                 isActive: true,
               ),
               DriversModel(
                 driverName: 'محمد علي',
+                points: 5000,
                 phoneNumber: '+96407123456789',
                 city: 'بغداد',
                 requests: '15',
-                deliveryType: 'خارجي',
-
                 isActive: false,
               ),
               DriversModel(
                 driverName: 'محمد علي',
+                points: 5000,
                 phoneNumber: '+96407123456789',
                 city: 'بغداد',
                 requests: '15',
-                deliveryType: 'خارجي',
-
                 isActive: true,
               ),
               DriversModel(
                 driverName: 'محمد علي',
+                points: 5000,
                 phoneNumber: '+96407123456789',
                 city: 'بغداد',
                 requests: '15',
-                deliveryType: 'خارجي',
-
                 isActive: false,
               ),
             ].asMap().entries.map((e) {
@@ -147,12 +139,8 @@ class DriversDataTable extends StatelessWidget {
                 cells: [
                   textDataCell(context: context, text: '${index + 1}'),
                   textDataCell(context: context, text: value.driverName),
-                  textDataCell(
-                    context: context,
-                    text: value.deliveryType,
-
-                  ),
                   textDataCell(context: context, text: value.phoneNumber,   textDirection: TextDirection.ltr,),
+                  textDataCell(context: context, text: '${value.points} ${AppStrings.point}'),
                   textDataCell(context: context, text: value.city),
                   textDataCell(context: context, text: value.requests),
 
@@ -177,9 +165,9 @@ class DriversDataTable extends StatelessWidget {
                               log('whatsappContact');
                             }
                             else if(value == MenuActionEnum.edit){
-                              log('edit');
+                              showUpdateDriverDialog(context: context);
                             }else if(value == MenuActionEnum.delete){
-                              log('delete');
+                              showDeleteDriverDialog(context: context);
                             }
                           },
                           items: buildPopupMenuItems(context, [
@@ -212,18 +200,34 @@ class DriversDataTable extends StatelessWidget {
       ),
     );
   }
+  void showUpdateDriverDialog({required BuildContext context}) {
+    showDialog(
+      context: context,
+      builder: (context) {
+        return UpdateDriverView();
+      },
+    );
+  }
+  void showDeleteDriverDialog({required BuildContext context}) {
+    showDialog(
+      context: context,
+      builder: (context) {
+        return DeleteDriverDialog();
+      },
+    );
+  }
 }
 
 class DriversModel {
   final String driverName;
-  final String deliveryType;
+  final num points;
   final String phoneNumber;
   final String city;
   final String requests;
   final bool isActive;
 
   DriversModel({
-    required this.deliveryType,
+    required this.points,
     required this.driverName,
     required this.phoneNumber,
     required this.city,

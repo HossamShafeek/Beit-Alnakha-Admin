@@ -69,7 +69,7 @@ class _CustomDropdownState extends State<CustomDropdown> {
                 widget.title!,
                 style: AppStyles.regular16(
                   context,
-                ).copyWith(color: AppColors.primaryBlack),
+                ).copyWith(color: AppColors.black),
               ),
             },
             TextFormField(
@@ -114,11 +114,12 @@ class _CustomDropdownState extends State<CustomDropdown> {
               validator: widget.validator,
               decoration: InputDecoration(
                 enabled: true,
+                isDense: true,
                 constraints: widget.height != null
                     ? BoxConstraints(
-                        maxHeight: widget.height!,
-                        minHeight: widget.height!,
-                      )
+                  maxHeight: widget.height!,
+                  minHeight: widget.height!,
+                )
                     : null,
                 contentPadding: EdgeInsets.symmetric(
                   vertical: AppSize.size12,
@@ -128,15 +129,12 @@ class _CustomDropdownState extends State<CustomDropdown> {
                 suffixIcon:
                     widget.suffixIcon ??
                     InkWell(
-                      child: SizedBox(
-                        width: AppSize.size24,
-                        height: AppSize.size24,
-                        child: Center(
-                          child: SvgPicture.asset(
-                            AppAssets.arrowDown,
-                            width: AppSize.size24,
-                            height: AppSize.size24,
-                          ),
+                      child: FittedBox(
+                        fit: BoxFit.scaleDown,
+                        child: SvgPicture.asset(
+                          AppAssets.arrowDown,
+                          width: AppSize.size24,
+                          height: AppSize.size24,
                         ),
                       ),
                     ),

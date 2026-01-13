@@ -23,8 +23,10 @@ class CustomPhoneField extends StatefulWidget {
     this.backgroundColor,
     this.onChanged,
     this.enabledPasswordVisibility = false,
-    this.showTitle = true,
+    this.showTitle = false,
     this.onFieldSubmitted,
+    this.enabledBorder,
+    this.focusedBorder,
   });
 
   final TextEditingController controller;
@@ -38,6 +40,8 @@ class CustomPhoneField extends StatefulWidget {
   final bool readOnly;
   final bool? showTitle;
   final Color? backgroundColor;
+  final InputBorder? enabledBorder ;
+  final InputBorder? focusedBorder ;
 
   @override
   State<CustomPhoneField> createState() => _CustomPhoneFieldState();
@@ -107,7 +111,7 @@ class _CustomPhoneFieldState extends State<CustomPhoneField> {
                 FocusScope.of(context).unfocus();
               }
             },
-            maxLength: _maxLength,
+           maxLength: _maxLength,
             validator: (value) {
               if (value!.trim().isEmpty) {
                 return AppStrings.pleaseEnterPhoneNumber;
@@ -132,12 +136,12 @@ class _CustomPhoneFieldState extends State<CustomPhoneField> {
               enabled: true,
               counterStyle: AppStyles.regular12(
                 context,
-              ).copyWith(color: AppColors.grey7A, height: 0.8),
+              ).copyWith(color: AppColors.grey7A, height: 0.4),
               contentPadding: EdgeInsets.symmetric(
                 vertical: AppSize.size12,
                 horizontal: AppSize.size16,
               ),
-              hintText: AppStrings.enterPhoneNumber,
+              hintText: AppStrings.phoneNumber,
               errorStyle: AppStyles.medium12(
                 context,
               ).copyWith(color: AppColors.red),
@@ -187,9 +191,8 @@ class _CustomPhoneFieldState extends State<CustomPhoneField> {
                   }
                 },
               ),
-              prefixIcon: SizedBox(
-                height: AppSize.size24,
-                width: AppSize.size24,
+              prefixIcon: FittedBox(
+                fit: BoxFit.scaleDown,
                 child: Center(child: SvgPicture.asset(AppAssets.call)),
               ),
               filled: true,
@@ -197,10 +200,11 @@ class _CustomPhoneFieldState extends State<CustomPhoneField> {
               hintStyle: AppStyles.regular16(
                 context,
               ).copyWith(color: AppColors.grey7A),
+              hoverColor: AppColors.grey200,
               fillColor: widget.backgroundColor ?? AppColors.white,
-              border: AppConstants.enabledBorder,
-              enabledBorder: AppConstants.enabledBorder,
-              focusedBorder: AppConstants.focusedBorder,
+              border:widget.enabledBorder?? AppConstants.removeBorder,
+              enabledBorder: widget.enabledBorder??AppConstants.removeBorder,
+              focusedBorder: widget.focusedBorder??AppConstants.focusedBorder,
               errorBorder: AppConstants.errorBorder,
               focusedErrorBorder: AppConstants.errorBorder,
             ),

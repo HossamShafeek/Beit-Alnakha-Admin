@@ -1,4 +1,3 @@
-import 'package:beit_alnakha_admin/core/responsive_helper/pop_on_resize.dart';
 import 'package:beit_alnakha_admin/core/utils/app_size.dart';
 import 'package:flutter/material.dart';
 
@@ -17,7 +16,6 @@ class CustomPopupMenuButton<T> extends StatefulWidget {
     this.splashRadius,
   });
 
-  /// بدل child
   final Widget child;
 
   final List<PopupMenuEntry<T>> items;
@@ -37,16 +35,17 @@ class CustomPopupMenuButton<T> extends StatefulWidget {
 
 class _CustomPopupMenuButtonState<T> extends State<CustomPopupMenuButton<T>> {
   double? lastWidth;
+  bool _isMenuOpen = false;
 
   void _openMenu() async {
     final RenderBox renderBox = context.findRenderObject() as RenderBox;
     final Offset position = renderBox.localToGlobal(Offset.zero);
 
-
+    _isMenuOpen = true;
     final value = await showMenu<T>(
       context: context,
       useRootNavigator: widget.useRootNavigator,
-      shape: widget.shape??const RoundedRectangleBorder(
+      shape: widget.shape ?? const RoundedRectangleBorder(
         borderRadius: BorderRadius.all(Radius.circular(AppSize.size12)),
       ),
       elevation: widget.elevation,
@@ -60,8 +59,7 @@ class _CustomPopupMenuButtonState<T> extends State<CustomPopupMenuButton<T>> {
       ),
       items: widget.items,
     );
-
-
+    _isMenuOpen = false;
 
     if (value != null) {
       widget.onSelected?.call(value);
@@ -70,12 +68,19 @@ class _CustomPopupMenuButtonState<T> extends State<CustomPopupMenuButton<T>> {
 
   @override
   Widget build(BuildContext context) {
-    return PopOnResize(
-      child: InkWell(
-        borderRadius: BorderRadius.circular(widget.splashRadius??AppSize.size24),
-        onTap: _openMenu,
-        child: widget.child,
-      ),
+    final width = MediaQuery.of(context).size.width;
+    if (lastWidth != null && lastWidth != width && _isMenuOpen) {
+      try {
+        Navigator.of(context, rootNavigator: widget.useRootNavigator).pop();
+      } catch (_) {}
+      _isMenuOpen = false;
+    }
+    lastWidth = width;
+
+    return InkWell(
+      borderRadius: BorderRadius.circular(widget.splashRadius ?? AppSize.size24),
+      onTap: _openMenu,
+      child: widget.child,
     );
   }
 }

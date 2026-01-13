@@ -19,7 +19,7 @@ void showToastificationWidget({
       message,
       maxLines: 2,
       overflow: TextOverflow.ellipsis,
-      style: AppStyles.medium16(context).copyWith(color: AppColors.primaryBlack),
+      style: AppStyles.medium16(context).copyWith(color: AppColors.black),
     ),
 
     type: notificationType,

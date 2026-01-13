@@ -49,12 +49,12 @@ class SideBarWidget extends StatelessWidget {
                 ? 90
                 : 280,
             height: double.infinity,
-            color: AppColors.primaryBlack,
+            color: AppColors.black,
             child: CustomScrollView(
               physics: const BouncingScrollPhysics(),
               slivers: [
                 SliverAppBar(
-                  backgroundColor: AppColors.primaryBlack,
+                  backgroundColor: AppColors.black,
                   automaticallyImplyLeading: false,
                   toolbarHeight: 80,
                   title: Padding(

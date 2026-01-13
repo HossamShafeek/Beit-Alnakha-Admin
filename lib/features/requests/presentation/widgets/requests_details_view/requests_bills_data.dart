@@ -36,18 +36,18 @@ class RequestsBillsData extends StatelessWidget {
               title: AppStrings.totalBeforeDiscount,
               subtitle:20000.toFormatMoney(),
             ),
-            TitleAndValueWidget(
-              title: AppStrings.restaurantCommission,
-              subtitle: 18000.toFormatMoney(),
-            ),
-            TitleAndValueWidget(
-              title: AppStrings.driverCommission,
-              subtitle: 1000.toFormatMoney(),
-            ),
-            TitleAndValueWidget(
-              title: AppStrings.agentCommission,
-              subtitle: 1000.toFormatMoney(),
-            ),
+            // TitleAndValueWidget(
+            //   title: AppStrings.restaurantCommission,
+            //   subtitle: 18000.toFormatMoney(),
+            // ),
+            // TitleAndValueWidget(
+            //   title: AppStrings.driverCommission,
+            //   subtitle: 1000.toFormatMoney(),
+            // ),
+            // TitleAndValueWidget(
+            //   title: AppStrings.agentCommission,
+            //   subtitle: 1000.toFormatMoney(),
+            // ),
             TitleAndValueWidget(
               title: '${AppStrings.couponDiscount} (10%)',
               subtitle: '${2000.toFormatMoney()} -',

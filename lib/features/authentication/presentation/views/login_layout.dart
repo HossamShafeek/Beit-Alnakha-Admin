@@ -42,7 +42,7 @@ class LoginLayout extends StatelessWidget {
           isLoading: state is LoginLoadingState,
           child: Scaffold(
             resizeToAvoidBottomInset: true,
-            backgroundColor: AppColors.primaryBlack,
+            backgroundColor: AppColors.black,
             body: AdaptiveLayout(
               mobileLayout: (context) => const LoginViewMobile(),
               tabletLayout: (context) => const LoginViewMobile(

@@ -15,10 +15,10 @@ class DriversStatisticsData extends StatelessWidget {
     AppAssets.users,
     AppAssets.activeUser,
     AppAssets.motorcycle,
-    AppAssets.delivering,
+   // AppAssets.delivering,
   ];
 
-  final List<int> requestsStatusValues = const [1000, 300, 100, 200];
+  final List<int> requestsStatusValues = const [1000, 300, 100];
 
   @override
   Widget build(BuildContext context) {
@@ -31,10 +31,10 @@ class DriversStatisticsData extends StatelessWidget {
         ),
       ),
       patternBuilder: (width) {
-        if (width >= ScreenWidthBreakpoints.desktop) {
-          return [4];
+        if (width >= ScreenWidthBreakpoints.tablet) {
+          return [3];
         } else {
-          return [2, 2];
+          return [2, 1];
         }
       },
       children: requestsStatusIcon
