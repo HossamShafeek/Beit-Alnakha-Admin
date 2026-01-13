@@ -5,6 +5,7 @@ enum MenuActionEnum {
   updateStatus,
   addNote,
   whatsappContact,
+  addFeature,
 }
 
 enum RequestStatusEnum {

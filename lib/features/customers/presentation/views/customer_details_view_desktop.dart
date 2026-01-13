@@ -15,6 +15,7 @@ class CustomerDetailsViewDesktop extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(AppSize.size24),
       child: CustomScrollView(
+        physics: const BouncingScrollPhysics(),
         slivers: [
           CustomerDetailsStatisticsData().toSliver(),
           SliverGap(AppSize.size24),

@@ -142,7 +142,6 @@ class AppStrings {
   static const String enterCancelReason = 'ادخل سبب الإلغاء';
   static const String pleaseEnterCancelReason = 'من فضلك ادخل سبب الإلغاء';
 
-
   static List<String> requestsTypeForDropDown = [
     AppStrings.all,
     AppStrings.inside,
@@ -216,8 +215,8 @@ class AppStrings {
   static const String pointsCount = 'عدد النقاط';
   static const String averageRequestTime = 'متوسط وقت الطلب';
   static const String deleteCustomer = 'حذف العميل';
-  static const String youAreSureDeleteCustomer = 'هل انت متأكد من حذف هذا العميل؟';
-
+  static const String youAreSureDeleteCustomer =
+      'هل انت متأكد من حذف هذا العميل؟';
 
   static List<String> customersStatusForStatistics = [
     allCustomers,
@@ -276,11 +275,9 @@ class AppStrings {
   static const String searchWithDriverName = 'ابحث باسم السائق…';
   static const String totalDeliveryProfit = 'إجمالي أرباح التوصيل';
   static const String deleteDriver = 'حذف السائق';
-  static const String youAreSureDeleteDriver = 'هل انت متأكد من حذف هذا السائق؟';
+  static const String youAreSureDeleteDriver =
+      'هل انت متأكد من حذف هذا السائق؟';
   static const String pressToUploadDriverImage = 'اضغط لرفع صورة السائق هنا';
-
-
-
 
   static List<String> driversStatusForStatistics = [
     allDrivers,
@@ -327,7 +324,8 @@ class AppStrings {
   static const String allAgents = 'إجمالي الوكلاء';
   static const String activeAgents = 'الوكلاء النشطون';
   static const String totalSales = 'إجمالي المبيعات المحققة';
-  static const String totalPoints = 'إجمالي النقاط الموزعة';
+  static const String totalDistributedPoints = 'إجمالي النقاط الموزعة';
+  static const String totalPoints = 'إجمالي النقاط';
   static const String searchWithAgentName = 'ابحث باسم الوكيل…';
   static const String agentName = 'اسم الوكيل';
   static const String agentCode = 'الكود الترويجي';
@@ -339,13 +337,11 @@ class AppStrings {
   static const String youAreSureDeleteAgent = 'هل انت متأكد من حذف هذا الوكيل؟';
   static const String pressToUploadAgentImage = 'اضغط لرفع صورة الوكيل هنا';
 
-
-
   static List<String> agentsStatusForStatistics = [
     allAgents,
     activeNow,
     totalSales,
-    totalPoints,
+    totalDistributedPoints,
   ];
 
   static List<String> agentsStatusForTabBar = [all, active, inactive];
@@ -360,6 +356,58 @@ class AppStrings {
   ];
 
   static List<String> agentDetailsStatusForStatistics = [
+    totalRequests,
+    totalProfit,
+    totalDistributedPoints,
+    totalEqualAmount,
+  ];
+
+  // Influencers View
+
+  static const String addInfluencer = 'إضافة مشهور';
+  static const String updateInfluencer = 'تعديل مشهور';
+  static const String influencersMenu = 'قائمة المشاهير';
+  static const String allInfluencers = 'إجمالي المشاهير';
+  static const String activeInfluencers = 'المشاهير النشطون';
+  static const String searchWithInfluencerName = 'ابحث باسم المشهور…';
+  static const String influencerName = 'اسم المشهور';
+  static const String influencerCode = 'الكود الترويجي';
+  static const String influencerStatus = 'حالة المشهور';
+  static const String deleteInfluencer = 'حذف المشهور';
+  static const String youAreSureDeleteInfluencer =
+      'هل انت متأكد من حذف هذا المشهور؟';
+  static const String pressToUploadInfluencerVideo =
+      'اضغط لرفع فيديو المشهور هنا';
+  static const String pressToUploadInfluencerImage =
+      'اضغط لرفع صورة المشهور هنا';
+  static const String pressToUploadCoverImage =
+      'اضغط لرفع صورة الغلاف هنا';
+  static const String addFeature = 'إضافه ميزة';
+  static const String influencerDescription = 'وصف المشهور';
+  static const String pleaseEnterInfluencerDescription = 'من فضلك ادخل وصف المشهور';
+
+
+
+
+  static List<String> influencersStatusForStatistics = [
+    allInfluencers,
+    activeNow,
+    totalSales,
+    totalPoints,
+  ];
+
+  static List<String> influencersStatusForTabBar = [all, active, inactive];
+  static List<String> columnsNameForInfluencersDataTable = [
+    hash,
+    influencerName,
+    phoneNumber,
+    points,
+    requests,
+    totalProfit,
+    action,
+  ];
+
+  static List<String> influencerDetailsStatusForStatistics = [
     totalRequests,
     totalProfit,
     totalPoints,
@@ -395,14 +443,17 @@ class AppStrings {
       'من فضلك أدخل رقم هاتف صحيح';
   static const String downloadedSuccessfullyInPath = 'تم تنزيل الملف في المسار';
   static const String downloadedSuccessfully = 'تم تنزيل الملف بنجاح';
-  static const String uploadImageDescription = '(يفضل حجم: 512x512 px – صيغة PNG أو JPG)';
+  static const String uploadImageDescription =
+      '( يفضل حجم: 512x512 px – صيغة PNG أو JPG )';
+  static const String uploadVideoDescription =
+      '( يفضل صيغة الفيديو MP4 )';
   static const String settleSelectedPoints = 'تسوية النقاط المختارة';
   static const String confirmPointsSettlement = 'تأكيد تسوية النقاط';
-  static const String  settlementNumber = 'رقم التسوية';
+  static const String settlementNumber = 'رقم التسوية';
   static const String transactionDate = 'تاريخ العملية';
   static const String totalSelectedPoints = 'مجموع النقاط المختارة';
   static const String pointsValue = 'قيمة النقاط';
-  static const String  transactionNumber  = 'رقم العملية';
+  static const String transactionNumber = 'رقم العملية';
   static const String transactionType = 'نوع العملية';
   static const String earnedPoints = 'النقاط المكتسبة';
   static const String unsettled = 'غير مسوّاة';
@@ -416,7 +467,6 @@ class AppStrings {
     price,
     status,
   ];
-
 
   // Errors Messages
   static const String connectionTimeoutErrorMessage =

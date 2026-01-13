@@ -15,6 +15,7 @@ class AgentDetailsViewMobile extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(AppSize.size16),
       child: CustomScrollView(
+        physics: const BouncingScrollPhysics(),
         slivers: [
           AgentDetailsStatisticsData().toSliver(),
           SliverGap(AppSize.size16),

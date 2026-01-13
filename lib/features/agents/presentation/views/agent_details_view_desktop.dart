@@ -15,6 +15,7 @@ class AgentDetailsViewDesktop extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(AppSize.size24),
       child: CustomScrollView(
+        physics: const BouncingScrollPhysics(),
         slivers: [
           AgentDetailsStatisticsData().toSliver(),
           SliverGap(AppSize.size24),

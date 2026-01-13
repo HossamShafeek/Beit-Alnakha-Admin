@@ -19,6 +19,8 @@ extension MenuActionEnumExtension on MenuActionEnum {
         return AppStrings.updateStatus;
       case MenuActionEnum.addNote:
         return AppStrings.addNote;
+      case MenuActionEnum.addFeature:
+        return AppStrings.addFeature;
     }
   }
 
@@ -36,6 +38,8 @@ extension MenuActionEnumExtension on MenuActionEnum {
         return AppAssets.status;
       case MenuActionEnum.addNote:
         return AppAssets.addNote;
+      case MenuActionEnum.addFeature:
+        return AppAssets.features;
     }
   }
 

@@ -62,6 +62,7 @@ abstract class AppAssets {
   static const String motorcycle = '${AppConstants.pathForSvg}motorcycle.svg';
   static const String add = '${AppConstants.pathForSvg}add.svg';
   static const String addPhoto = '${AppConstants.pathForSvg}add_photo.svg';
+  static const String addVideo = '${AppConstants.pathForSvg}add_video.svg';
   static const String pointsFill = '${AppConstants.pathForSvg}points_fill.svg';
   static const String points = '${AppConstants.pathForSvg}points.svg';
   static const String moneyCircleFill = '${AppConstants.pathForSvg}money_circle_fill.svg';

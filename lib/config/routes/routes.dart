@@ -9,6 +9,7 @@ class Routes {
   static const String agentsView = '/agents_view';
   static const String agentDetailsView = '/agent_details_view';
   static const String influencersView = '/influencers_view';
+  static const String influencerDetailsView = '/influencer_details_view';
   static const String chefsView = '/chefs_view';
   static const String departmentsView = '/departments_view';
   static const String mealsView = '/meals_view';

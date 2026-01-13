@@ -15,6 +15,7 @@ class DriverDetailsViewDesktop extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(AppSize.size24),
       child: CustomScrollView(
+        physics: const BouncingScrollPhysics(),
         slivers: [
           DriverDetailsStatisticsData().toSliver(),
           SliverGap(AppSize.size24),

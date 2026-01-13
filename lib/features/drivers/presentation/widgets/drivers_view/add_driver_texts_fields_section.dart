@@ -1,5 +1,4 @@
 import 'package:beit_alnakha_admin/core/utils/app_assets.dart';
-import 'package:beit_alnakha_admin/core/utils/app_size.dart';
 import 'package:beit_alnakha_admin/core/utils/app_strings.dart';
 import 'package:beit_alnakha_admin/core/widgets/custom_container_with_title.dart';
 import 'package:beit_alnakha_admin/core/widgets/custom_list_tile.dart';
@@ -58,7 +57,6 @@ class AddDriverTextsFieldsSection extends StatelessWidget {
           GovernoratesDropDown(controller: TextEditingController()),
           RegionsDropDown(controller: TextEditingController()),
           CustomListTile(
-            paddingForBottom: AppSize.size12,
             svgIconPath: AppAssets.status,
             titleText: AppStrings.driverStatus,
             trailing: CustomSwitch(value: true, onChanged: (value) {}),

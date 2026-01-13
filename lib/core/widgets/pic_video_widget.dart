@@ -8,8 +8,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
 
-class PicPhotoWidget extends StatelessWidget {
-  const PicPhotoWidget({super.key, required this.title});
+class PicVideoWidget extends StatelessWidget {
+  const PicVideoWidget({super.key, required this.title});
 
   final String title;
 
@@ -24,7 +24,7 @@ class PicPhotoWidget extends StatelessWidget {
             mainAxisSize: MainAxisSize.max,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              SvgPicture.asset(AppAssets.addPhoto),
+              SvgPicture.asset(AppAssets.addVideo),
               Gap(AppSize.size4,),
               Text(
                 title,
@@ -32,7 +32,7 @@ class PicPhotoWidget extends StatelessWidget {
                 style: AppStyles.medium16(context),
               ),
               Text(
-                AppStrings.uploadImageDescription,
+                AppStrings.uploadVideoDescription,
                 textAlign: TextAlign.center,
                 style: AppStyles.semiBold14(
                   context,

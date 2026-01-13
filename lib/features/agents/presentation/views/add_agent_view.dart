@@ -11,21 +11,29 @@ class AddAgentView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CustomResponsiveDialog(
-      title: AppStrings.addAgent,
-      bottomWidget: DialogActions(onPressed: () {}),
-      child: Padding(
-        padding: const EdgeInsets.only(
-          top: AppSize.size16,
-          right: AppSize.size16,
-          left: AppSize.size16,
-        ),
+    return Padding(
+      padding: const EdgeInsets.only(
+        top: AppSize.size16,
+        right: AppSize.size16,
+        left: AppSize.size16,
+      ),
+      child: CustomResponsiveDialog(
+        title: AppStrings.addAgent,
+        bottomWidget: DialogActions(onPressed: () {}),
         child: SingleChildScrollView(
-          child: Column(
-            spacing: AppSize.size12,
-            children: [PicPhotoWidget(
-              title: AppStrings.pressToUploadAgentImage,
-            ), AddAgentTextsFieldsSection()],
+          physics: const BouncingScrollPhysics(),
+          child: Padding(
+            padding: const EdgeInsets.only(
+              top: AppSize.size16,
+              right: AppSize.size16,
+              left: AppSize.size16,
+            ),
+            child: Column(
+              spacing: AppSize.size12,
+              children: [PicPhotoWidget(
+                title: AppStrings.pressToUploadAgentImage,
+              ), AddAgentTextsFieldsSection()],
+            ),
           ),
         ),
       ),

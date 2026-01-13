@@ -8,7 +8,8 @@ import 'package:beit_alnakha_admin/features/departments/presentation/views/depar
 import 'package:beit_alnakha_admin/features/drivers/presentation/views/driver_details_layout.dart';
 import 'package:beit_alnakha_admin/features/drivers/presentation/views/drivers_layout.dart';
 import 'package:beit_alnakha_admin/features/features/presentation/views/features_view.dart';
-import 'package:beit_alnakha_admin/features/influencers/presentation/views/influencers_view.dart';
+import 'package:beit_alnakha_admin/features/influencers/presentation/views/influencers_layout.dart';
+import 'package:beit_alnakha_admin/features/influencers/presentation/views/influencer_details_layout.dart';
 import 'package:beit_alnakha_admin/features/layout/presentation/cubits/side_bar_cubit/side_bar_cubit.dart';
 import 'package:beit_alnakha_admin/features/layout/presentation/views/shell_route.dart';
 import 'package:beit_alnakha_admin/features/meals/presentation/views/meals_view.dart';
@@ -24,7 +25,6 @@ import 'package:beit_alnakha_admin/core/dependency_injection/injectable_config.d
 import 'package:beit_alnakha_admin/core/utils/app_constants.dart';
 import 'package:beit_alnakha_admin/features/authentication/presentation/cubits/login_cubit/login_cubit.dart';
 import 'package:beit_alnakha_admin/features/authentication/presentation/views/login_layout.dart';
-
 
 final GlobalKey<NavigatorState> _rootNavigatorKey = GlobalKey<NavigatorState>(
   debugLabel: 'root',
@@ -87,13 +87,11 @@ final GoRouter router = GoRouter(
                 return _buildPageWithSlideTransition(
                   context: context,
                   state: state,
-                  child:  RequestsDetailsLayout(
-                    requestId: requestId,
-                  ),
+                  child: RequestsDetailsLayout(requestId: requestId),
                 );
               },
             ),
-          ]
+          ],
         ),
 
         GoRoute(
@@ -115,9 +113,7 @@ final GoRouter router = GoRouter(
                 return _buildPageWithSlideTransition(
                   context: context,
                   state: state,
-                  child:  CustomerDetailsLayout(
-                    customerId: customerId,
-                  ),
+                  child: CustomerDetailsLayout(customerId: customerId),
                 );
               },
             ),
@@ -143,9 +139,7 @@ final GoRouter router = GoRouter(
                 return _buildPageWithSlideTransition(
                   context: context,
                   state: state,
-                  child:  DriverDetailsLayout(
-                    driverId: driverId,
-                  ),
+                  child: DriverDetailsLayout(driverId: driverId),
                 );
               },
             ),
@@ -170,13 +164,11 @@ final GoRouter router = GoRouter(
                 return _buildPageWithSlideTransition(
                   context: context,
                   state: state,
-                  child:  AgentDetailsLayout(
-                    agentId: agentId,
-                  ),
+                  child: AgentDetailsLayout(agentId: agentId),
                 );
               },
             ),
-          ]
+          ],
         ),
         GoRoute(
           path: Routes.influencersView,
@@ -185,9 +177,24 @@ final GoRouter router = GoRouter(
             return _buildPageWithSlideTransition(
               context: context,
               state: state,
-              child: const InfluencersView(),
+              child: const InfluencersLayout(),
             );
           },
+          routes: [
+            GoRoute(
+              path: '${Routes.influencerDetailsView}/:influencerId',
+              name: Routes.influencerDetailsView,
+              pageBuilder: (context, state) {
+                String influencerId =
+                    state.pathParameters['influencerId'] ?? '';
+                return _buildPageWithSlideTransition(
+                  context: context,
+                  state: state,
+                  child: InfluencerDetailsLayout(influencerId: influencerId),
+                );
+              },
+            ),
+          ],
         ),
         GoRoute(
           path: Routes.chefsView,
