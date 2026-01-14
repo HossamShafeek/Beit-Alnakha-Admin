@@ -16,6 +16,8 @@ abstract class AppAssets {
   static const String agents = '${AppConstants.pathForSvg}agents.svg';
   static const String influencersFill = '${AppConstants.pathForSvg}influencers_fill.svg';
   static const String influencers = '${AppConstants.pathForSvg}influencers.svg';
+  static const String employeesFill = '${AppConstants.pathForSvg}employees_fill.svg';
+  static const String employees = '${AppConstants.pathForSvg}employees.svg';
   static const String chefsFill = '${AppConstants.pathForSvg}chefs_fill.svg';
   static const String chefs = '${AppConstants.pathForSvg}chefs.svg';
   static const String mealsFill = '${AppConstants.pathForSvg}meals_fill.svg';

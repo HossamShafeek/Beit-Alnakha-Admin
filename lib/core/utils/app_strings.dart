@@ -30,6 +30,7 @@ class AppStrings {
   static const String drivers = 'السائقين';
   static const String agents = 'الوكلاء';
   static const String influencers = 'المشاهير';
+  static const String employees = 'الموظفين';
   static const String chefs = 'الشيفات';
   static const String meals = 'الوجبات';
   static const String features = 'المميزات';
@@ -42,6 +43,7 @@ class AppStrings {
   static const String manageDrivers = 'إدارة السائقين';
   static const String manageAgents = 'إدارة الوكلاء';
   static const String manageInfluencers = 'إدارة المشاهير';
+  static const String manageEmployees = 'إدارة الموظفين';
   static const String manageChefs = 'إدارة الشيفات';
   static const String manageMeals = 'إدارة الوجبات';
   static const String manageFeatures = 'إدارة المميزات';
@@ -59,6 +61,8 @@ class AppStrings {
       'متابعة أداء الوكلاء، مراقبة الكودات الترويجية، ومكافآت النقاط لكل وكيل.';
   static const String influencersDescription =
       'متابعة أداء المشاهير، مراقبة الكودات الترويجية، ومكافآت النقاط لكل مشهور.';
+  static const String employeesDescription =
+      'إدارة موظفي النظام، إضافة موظفين جدد، وتعديل الصلاحيات وحالة الحسابات.';
   static const String chefsDescription =
       'يمكنك من هنا تحكم في الوجبات التي تظهر لكل شيف حسب تخصصه أو القسم الذي يعمل فيه.';
   static const String mealsDescription =
@@ -380,14 +384,11 @@ class AppStrings {
       'اضغط لرفع فيديو المشهور هنا';
   static const String pressToUploadInfluencerImage =
       'اضغط لرفع صورة المشهور هنا';
-  static const String pressToUploadCoverImage =
-      'اضغط لرفع صورة الغلاف هنا';
+  static const String pressToUploadCoverImage = 'اضغط لرفع صورة الغلاف هنا';
   static const String addFeature = 'إضافه ميزة';
   static const String influencerDescription = 'وصف المشهور';
-  static const String pleaseEnterInfluencerDescription = 'من فضلك ادخل وصف المشهور';
-
-
-
+  static const String pleaseEnterInfluencerDescription =
+      'من فضلك ادخل وصف المشهور';
 
   static List<String> influencersStatusForStatistics = [
     allInfluencers,
@@ -414,7 +415,61 @@ class AppStrings {
     totalEqualAmount,
   ];
 
+  // Chefs View
+
+  static const String addChef = 'إضافة شيف';
+  static const String updateChef = 'تعديل شيف';
+  static const String chefsMenu = 'قائمة الشيفات';
+  static const String allChefs = 'إجمالي الشيفات';
+  static const String activeChefs = 'الشيفات النشطون';
+  static const String searchWithChefName = 'ابحث باسم الشيف…';
+  static const String chefName = 'اسم الشيف';
+  static const String chefStatus = 'حالة الشيف';
+  static const String deleteChef = 'حذف الشيف';
+  static const String youAreSureDeleteChef = 'هل انت متأكد من حذف هذا الشيف؟';
+  static const String pressToUploadChefImage = 'اضغط لرفع صورة الشيف هنا';
+
+  static List<String> chefsStatusForTabBar = [all, active, inactive];
+  static List<String> columnsNameForChefsDataTable = [
+    hash,
+    chefName,
+    phoneNumber,
+    governorate,
+    region,
+    stats,
+    action,
+  ];
+
+  // Employees View
+
+  static const String addEmployee = 'إضافة موظف';
+  static const String updateEmployee = 'تعديل موظف';
+  static const String employeesMenu = 'قائمة الموظفين';
+  static const String allEmployees = 'إجمالي الموظفين';
+  static const String activeEmployees = 'الموظفين النشطون';
+  static const String searchWithEmployeeName = 'ابحث باسم الموظف…';
+  static const String employeeName = 'اسم الموظف';
+  static const String employeeNumber = 'رقم الموظف';
+  static const String addedDate = 'تاريخ الإضافة';
+  static const String employeeStatus = 'حالة الموظف';
+  static const String deleteEmployee = 'حذف الموظف';
+  static const String youAreSureDeleteEmployee =
+      'هل انت متأكد من حذف هذا الموظف؟';
+  static const String pressToUploadEmployeeImage = 'اضغط لرفع صورة الموظف هنا';
+
+  static List<String> employeesStatusForTabBar = [all, active, inactive];
+  static List<String> columnsNameForEmployeesDataTable = [
+    hash,
+    employeeName,
+    employeeNumber,
+    governorate,
+    region,
+    addedDate,
+    action,
+  ];
+
   // Common
+  static const String stats = 'الحالة';
   static const String address = 'العنوان';
   static const String search = 'ابحث';
   static const String selectStartAndEndDate = 'حدد تاريخ البداية والنهاية';
@@ -445,8 +500,7 @@ class AppStrings {
   static const String downloadedSuccessfully = 'تم تنزيل الملف بنجاح';
   static const String uploadImageDescription =
       '( يفضل حجم: 512x512 px – صيغة PNG أو JPG )';
-  static const String uploadVideoDescription =
-      '( يفضل صيغة الفيديو MP4 )';
+  static const String uploadVideoDescription = '( يفضل صيغة الفيديو MP4 )';
   static const String settleSelectedPoints = 'تسوية النقاط المختارة';
   static const String confirmPointsSettlement = 'تأكيد تسوية النقاط';
   static const String settlementNumber = 'رقم التسوية';

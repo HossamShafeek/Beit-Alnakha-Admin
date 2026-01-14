@@ -1,4 +1,3 @@
-import 'package:beit_alnakha_admin/core/responsive_helper/responsive_app_extensions.dart';
 import 'package:beit_alnakha_admin/core/utils/app_assets.dart';
 import 'package:beit_alnakha_admin/core/utils/app_colors.dart';
 import 'package:beit_alnakha_admin/core/utils/app_strings.dart';
@@ -25,18 +24,13 @@ class LoginTextsFieldsSection extends StatelessWidget {
             textInputType: TextInputType.emailAddress,
             controller: loginCubit.emailController,
             backgroundColor: AppColors.secondaryBlack,
-            prefixIcon: SizedBox(
-              width: context.getIconsSizeForTextField,
-              height: context.getIconsSizeForTextField,
-              child: Center(
-                child: SvgPicture.asset(
-                  AppAssets.username,
-                  colorFilter: ColorFilter.mode(
-                    AppColors.white,
-                    BlendMode.srcIn,
-                  ),
-                  width: context.getIconsSizeForTextField,
-                  height: context.getIconsSizeForTextField,
+            prefixIcon: FittedBox(
+              fit: BoxFit.scaleDown,
+              child: SvgPicture.asset(
+                AppAssets.username,
+                colorFilter: ColorFilter.mode(
+                  AppColors.white,
+                  BlendMode.srcIn,
                 ),
               ),
             ),

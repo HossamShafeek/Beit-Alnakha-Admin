@@ -1,5 +1,4 @@
 import 'package:beit_alnakha_admin/core/utils/app_assets.dart';
-import 'package:beit_alnakha_admin/core/utils/app_size.dart';
 import 'package:beit_alnakha_admin/core/utils/app_strings.dart';
 import 'package:beit_alnakha_admin/core/widgets/custom_container_with_title.dart';
 import 'package:beit_alnakha_admin/core/widgets/custom_list_tile.dart';
@@ -11,8 +10,8 @@ import 'package:beit_alnakha_admin/features/agents/presentation/widgets/agent_vi
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class AddInfluencerTextsFieldsSection extends StatelessWidget {
-  const AddInfluencerTextsFieldsSection({super.key});
+class AddChefTextsFieldsSection extends StatelessWidget {
+  const AddChefTextsFieldsSection({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +30,7 @@ class AddInfluencerTextsFieldsSection extends StatelessWidget {
               }
               return null;
             },
-            hintText: AppStrings.username,
+            hintText: AppStrings.chefName,
           ),
           CustomPhoneField(
             paddingForBottom: 1,
@@ -58,23 +57,9 @@ class AddInfluencerTextsFieldsSection extends StatelessWidget {
           GovernoratesDropDown(controller: TextEditingController()),
           RegionsDropDown(controller: TextEditingController()),
           CustomListTile(
-            paddingForBottom: AppSize.size12,
             svgIconPath: AppAssets.status,
-            titleText: AppStrings.influencerStatus,
+            titleText: AppStrings.chefStatus,
             trailing: CustomSwitch(value: true, onChanged: (value) {}),
-          ),
-          CustomTextField(
-            controller: TextEditingController(),
-            maxLength: 100,
-            maxLines: 3,
-            paddingForBottom: 0,
-            validator: (value) {
-              if (value!.trim().isEmpty) {
-                return AppStrings.pleaseEnterInfluencerDescription;
-              }
-              return null;
-            },
-            hintText: AppStrings.influencerDescription,
           ),
         ],
       ),

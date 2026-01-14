@@ -1,12 +1,13 @@
 import 'package:beit_alnakha_admin/features/agents/presentation/views/agent_details_layout.dart';
 import 'package:beit_alnakha_admin/features/agents/presentation/views/agents_layout.dart';
-import 'package:beit_alnakha_admin/features/chefs/presentation/views/chefs_view.dart';
+import 'package:beit_alnakha_admin/features/chefs/presentation/views/chefs_layout.dart';
 import 'package:beit_alnakha_admin/features/codes/presentation/views/codes_view.dart';
 import 'package:beit_alnakha_admin/features/customers/presentation/views/customer_details_layout.dart';
 import 'package:beit_alnakha_admin/features/customers/presentation/views/customers_layout.dart';
 import 'package:beit_alnakha_admin/features/departments/presentation/views/departments_view.dart';
 import 'package:beit_alnakha_admin/features/drivers/presentation/views/driver_details_layout.dart';
 import 'package:beit_alnakha_admin/features/drivers/presentation/views/drivers_layout.dart';
+import 'package:beit_alnakha_admin/features/employees/presentation/views/employees_layout.dart';
 import 'package:beit_alnakha_admin/features/features/presentation/views/features_view.dart';
 import 'package:beit_alnakha_admin/features/influencers/presentation/views/influencers_layout.dart';
 import 'package:beit_alnakha_admin/features/influencers/presentation/views/influencer_details_layout.dart';
@@ -197,13 +198,39 @@ final GoRouter router = GoRouter(
           ],
         ),
         GoRoute(
+          path: Routes.employeesView,
+          name: Routes.employeesView,
+          pageBuilder: (context, state) {
+            return _buildPageWithSlideTransition(
+              context: context,
+              state: state,
+              child: const EmployeesLayout(),
+            );
+          },
+          routes: [
+            // GoRoute(
+            //   path: '${Routes.employeeDetailsView}/:employeeId',
+            //   name: Routes.employeeDetailsView,
+            //   pageBuilder: (context, state) {
+            //     String employeeId =
+            //         state.pathParameters['employeeId'] ?? '';
+            //     return _buildPageWithSlideTransition(
+            //       context: context,
+            //       state: state,
+            //       child: InfluencerDetailsLayout(influencerId: employeeId),
+            //     );
+            //   },
+            // ),
+          ],
+        ),
+        GoRoute(
           path: Routes.chefsView,
           name: Routes.chefsView,
           pageBuilder: (context, state) {
             return _buildPageWithSlideTransition(
               context: context,
               state: state,
-              child: const ChefsView(),
+              child: const ChefsLayout(),
             );
           },
         ),
