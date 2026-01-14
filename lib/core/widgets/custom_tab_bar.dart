@@ -9,8 +9,8 @@ class CustomTabBar extends StatefulWidget {
     super.key,
     required this.titles,
     this.onTap,
-     this.paddingForLeft,
-     this.paddingForRight,
+    this.paddingForLeft,
+    this.paddingForRight,
   });
 
   final List<String> titles;
@@ -29,16 +29,20 @@ class _CustomTabBarState extends State<CustomTabBar> {
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.only(
-        left: widget.paddingForLeft??context.withFormFactor(
-          onMobile: AppSize.size16,
-          onTablet: AppSize.size24,
-          onDesktop: AppSize.size24,
-        ),
-        right:widget.paddingForRight??context.withFormFactor(
-          onMobile: AppSize.size16,
-          onTablet: AppSize.size24,
-          onDesktop: AppSize.size24,
-        ),
+        left:
+            widget.paddingForLeft ??
+            context.withFormFactor(
+              onMobile: AppSize.size16,
+              onTablet: AppSize.size24,
+              onDesktop: AppSize.size24,
+            ),
+        right:
+            widget.paddingForRight ??
+            context.withFormFactor(
+              onMobile: AppSize.size16,
+              onTablet: AppSize.size24,
+              onDesktop: AppSize.size24,
+            ),
       ),
       child: SizedBox(
         height: AppSize.size40,
@@ -54,10 +58,10 @@ class _CustomTabBarState extends State<CustomTabBar> {
           dividerColor: Colors.transparent,
           indicatorColor: Colors.transparent,
 
-          indicatorPadding: const  EdgeInsetsDirectional.only(
+          indicatorPadding: const EdgeInsetsDirectional.only(
             end: AppSize.size8,
           ),
-         labelPadding: const EdgeInsetsDirectional.only(end: 8),
+          labelPadding: const EdgeInsetsDirectional.only(end: 8),
           indicator: BoxDecoration(
             borderRadius: BorderRadius.circular(AppSize.size10),
             color: AppColors.primary,

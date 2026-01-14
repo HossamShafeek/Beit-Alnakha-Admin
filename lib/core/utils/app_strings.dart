@@ -461,7 +461,7 @@ class AppStrings {
   static List<String> columnsNameForEmployeesDataTable = [
     hash,
     employeeName,
-    employeeNumber,
+    phoneNumber,
     governorate,
     region,
     addedDate,

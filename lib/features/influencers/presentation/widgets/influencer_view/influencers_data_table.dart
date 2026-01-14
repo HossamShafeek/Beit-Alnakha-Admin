@@ -186,7 +186,7 @@ class InfluencersDataTable extends StatelessWidget {
                               },
                               items: buildPopupMenuItems(context, [
                                 MenuActionEnum.viewDetails,
-                                MenuActionEnum.addFeature,
+                               // MenuActionEnum.addFeature,
                                 MenuActionEnum.edit,
                                 MenuActionEnum.delete,
                                 MenuActionEnum.whatsappContact,

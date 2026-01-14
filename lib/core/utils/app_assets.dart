@@ -92,6 +92,8 @@ abstract class AppAssets {
   static const String orderFillPrimary = '${AppConstants.pathForSvg}order_fill_primary.svg';
   static const String moneyVectorHand = '${AppConstants.pathForSvg}money_vector_hand.svg';
   static const String wallet = '${AppConstants.pathForSvg}wallet.svg';
+  static const String check = '${AppConstants.pathForSvg}check.svg';
+  static const String uncheck = '${AppConstants.pathForSvg}uncheck.svg';
 
   // Other Images
   static const String logo = '${AppConstants.pathForImages}logo.png';
