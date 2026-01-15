@@ -32,6 +32,15 @@ abstract class AppAssets {
   static const String settingsFill =
       '${AppConstants.pathForSvg}settings_fill.svg';
   static const String settings = '${AppConstants.pathForSvg}settings.svg';
+  static const String awardsFill =
+      '${AppConstants.pathForSvg}awards_fill.svg';
+  static const String awards = '${AppConstants.pathForSvg}awards.svg';
+  static const String ratingsFill =
+      '${AppConstants.pathForSvg}ratings_fill.svg';
+  static const String ratings = '${AppConstants.pathForSvg}ratings.svg';
+  static const String basicDataFill =
+      '${AppConstants.pathForSvg}basic_data_fill.svg';
+  static const String basicData = '${AppConstants.pathForSvg}basic_data.svg';
   static const String date = '${AppConstants.pathForSvg}date.svg';
   static const String search = '${AppConstants.pathForSvg}search.svg';
   static const String arrowRight = '${AppConstants.pathForSvg}arrow_right.svg';
@@ -94,6 +103,9 @@ abstract class AppAssets {
   static const String wallet = '${AppConstants.pathForSvg}wallet.svg';
   static const String check = '${AppConstants.pathForSvg}check.svg';
   static const String uncheck = '${AppConstants.pathForSvg}uncheck.svg';
+  static const String meal = '${AppConstants.pathForSvg}meal.svg';
+  static const String featureVector = '${AppConstants.pathForSvg}feature_vector.svg';
+  static const String feature = '${AppConstants.pathForSvg}feature.svg';
 
   // Other Images
   static const String logo = '${AppConstants.pathForImages}logo.png';

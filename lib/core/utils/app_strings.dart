@@ -36,7 +36,9 @@ class AppStrings {
   static const String features = 'المميزات';
   static const String codesAndPoints = 'الكودات والنقاط';
   static const String departments = 'الأقسام';
-  static const String settings = 'الإعدادات';
+  static const String awards = 'الجوائز';
+  static const String ratings = 'التقييمات';
+  static const String basicData = 'البيانات الأساسية';
 
   static const String manageRequests = 'إدارة الطلبات';
   static const String manageCustomers = 'إدارة العملاء';
@@ -50,6 +52,9 @@ class AppStrings {
   static const String manageCodesAndPoints = 'إدارة الكودات والنقاط';
   static const String manageDepartments = 'إدارة الأقسام';
   static const String manageSettings = 'إدارة الإعدادات';
+  static const String manageAwards = 'إدارة الجوائز';
+  static const String manageRatings = 'إدارة التقييمات';
+  static const String manageBasicData = 'إدارة البيانات الأساسية';
 
   static const String requestsDescription =
       'تتبع جميع الطلبات الواردة من داخل وخارج المطعم، مع التحكم الكامل في حالة الطلب، والملاحظات، والمميزات المرفقة.';
@@ -75,6 +80,13 @@ class AppStrings {
       'يمكن إضافة أو تعديل أو حذف الأقسام الرئيسية التي تظهر في واجهة المستخدم.';
   static const String settingsDescription =
       'تحكم بجميع إعدادات النظام، من معلومات التطبيق إلى إعدادات التوصيل والدفع.';
+  static const String awardsDescription =
+      'يمكنك إدارة الجوائز التي يمكن للمستخدمين استبدال النقاط بها، مع إمكانية تخصيص جوائز مختلفة لكل نوع مستخدم.';
+  static const String ratingsDescription =
+      'جميع تقييمات الزبائن على الطلبات وجودة التوصيل والطعام.';
+  static const String basicDataDescription =
+      'تحكم بجميع إعدادات النظام، من معلومات التطبيق إلى إعدادات التوصيل والدفع.';
+
 
   // Requests View
   static const String searchWithCustomerNameOrRequestsId =
@@ -389,6 +401,13 @@ class AppStrings {
   static const String influencerDescription = 'وصف المشهور';
   static const String pleaseEnterInfluencerDescription =
       'من فضلك ادخل وصف المشهور';
+  static const String addFavoriteMeals = 'إضافة الوجبات المفضلة';
+  static const String chooseMeals = 'أختر الوجبات';
+  static const String addMealsForInfluencer = 'إضافة الوجبات للمشهور';
+  static const String addFavoriteFeatures = 'إضافة الميزات';
+  static const String chooseFeatures = 'أختر الميزات';
+  static const String addFeaturesForInfluencer = 'إضافة الميزات للمشهور';
+
 
   static List<String> influencersStatusForStatistics = [
     allInfluencers,
@@ -470,6 +489,7 @@ class AppStrings {
 
   // Common
   static const String stats = 'الحالة';
+  static const String selectAll = 'تحديد الكل';
   static const String address = 'العنوان';
   static const String search = 'ابحث';
   static const String selectStartAndEndDate = 'حدد تاريخ البداية والنهاية';

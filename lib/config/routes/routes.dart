@@ -17,5 +17,7 @@ class Routes {
   static const String mealsView = '/meals_view';
   static const String featuresView = '/features_view';
   static const String codesView = '/codes_view';
-  static const String settingsView = '/settings_view';
+  static const String awardsView = '/awards_view';
+  static const String ratingsView = '/ratings_view';
+  static const String basicDataView = '/basic_data_view';
 }

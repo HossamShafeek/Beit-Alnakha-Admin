@@ -1,5 +1,7 @@
 import 'package:beit_alnakha_admin/features/agents/presentation/views/agent_details_layout.dart';
 import 'package:beit_alnakha_admin/features/agents/presentation/views/agents_layout.dart';
+import 'package:beit_alnakha_admin/features/awards/presentation/views/awards_view.dart';
+import 'package:beit_alnakha_admin/features/basic_data/presentation/views/basic_data_view.dart';
 import 'package:beit_alnakha_admin/features/chefs/presentation/views/chefs_layout.dart';
 import 'package:beit_alnakha_admin/features/codes/presentation/views/codes_view.dart';
 import 'package:beit_alnakha_admin/features/customers/presentation/views/customer_details_layout.dart';
@@ -14,9 +16,11 @@ import 'package:beit_alnakha_admin/features/influencers/presentation/views/influ
 import 'package:beit_alnakha_admin/features/layout/presentation/cubits/side_bar_cubit/side_bar_cubit.dart';
 import 'package:beit_alnakha_admin/features/layout/presentation/views/shell_route.dart';
 import 'package:beit_alnakha_admin/features/meals/presentation/views/meals_view.dart';
+import 'package:beit_alnakha_admin/features/ratings/presentation/views/ratings_view.dart';
 import 'package:beit_alnakha_admin/features/requests/presentation/views/requests_details_layout.dart';
 import 'package:beit_alnakha_admin/features/requests/presentation/views/requests_layout.dart';
-import 'package:beit_alnakha_admin/features/settings/presentation/views/settings_view.dart';
+
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
@@ -279,13 +283,35 @@ final GoRouter router = GoRouter(
           },
         ),
         GoRoute(
-          path: Routes.settingsView,
-          name: Routes.settingsView,
+          path: Routes.awardsView,
+          name: Routes.awardsView,
           pageBuilder: (context, state) {
             return _buildPageWithSlideTransition(
               context: context,
               state: state,
-              child: const SettingsView(),
+              child: const AwardsView(),
+            );
+          },
+        ),
+        GoRoute(
+          path: Routes.ratingsView,
+          name: Routes.ratingsView,
+          pageBuilder: (context, state) {
+            return _buildPageWithSlideTransition(
+              context: context,
+              state: state,
+              child: const RatingsView(),
+            );
+          },
+        ),
+        GoRoute(
+          path: Routes.basicDataView,
+          name: Routes.basicDataView,
+          pageBuilder: (context, state) {
+            return _buildPageWithSlideTransition(
+              context: context,
+              state: state,
+              child: const BasicDataView(),
             );
           },
         ),

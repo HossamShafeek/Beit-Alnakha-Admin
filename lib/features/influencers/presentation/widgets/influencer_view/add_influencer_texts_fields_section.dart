@@ -8,6 +8,8 @@ import 'package:beit_alnakha_admin/core/widgets/custom_switch.dart';
 import 'package:beit_alnakha_admin/core/widgets/custom_text_field.dart';
 import 'package:beit_alnakha_admin/features/agents/presentation/widgets/agent_view/governorates_drop_down.dart';
 import 'package:beit_alnakha_admin/features/agents/presentation/widgets/agent_view/regions_drop_down.dart';
+import 'package:beit_alnakha_admin/features/influencers/presentation/widgets/influencer_view/features_dialog.dart';
+import 'package:beit_alnakha_admin/features/influencers/presentation/widgets/influencer_view/meals_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -55,6 +57,8 @@ class AddInfluencerTextsFieldsSection extends StatelessWidget {
             },
             hintText: AppStrings.password,
           ),
+          MealsDialog(controller: TextEditingController(),),
+          FeaturesDialog(controller: TextEditingController(),),
           GovernoratesDropDown(controller: TextEditingController()),
           RegionsDropDown(controller: TextEditingController()),
           CustomListTile(

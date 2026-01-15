@@ -40,7 +40,9 @@ class SideBarCubit extends Cubit<SideBarStates> {
     AppAssets.meals,
     AppAssets.features,
     AppAssets.codes,
-    AppAssets.settings,
+    AppAssets.awards,
+    AppAssets.ratings,
+    AppAssets.basicData,
   ];
   final List<String> iconsFilled = [
     AppAssets.requestsFill,
@@ -54,7 +56,9 @@ class SideBarCubit extends Cubit<SideBarStates> {
     AppAssets.mealsFill,
     AppAssets.featuresFill,
     AppAssets.codesFill,
-    AppAssets.settingsFill,
+    AppAssets.awardsFill,
+    AppAssets.ratingsFill,
+    AppAssets.basicDataFill,
   ];
 
   final List<String> titles = [
@@ -69,7 +73,9 @@ class SideBarCubit extends Cubit<SideBarStates> {
     AppStrings.meals,
     AppStrings.features,
     AppStrings.codesAndPoints,
-    AppStrings.settings,
+    AppStrings.awards,
+    AppStrings.ratings,
+    AppStrings.basicData,
   ];
 
    final List<String> manageTitles = [
@@ -80,11 +86,13 @@ class SideBarCubit extends Cubit<SideBarStates> {
     AppStrings.manageInfluencers,
     AppStrings.manageEmployees,
     AppStrings.manageChefs,
+    AppStrings.manageDepartments,
     AppStrings.manageMeals,
     AppStrings.manageFeatures,
     AppStrings.manageCodesAndPoints,
-    AppStrings.manageDepartments,
-    AppStrings.manageSettings,
+    AppStrings.manageAwards,
+    AppStrings.manageRatings,
+    AppStrings.manageBasicData,
   ];
 
   final List<String> subtitles = [
@@ -95,11 +103,13 @@ class SideBarCubit extends Cubit<SideBarStates> {
     AppStrings.influencersDescription,
     AppStrings.employeesDescription,
     AppStrings.chefsDescription,
+    AppStrings.departmentsDescription,
     AppStrings.mealsDescription,
     AppStrings.featuresDescription,
     AppStrings.codesAndPointsDescription,
-    AppStrings.departmentsDescription,
-    AppStrings.settingsDescription,
+    AppStrings.awardsDescription,
+    AppStrings.ratingsDescription,
+    AppStrings.basicDataDescription,
   ];
 
   final routes = [
@@ -114,6 +124,8 @@ class SideBarCubit extends Cubit<SideBarStates> {
     Routes.mealsView,
     Routes.featuresView,
     Routes.codesView,
-    Routes.settingsView,
+    Routes.awardsView,
+    Routes.ratingsView,
+    Routes.basicDataView,
   ];
 }

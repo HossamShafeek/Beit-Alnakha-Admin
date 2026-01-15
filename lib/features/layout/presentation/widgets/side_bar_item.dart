@@ -30,7 +30,7 @@ class SideBarItem extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.only(
         bottom: AppSize.size12,
-        top: isLastItem ? AppSize.size12 : 0,
+      //  top: isLastItem ? AppSize.size12 : 0,
         left:  AppSize.size16,
         right:  AppSize.size16,
       ),

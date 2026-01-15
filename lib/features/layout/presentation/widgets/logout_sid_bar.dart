@@ -23,7 +23,12 @@ class LogoutSidBar extends StatelessWidget {
       child: Align(
         alignment: Alignment.bottomCenter,
         child: Padding(
-          padding: const EdgeInsets.only(bottom: AppSize.size40, left: AppSize.size16, right: AppSize.size16),
+          padding: const EdgeInsets.only(
+            bottom: AppSize.size40,
+            top: AppSize.size16,
+            left: AppSize.size16,
+            right: AppSize.size16,
+          ),
           child: InkWell(
             borderRadius: BorderRadius.circular(AppSize.size16),
             radius: AppSize.size16,

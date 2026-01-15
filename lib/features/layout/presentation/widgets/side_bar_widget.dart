@@ -128,16 +128,11 @@ class SideBarWidget extends StatelessWidget {
                     padding: EdgeInsets.zero,
                     itemCount: sideBarCubit.titles.length,
                     itemBuilder: (context, index) {
-                      final lastItemIndex = sideBarCubit.titles.length - 1;
+                      final lastItemIndex = sideBarCubit.titles.length -1;
                       final shouldShowDivider = index == lastItemIndex;
                       return Column(
                         children: [
-                          if (shouldShowDivider)
-                            const Divider(
-                              height: 1,
-                              thickness: 1,
-                              color: AppColors.greyAA,
-                            ),
+
                           SideBarItem(
                             title: sideBarCubit.titles[index],
                             icon: sideBarCubit.getCurrentIndex(context) == index
@@ -163,6 +158,12 @@ class SideBarWidget extends StatelessWidget {
                               }
                             },
                           ),
+                          // if (shouldShowDivider)
+                          //   const Divider(
+                          //     height: 1,
+                          //     thickness: 1,
+                          //     color: AppColors.greyAA,
+                          //   ),
                         ],
                       );
                     },
