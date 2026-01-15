@@ -16,11 +16,17 @@ class CustomDropdown extends StatefulWidget {
     required this.hintText,
     this.prefixIcon,
     this.onTapOutsideUnFocus = true,
+    this.enabledBorder,
+    this.borderRadius,
     required this.items,
     this.onChanged,
     this.offset,
     this.title,
     this.height,
+    this.hoverColor,
+    this.focusedBorder,
+    this.focusedErrorBorder,
+    this.errorBorder,
   });
 
   final TextEditingController controller;
@@ -30,10 +36,16 @@ class CustomDropdown extends StatefulWidget {
   final String hintText;
   final String? title;
   final bool? onTapOutsideUnFocus;
+  final InputBorder? enabledBorder;
+  final InputBorder? focusedBorder;
+  final InputBorder? focusedErrorBorder;
+  final InputBorder? errorBorder;
+  final double? borderRadius;
   final Offset? offset;
   final List<PopupMenuEntry> items;
   final void Function(String)? onChanged;
   final double? height;
+  final Color? hoverColor;
 
   @override
   State<CustomDropdown> createState() => _CustomDropdownState();
@@ -140,24 +152,25 @@ class _CustomDropdownState extends State<CustomDropdown> {
                     ),
                 prefixIcon: widget.prefixIcon,
                 filled: true,
+                hoverColor: widget.hoverColor??AppColors.grey200,
                 hintStyle: AppStyles.regular16(
                   context,
                 ).copyWith(color: AppColors.grey7A),
                 fillColor: AppColors.white,
-                border: AppConstants.enabledBorder.copyWith(
-                  borderRadius: BorderRadius.circular(AppSize.size24),
+                border: widget.enabledBorder??AppConstants.enabledBorder.copyWith(
+                  borderRadius: BorderRadius.circular(widget.borderRadius??AppSize.size24),
                 ),
-                enabledBorder: AppConstants.enabledBorder.copyWith(
-                  borderRadius: BorderRadius.circular(AppSize.size24),
+                enabledBorder: widget.enabledBorder??AppConstants.enabledBorder.copyWith(
+                  borderRadius: BorderRadius.circular(widget.borderRadius??AppSize.size24),
                 ),
-                focusedBorder: AppConstants.enabledBorder.copyWith(
-                  borderRadius: BorderRadius.circular(AppSize.size24),
+                focusedBorder: widget.focusedBorder?? AppConstants.enabledBorder.copyWith(
+                  borderRadius: BorderRadius.circular(widget.borderRadius??AppSize.size24),
                 ),
-                errorBorder: AppConstants.errorBorder.copyWith(
-                  borderRadius: BorderRadius.circular(AppSize.size24),
+                errorBorder:widget.errorBorder?? AppConstants.errorBorder.copyWith(
+                  borderRadius: BorderRadius.circular(widget.borderRadius??AppSize.size24),
                 ),
-                focusedErrorBorder: AppConstants.errorBorder.copyWith(
-                  borderRadius: BorderRadius.circular(AppSize.size24),
+                focusedErrorBorder: widget.focusedErrorBorder??AppConstants.errorBorder.copyWith(
+                  borderRadius: BorderRadius.circular(widget.borderRadius??AppSize.size24),
                 ),
               ),
             ),

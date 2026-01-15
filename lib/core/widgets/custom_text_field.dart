@@ -1,3 +1,4 @@
+import 'package:flutter/services.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:beit_alnakha_admin/core/utils/app_assets.dart';
 import 'package:beit_alnakha_admin/core/utils/app_colors.dart';
@@ -37,6 +38,7 @@ class CustomTextField extends StatefulWidget {
     this.enabledBorder,
     this.focusedBorder,
     this.hoverColor,
+    this.inputFormatters,
   });
 
   final TextEditingController controller;
@@ -67,6 +69,7 @@ class CustomTextField extends StatefulWidget {
   final TextAlign? textAlign;
   final InputBorder? enabledBorder;
   final InputBorder? focusedBorder;
+  final List<TextInputFormatter>? inputFormatters;
 
   @override
   State<CustomTextField> createState() => _CustomTextFieldState();
@@ -113,6 +116,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
                 FocusScope.of(context).unfocus();
               }
             },
+            inputFormatters: widget.inputFormatters,
             style: AppStyles.regular16(context).copyWith(
            color:      widget.textStyleColor??AppColors.black
             ),

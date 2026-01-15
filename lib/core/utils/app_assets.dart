@@ -6,35 +6,42 @@ abstract class AppAssets {
   static const String show = '${AppConstants.pathForSvg}show.svg';
   static const String lock = '${AppConstants.pathForSvg}lock.svg';
   static const String username = '${AppConstants.pathForSvg}username.svg';
-  static const String requestsFill = '${AppConstants.pathForSvg}requests_fill.svg';
+  static const String requestsFill =
+      '${AppConstants.pathForSvg}requests_fill.svg';
   static const String requests = '${AppConstants.pathForSvg}requests.svg';
-  static const String customersFill = '${AppConstants.pathForSvg}customers_fill.svg';
+  static const String customersFill =
+      '${AppConstants.pathForSvg}customers_fill.svg';
   static const String customers = '${AppConstants.pathForSvg}customers.svg';
-  static const String driversFill = '${AppConstants.pathForSvg}drivers_fill.svg';
+  static const String driversFill =
+      '${AppConstants.pathForSvg}drivers_fill.svg';
   static const String drivers = '${AppConstants.pathForSvg}drivers.svg';
   static const String agentsFill = '${AppConstants.pathForSvg}agents_fill.svg';
   static const String agents = '${AppConstants.pathForSvg}agents.svg';
-  static const String influencersFill = '${AppConstants.pathForSvg}influencers_fill.svg';
+  static const String influencersFill =
+      '${AppConstants.pathForSvg}influencers_fill.svg';
   static const String influencers = '${AppConstants.pathForSvg}influencers.svg';
-  static const String employeesFill = '${AppConstants.pathForSvg}employees_fill.svg';
+  static const String employeesFill =
+      '${AppConstants.pathForSvg}employees_fill.svg';
   static const String employees = '${AppConstants.pathForSvg}employees.svg';
   static const String chefsFill = '${AppConstants.pathForSvg}chefs_fill.svg';
   static const String chefs = '${AppConstants.pathForSvg}chefs.svg';
   static const String mealsFill = '${AppConstants.pathForSvg}meals_fill.svg';
   static const String meals = '${AppConstants.pathForSvg}meals.svg';
-  static const String featuresFill = '${AppConstants.pathForSvg}features_fill.svg';
+  static const String featuresFill =
+      '${AppConstants.pathForSvg}features_fill.svg';
   static const String features = '${AppConstants.pathForSvg}features.svg';
   static const String codesFill = '${AppConstants.pathForSvg}codes_fill.svg';
   static const String codes = '${AppConstants.pathForSvg}codes.svg';
   static const String coupon = '${AppConstants.pathForSvg}coupon.svg';
-  static const String departmentsFill = '${AppConstants.pathForSvg}departments_fill.svg';
+  static const String departmentsFill =
+      '${AppConstants.pathForSvg}departments_fill.svg';
   static const String departments = '${AppConstants.pathForSvg}departments.svg';
   static const String settingsFill =
       '${AppConstants.pathForSvg}settings_fill.svg';
   static const String settings = '${AppConstants.pathForSvg}settings.svg';
-  static const String awardsFill =
-      '${AppConstants.pathForSvg}awards_fill.svg';
+  static const String awardsFill = '${AppConstants.pathForSvg}awards_fill.svg';
   static const String awards = '${AppConstants.pathForSvg}awards.svg';
+  static const String awardsUser = '${AppConstants.pathForSvg}awards_user.svg';
   static const String ratingsFill =
       '${AppConstants.pathForSvg}ratings_fill.svg';
   static const String ratings = '${AppConstants.pathForSvg}ratings.svg';
@@ -52,15 +59,20 @@ abstract class AppAssets {
   static const String menu = '${AppConstants.pathForSvg}menu.svg';
   static const String close = '${AppConstants.pathForSvg}close.svg';
   static const String orders = '${AppConstants.pathForSvg}orders.svg';
-  static const String ordersWaiting = '${AppConstants.pathForSvg}orders_waiting.svg';
-  static const String ordersDelivery = '${AppConstants.pathForSvg}orders_delivery.svg';
+  static const String ordersWaiting =
+      '${AppConstants.pathForSvg}orders_waiting.svg';
+  static const String ordersDelivery =
+      '${AppConstants.pathForSvg}orders_delivery.svg';
   static const String ordersDone = '${AppConstants.pathForSvg}orders_done.svg';
-  static const String ordersCancelled = '${AppConstants.pathForSvg}orders_cancelled.svg';
+  static const String ordersCancelled =
+      '${AppConstants.pathForSvg}orders_cancelled.svg';
   static const String noInternet = '${AppConstants.pathForSvg}no_internet.svg';
   static const String more = '${AppConstants.pathForSvg}more.svg';
-  static const String notifications = '${AppConstants.pathForSvg}notifications.svg';
+  static const String notifications =
+      '${AppConstants.pathForSvg}notifications.svg';
   static const String newOrder = '${AppConstants.pathForSvg}new_order.svg';
-  static const String cancelOrder = '${AppConstants.pathForSvg}cancel_order.svg';
+  static const String cancelOrder =
+      '${AppConstants.pathForSvg}cancel_order.svg';
   static const String delivering = '${AppConstants.pathForSvg}delivering.svg';
   static const String waiting = '${AppConstants.pathForSvg}waiting.svg';
   static const String done = '${AppConstants.pathForSvg}done.svg';
@@ -76,15 +88,22 @@ abstract class AppAssets {
   static const String addVideo = '${AppConstants.pathForSvg}add_video.svg';
   static const String pointsFill = '${AppConstants.pathForSvg}points_fill.svg';
   static const String points = '${AppConstants.pathForSvg}points.svg';
-  static const String moneyCircleFill = '${AppConstants.pathForSvg}money_circle_fill.svg';
-  static const String moneyCircle = '${AppConstants.pathForSvg}money_circle.svg';
+  static const String moneyCircleFill =
+      '${AppConstants.pathForSvg}money_circle_fill.svg';
+  static const String moneyCircle =
+      '${AppConstants.pathForSvg}money_circle.svg';
   static const String whatsApp = '${AppConstants.pathForSvg}whats_app.svg';
-  static const String whatsAppFill = '${AppConstants.pathForSvg}whats_app_fill.svg';
+  static const String whatsAppFill =
+      '${AppConstants.pathForSvg}whats_app_fill.svg';
   static const String addNote = '${AppConstants.pathForSvg}add_note.svg';
-  static const String ordersVector = '${AppConstants.pathForSvg}orders_vector.svg';
-  static const String moneyVector = '${AppConstants.pathForSvg}money_vector.svg';
-  static const String phoneVector = '${AppConstants.pathForSvg}phone_vector.svg';
-  static const String pointsVector = '${AppConstants.pathForSvg}points_vector.svg';
+  static const String ordersVector =
+      '${AppConstants.pathForSvg}orders_vector.svg';
+  static const String moneyVector =
+      '${AppConstants.pathForSvg}money_vector.svg';
+  static const String phoneVector =
+      '${AppConstants.pathForSvg}phone_vector.svg';
+  static const String pointsVector =
+      '${AppConstants.pathForSvg}points_vector.svg';
   static const String address = '${AppConstants.pathForSvg}address.svg';
   static const String city = '${AppConstants.pathForSvg}city.svg';
   static const String region = '${AppConstants.pathForSvg}region.svg';
@@ -98,13 +117,16 @@ abstract class AppAssets {
   static const String dollarTwo = '${AppConstants.pathForSvg}dollar_two.svg';
   static const String rate = '${AppConstants.pathForSvg}rate.svg';
   static const String star = '${AppConstants.pathForSvg}star.svg';
-  static const String orderFillPrimary = '${AppConstants.pathForSvg}order_fill_primary.svg';
-  static const String moneyVectorHand = '${AppConstants.pathForSvg}money_vector_hand.svg';
+  static const String orderFillPrimary =
+      '${AppConstants.pathForSvg}order_fill_primary.svg';
+  static const String moneyVectorHand =
+      '${AppConstants.pathForSvg}money_vector_hand.svg';
   static const String wallet = '${AppConstants.pathForSvg}wallet.svg';
   static const String check = '${AppConstants.pathForSvg}check.svg';
   static const String uncheck = '${AppConstants.pathForSvg}uncheck.svg';
   static const String meal = '${AppConstants.pathForSvg}meal.svg';
-  static const String featureVector = '${AppConstants.pathForSvg}feature_vector.svg';
+  static const String featureVector =
+      '${AppConstants.pathForSvg}feature_vector.svg';
   static const String feature = '${AppConstants.pathForSvg}feature.svg';
 
   // Other Images

@@ -87,7 +87,6 @@ class AppStrings {
   static const String basicDataDescription =
       'تحكم بجميع إعدادات النظام، من معلومات التطبيق إلى إعدادات التوصيل والدفع.';
 
-
   // Requests View
   static const String searchWithCustomerNameOrRequestsId =
       'ابحث برقم الطلب أو باسم الزبون…';
@@ -218,7 +217,7 @@ class AppStrings {
   static const String activeCustomers = 'العملاء النشطون';
   static const String vipCustomers = 'كبار الزوار';
   static const String blockedCustomers = 'العملاء المحظورون';
-  static const String influencer = 'مستثمر';
+  static const String influencer = 'مشهور';
   static const String clientName = 'اسم العميل';
   static const String whatsAppNumber = 'رقم الواتساب';
   static const String governorate = 'المحافظة';
@@ -243,10 +242,9 @@ class AppStrings {
 
   static List<String> customersStatusForTabBar = [
     all,
-    activeCustomers,
     vipCustomers,
+    activeCustomers,
     blockedCustomers,
-    influencer,
   ];
   static List<String> columnsNameForCustomersDataTable = [
     hash,
@@ -408,7 +406,6 @@ class AppStrings {
   static const String chooseFeatures = 'أختر الميزات';
   static const String addFeaturesForInfluencer = 'إضافة الميزات للمشهور';
 
-
   static List<String> influencersStatusForStatistics = [
     allInfluencers,
     activeNow,
@@ -484,6 +481,62 @@ class AppStrings {
     governorate,
     region,
     addedDate,
+    action,
+  ];
+
+  // Awards View
+
+  static const String addAward = 'إضافة جائزة';
+  static const String updateAward = 'تعديل جائزة';
+  static const String awardsMenu = 'قائمة الجوائز';
+  static const String totalAwards = 'إجمالي الجوائز';
+  static const String driversAwards = 'جوائز السائقين';
+  static const String influencersAwards = 'جوائز المشاهير';
+  static const String customersAwards = 'جوائز العملاء';
+  static const String agentsAwards = 'جوائز الوكلاء';
+  static const String searchWithAwardName = 'ابحث باسم الجائزة…';
+  static const String awardName = 'اسم الجائزة';
+  static const String requiredPoints = 'النقاط المطلوبة';
+  static const String userType = 'نوع المستخدم';
+  static const String allStatuses = 'جميع الحالات';
+  static const String deleteAward = 'حذف الجائزة';
+  static const String youAreSureDeleteAward =
+      'هل انت متأكد من حذف هذه الجائزة؟';
+  static const String driver = 'سائق';
+  static const String agent = 'وكيل';
+  static const String customer = 'زبون';
+  static const String awardStatus = 'حالة الجائزة';
+  static const String pleaseEnterAwardName = 'من فضلك أدخل اسم الجائزة';
+  static const String pleaseEnterRequiredPoints =
+      'من فضلك أدخل النقاط المطلوبة';
+
+  static List<String> awardsStatusForStatistics = [
+    totalAwards,
+    driversAwards,
+    influencersAwards,
+    customersAwards,
+    agentsAwards,
+  ];
+
+  static List<String> userTypesForDropDown = [
+    all,
+    driver,
+    agent,
+    influencer,
+    customer,
+  ];
+
+  static List<String> userTypesForForm = [driver, agent, influencer, customer];
+
+  static List<String> awardsStatusForDropDown = [allStatuses, active, inactive];
+
+  static List<String> awardsStatusForTabBar = [all, active, inactive];
+  static List<String> columnsNameForAwardsDataTable = [
+    hash,
+    awardName,
+    addedDate,
+    requiredPoints,
+    userType,
     action,
   ];
 

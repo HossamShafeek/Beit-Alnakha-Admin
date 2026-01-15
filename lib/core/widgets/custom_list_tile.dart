@@ -21,6 +21,7 @@ class CustomListTile extends StatelessWidget {
     this.paddingForBottom,
     this.trailingTitleColor,
     this.titleWidget,
+    this.removeIconPadding=false,
   });
 
   final String? titleText;
@@ -32,10 +33,10 @@ class CustomListTile extends StatelessWidget {
   final Color? trailingTitleColor;
   final Color? backgroundIconColor;
   final Color? backgroundColor;
-
   final Widget? trailing;
   final double? horizontalTitleGap;
   final bool? expandedTitle;
+  final bool removeIconPadding;
   final double? paddingForTop;
   final double? paddingForBottom;
 
@@ -51,9 +52,11 @@ class CustomListTile extends StatelessWidget {
         child: ListTile(
           onTap: onTap,
           hoverColor: AppColors.grey200,
-          contentPadding: EdgeInsets.symmetric(
-            horizontal: AppSize.size12,
-            vertical: AppSize.size4,
+          contentPadding: EdgeInsets.only(
+            left: AppSize.size12,
+            top: AppSize.size4,
+            bottom: AppSize.size4,
+            right: removeIconPadding?0:AppSize.size12,
           ),
           horizontalTitleGap: horizontalTitleGap ?? AppSize.size5,
           dense: true,

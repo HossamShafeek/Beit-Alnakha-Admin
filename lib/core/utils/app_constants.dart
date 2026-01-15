@@ -13,7 +13,7 @@ class AppConstants {
   static const String pathForLottie = 'assets/lottie/';
   static const String onboardingKey = 'onboarding';
   static  GlobalKey<ScaffoldState> layoutKey = GlobalKey<ScaffoldState>();
-
+  static TextInputFormatter numberFormatter = FilteringTextInputFormatter.digitsOnly;
   static final OutlineInputBorder focusedBorder = OutlineInputBorder(
     borderRadius: BorderRadius.circular(AppSize.size12),
     borderSide: BorderSide(width: AppSize.borderSize, color: AppColors.primary),

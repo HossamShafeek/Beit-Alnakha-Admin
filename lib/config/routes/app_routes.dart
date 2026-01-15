@@ -1,6 +1,6 @@
 import 'package:beit_alnakha_admin/features/agents/presentation/views/agent_details_layout.dart';
 import 'package:beit_alnakha_admin/features/agents/presentation/views/agents_layout.dart';
-import 'package:beit_alnakha_admin/features/awards/presentation/views/awards_view.dart';
+import 'package:beit_alnakha_admin/features/awards/presentation/views/awards_layout.dart';
 import 'package:beit_alnakha_admin/features/basic_data/presentation/views/basic_data_view.dart';
 import 'package:beit_alnakha_admin/features/chefs/presentation/views/chefs_layout.dart';
 import 'package:beit_alnakha_admin/features/codes/presentation/views/codes_view.dart';
@@ -287,7 +287,7 @@ final GoRouter router = GoRouter(
             return _buildPageWithSlideTransition(
               context: context,
               state: state,
-              child: const AwardsView(),
+              child: const AwardsLayout(),
             );
           },
         ),

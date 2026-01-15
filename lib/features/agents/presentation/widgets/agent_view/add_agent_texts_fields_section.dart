@@ -57,7 +57,7 @@ class AddAgentTextsFieldsSection extends StatelessWidget {
           GovernoratesDropDown(controller: TextEditingController()),
           RegionsDropDown(controller: TextEditingController()),
           CustomListTile(
-
+            removeIconPadding: true,
             svgIconPath: AppAssets.status,
             titleText: AppStrings.agentStatus,
             trailing: CustomSwitch(value: true, onChanged: (value) {}),
