@@ -4,7 +4,6 @@ import 'package:beit_alnakha_admin/features/authentication/data/models/authentic
 import 'package:beit_alnakha_admin/features/authentication/params/login_params.dart';
 import 'package:injectable/injectable.dart';
 
-
 abstract class AuthenticationRemoteDataSource {
   Future<AuthenticationModel> login({required LoginParams loginParams});
 }
@@ -18,9 +17,9 @@ class AuthenticationRemoteDataSourceImplementation
 
   @override
   Future<AuthenticationModel> login({required LoginParams loginParams}) async {
-    dynamic data = await apiServices.post(
+    final data = await apiServices.post(
       endPoint: EndPoints.login,
-      data: {'phone': loginParams.email, 'password': loginParams.password},
+      data: {'username': loginParams.email, 'password': loginParams.password},
     );
 
     AuthenticationModel authenticationModel = AuthenticationModel.fromJson(

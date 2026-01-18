@@ -5,12 +5,16 @@ class AuthenticationModel {
   User? user;
   String? accessToken;
   String? refreshToken;
+  String? role;
+  String? displayName;
 
   AuthenticationModel({
     this.message,
     this.user,
     this.accessToken,
+    this.role,
     this.refreshToken,
+    this.displayName,
   });
 
   factory AuthenticationModel.fromJson(Map<String, dynamic> json) {
@@ -21,6 +25,8 @@ class AuthenticationModel {
           : User.fromJson(json['user'] as Map<String, dynamic>),
       accessToken: json['accessToken'] as String?,
       refreshToken: json['refreshToken'] as String?,
+      role: json['role'] as String?,
+      displayName: json['displayName'] as String?,
     );
   }
 

@@ -1,4 +1,3 @@
-import 'package:beit_alnakha_admin/config/routes/routes.dart';
 import 'package:beit_alnakha_admin/core/widgets/custom_elevated_button.dart';
 import 'package:beit_alnakha_admin/core/widgets/logo_widget.dart';
 import 'package:flutter/services.dart';
@@ -15,7 +14,6 @@ import 'package:beit_alnakha_admin/features/authentication/presentation/widgets/
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gap/gap.dart';
-import 'package:go_router/go_router.dart';
 
 class LoginViewMobile extends StatelessWidget {
   const LoginViewMobile({super.key, this.horizontalPadding});
@@ -59,7 +57,8 @@ class LoginViewMobile extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              if (context.width < ScreenWidthBreakpoints.desktop) ...{
+                              if (context.width <
+                                  ScreenWidthBreakpoints.desktop) ...{
                                 const Gap(AppSize.size8),
                               } else ...{
                                 const Gap(AppSize.size16),
@@ -73,9 +72,11 @@ class LoginViewMobile extends StatelessWidget {
                               const Gap(AppSize.size32),
                               CustomElevatedButton(
                                 title: AppStrings.login,
+
                                 onPressed: () {
-                                  if (loginCubit.formKey.currentState!.validate()) {
-                                    context.goNamed(Routes.requestsView);
+                                  if (loginCubit.formKey.currentState!
+                                      .validate()) {
+                                    loginCubit.login();
                                   }
                                 },
                               ),
@@ -83,7 +84,6 @@ class LoginViewMobile extends StatelessWidget {
                             ],
                           ),
                         ),
-
                       ],
                     ),
                   ),
