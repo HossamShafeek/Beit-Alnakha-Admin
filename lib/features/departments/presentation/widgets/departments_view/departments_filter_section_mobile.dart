@@ -2,7 +2,6 @@ import 'package:beit_alnakha_admin/core/utils/app_size.dart';
 import 'package:beit_alnakha_admin/core/utils/app_strings.dart';
 import 'package:beit_alnakha_admin/core/utils/app_styles.dart';
 import 'package:beit_alnakha_admin/features/departments/presentation/widgets/departments_view/add_department_button.dart';
-import 'package:beit_alnakha_admin/features/departments/presentation/widgets/departments_view/departments_date_range_picker.dart';
 import 'package:beit_alnakha_admin/features/departments/presentation/widgets/departments_view/departments_search_field.dart';
 import 'package:flutter/material.dart';
 
@@ -30,7 +29,6 @@ class DepartmentsFilterSectionMobile extends StatelessWidget {
             spacing: AppSize.size8,
             children: [
               Expanded(child: DepartmentsSearchField()),
-              DepartmentsDateRangePicker(),
               AddDepartmentButton(),
             ],
           ),

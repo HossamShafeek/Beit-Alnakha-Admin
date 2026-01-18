@@ -5,12 +5,12 @@ import 'package:beit_alnakha_admin/core/utils/app_colors.dart';
 import 'package:beit_alnakha_admin/core/utils/app_strings.dart';
 import 'package:beit_alnakha_admin/core/widgets/custom_container_button.dart';
 import 'package:beit_alnakha_admin/core/widgets/custom_elevated_button.dart';
-import 'package:beit_alnakha_admin/features/agents/presentation/views/add_agent_view.dart';
+import 'package:beit_alnakha_admin/features/departments/presentation/views/add_sub_department_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class AddAgentButton extends StatelessWidget {
-  const AddAgentButton({super.key});
+class AddSubDepartmentButton extends StatelessWidget {
+  const AddSubDepartmentButton({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -20,16 +20,16 @@ class AddAgentButton extends StatelessWidget {
         iconColor: AppColors.white,
         backgroundColor: AppColors.primary,
         onTap: () {
-          showAddAgentDialog(context: context);
+          showAddSubDepartmentDialog(context: context);
         },
       );
     } else {
       return CustomElevatedButton(
         width: 160,
         onPressed: () {
-          showAddAgentDialog(context: context);
+          showAddSubDepartmentDialog(context: context);
         },
-        title: AppStrings.addAgent,
+        title: AppStrings.addSubDepartment,
         icon: SvgPicture.asset(
           AppAssets.add,
           colorFilter: ColorFilter.mode(AppColors.white, BlendMode.srcIn),
@@ -38,13 +38,12 @@ class AddAgentButton extends StatelessWidget {
     }
   }
 
-  void showAddAgentDialog({required BuildContext context}) {
+  void showAddSubDepartmentDialog({required BuildContext context}) {
     showDialog(
       context: context,
       builder: (context) {
-        return AddAgentView();
+        return AddSubDepartmentView();
       },
     );
   }
 }
-

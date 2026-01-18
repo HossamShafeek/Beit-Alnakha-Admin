@@ -7,11 +7,12 @@ import 'package:beit_alnakha_admin/core/utils/app_size.dart';
 import 'package:beit_alnakha_admin/core/utils/app_strings.dart';
 import 'package:beit_alnakha_admin/core/utils/app_styles.dart';
 import 'package:beit_alnakha_admin/core/widgets/custom_data_table.dart';
+import 'package:beit_alnakha_admin/core/widgets/custom_network_image.dart';
 import 'package:beit_alnakha_admin/core/widgets/custom_popup_menu_button.dart';
 import 'package:beit_alnakha_admin/core/widgets/custom_switch.dart';
 import 'package:beit_alnakha_admin/features/departments/presentation/views/update_department_view.dart';
 import 'package:beit_alnakha_admin/features/departments/presentation/widgets/departments_view/delete_department_dialog.dart';
-import 'package:beit_alnakha_admin/features/departments/presentation/widgets/departments_view/department_details_view.dart';
+import 'package:beit_alnakha_admin/features/departments/presentation/views/department_details_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -125,9 +126,20 @@ class DepartmentsDataTable extends StatelessWidget {
                   return DataRow(
                     cells: [
                       textDataCell(context: context, text: '${index + 1}'),
-                      textDataCell(
-                        context: context,
-                        text: value.departmentName,
+
+                      DataCell(
+                        Row(
+                          mainAxisSize: MainAxisSize.min,
+                          spacing: AppSize.size8,
+                          children: [
+                            CustomNetworkImage(
+                                width: AppSize.size30,
+                                height: AppSize.size30,
+                                borderRadius: AppSize.size8,
+                                image: 'https://static.vecteezy.com/system/resources/thumbnails/057/068/323/small/single-fresh-red-strawberry-on-table-green-background-food-fruit-sweet-macro-juicy-plant-image-photo.jpg'),
+                            Text(value.departmentName, style: AppStyles.medium14(context)),
+                          ],
+                        ),
                       ),
                       textDataCell(
                         context: context,

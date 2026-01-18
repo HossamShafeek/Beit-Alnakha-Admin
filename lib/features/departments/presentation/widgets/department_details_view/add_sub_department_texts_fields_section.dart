@@ -8,8 +8,8 @@ import 'package:beit_alnakha_admin/core/widgets/custom_text_field.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class AddDepartmentTextsFieldsSection extends StatelessWidget {
-  const AddDepartmentTextsFieldsSection({super.key});
+class AddSubDepartmentTextsFieldsSection extends StatelessWidget {
+  const AddSubDepartmentTextsFieldsSection({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +30,7 @@ class AddDepartmentTextsFieldsSection extends StatelessWidget {
             ),
             validator: (value) {
               if (value!.trim().isEmpty) {
-                return AppStrings.pleaseEnterDepartmentName;
+                return AppStrings.pleaseEnterSubDepartmentName;
               }
               return null;
             },
@@ -39,7 +39,7 @@ class AddDepartmentTextsFieldsSection extends StatelessWidget {
           CustomListTile(
             removeIconPadding: true,
             svgIconPath: AppAssets.status,
-            titleText: AppStrings.departmentStatus,
+            titleText: AppStrings.subDepartmentStatus,
             trailing: CustomSwitch(value: true, onChanged: (value) {}),
           ),
         ],

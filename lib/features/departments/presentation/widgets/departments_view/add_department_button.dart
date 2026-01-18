@@ -14,7 +14,7 @@ class AddDepartmentButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    if (context.width < ScreenWidthBreakpoints.desktop) {
+    if (context.width < ScreenWidthBreakpoints.tablet) {
       return CustomContainerButton(
         imagePath: AppAssets.add,
         iconColor: AppColors.white,

@@ -567,6 +567,30 @@ class AppStrings {
     action,
   ];
 
+  // Sub Departments
+  static const String addSubDepartment = 'إضافة قسم فرعي';
+  static const String updateSubDepartment = 'تعديل قسم فرعي';
+  static const String searchWithSubDepartmentName = 'ابحث باسم القسم الفرعي…';
+  static const String subDepartmentPrice = 'السعر';
+  static const String subDepartmentStatus = 'حالة القسم الفرعي';
+  static const String deleteSubDepartment = 'حذف القسم الفرعي';
+  static const String youAreSureDeleteSubDepartment =
+      'هل انت متأكد من حذف هذا القسم الفرعي؟';
+  static const String pleaseEnterSubDepartmentName =
+      'من فضلك أدخل اسم القسم الفرعي';
+
+  static const String pressToUploadSubDepartmentImage =
+      'اضغط لرفع صورة القسم الفرعي هنا';
+
+  static List<String> subDepartmentsStatusForTabBar = [all, active, inactive];
+  static List<String> columnsNameForSubDepartmentsDataTable = [
+    hash,
+    departmentName,
+    subDepartmentPrice,
+    addedDate,
+    action,
+  ];
+
   // Ratings View
 
   static const String ratingsMenu = 'قائمة التقييمات';
