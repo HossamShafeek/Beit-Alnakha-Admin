@@ -540,6 +540,40 @@ class AppStrings {
     action,
   ];
 
+  // Ratings View
+
+  static const String ratingsMenu = 'جدول التقييمات';
+  static const String starsCount = 'عدد النجوم';
+  static const String searchWithRating = 'ابحث…';
+  static const String deleteRating = 'حذف التقييم';
+  static const String youAreSureDeleteRating =
+      'هل انت متأكد من حذف هذا التقييم؟';
+  static const String oneStar = '1 نجمة';
+  static const String twoStars = '2 نجمة';
+  static const String threeStars = '3 نجوم';
+  static const String fourStars = '4 نجوم';
+  static const String fiveStars = '5 نجوم';
+  static const String starsCountFrom1To5 = 'عدد النجوم 1 إلى 5';
+
+  static List<String> ratingsStarsForTabBar = [
+    all,
+    oneStar,
+    twoStars,
+    threeStars,
+    fourStars,
+    fiveStars,
+  ];
+
+  static List<String> columnsNameForRatingsDataTable = [
+    hash,
+    starsCount,
+    customerName,
+    requestNumber,
+    driverName,
+    date,
+    action,
+  ];
+
   // Common
   static const String stats = 'الحالة';
   static const String selectAll = 'تحديد الكل';
