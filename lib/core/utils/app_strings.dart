@@ -85,7 +85,7 @@ class AppStrings {
   static const String ratingsDescription =
       'جميع تقييمات الزبائن على الطلبات وجودة التوصيل والطعام.';
   static const String basicDataDescription =
-      'تحكم بجميع إعدادات النظام، من معلومات التطبيق إلى إعدادات التوصيل والدفع.';
+      'إدارة جميع الإعدادات الثابتة التي يعتمد عليها النظام، مثل الإضافات العامة، ومحافظات ومناطق التوصيل.';
 
   // Requests View
   static const String searchWithCustomerNameOrRequestsId =
@@ -547,20 +547,21 @@ class AppStrings {
   static const String departmentsMenu = 'قائمة الأقسام';
   static const String searchWithDepartmentName = 'ابحث باسم القسم…';
   static const String departmentName = 'اسم القسم';
-  static const String subDepartments = 'الأقسام الفرعية';
+  static const String departmentMainName = 'اسم القسم الرئيسي';
+  static const String subDepartmentName = 'اسم القسم الفرعي';
   static const String productsCount = 'عدد المنتجات';
   static const String departmentStatus = 'حالة القسم';
   static const String departmentDetails = 'تفاصيل القسم';
-  static const String deleteDepartment = 'حذف القسم';
-  static const String youAreSureDeleteDepartment =
-      'هل انت متأكد من حذف هذا القسم؟';
-  static const String pleaseEnterDepartmentName = 'من فضلك أدخل اسم القسم';
+  static const String deleteMainDepartment = 'حذف القسم الرئيسي';
+  static const String youAreSureDeleteMainDepartment =
+      'هل انت متأكد من حذف هذا القسم الرئيسي؟';
+  static const String pleaseEnterDepartmentMainName = 'من فضلك أدخل اسم القسم الرئيسي';
   static const String pressToUploadDepartmentImage = 'اضغط لرفع صورة القسم هنا';
 
   static List<String> departmentsStatusForTabBar = [all, active, inactive];
   static List<String> columnsNameForDepartmentsDataTable = [
     hash,
-    departmentName,
+    departmentMainName,
     subDepartments,
     productsCount,
     addedDate,
@@ -571,7 +572,7 @@ class AppStrings {
   static const String addSubDepartment = 'إضافة قسم فرعي';
   static const String updateSubDepartment = 'تعديل قسم فرعي';
   static const String searchWithSubDepartmentName = 'ابحث باسم القسم الفرعي…';
-  static const String subDepartmentPrice = 'السعر';
+  static const String subDepartments = 'الأقسام الفرعية';
   static const String subDepartmentStatus = 'حالة القسم الفرعي';
   static const String deleteSubDepartment = 'حذف القسم الفرعي';
   static const String youAreSureDeleteSubDepartment =
@@ -585,9 +586,32 @@ class AppStrings {
   static List<String> subDepartmentsStatusForTabBar = [all, active, inactive];
   static List<String> columnsNameForSubDepartmentsDataTable = [
     hash,
-    departmentName,
-    subDepartmentPrice,
+    subDepartmentName,
+    price,
     addedDate,
+    action,
+  ];
+
+  // Meals View
+  static const String mealsMenu = 'قائمة الوجبات';
+  static const String searchWithMealName = 'ابحث باسم الوجبة…';
+  static const String mealName = 'اسم الوجبة';
+  static const String mealPrice = 'السعر';
+  static const String lastUpdate = 'آخر تحديث';
+  static const String addMeal = 'إضافة وجبة';
+  static const String updateMeal = 'تعديل وجبة';
+  static const String deleteMeal = 'حذف الوجبة';
+  static const String youAreSureDeleteMeal = 'هل انت متأكد من حذف هذه الوجبة؟';
+  static const String mealStatus = 'حالة الوجبة';
+
+  static List<String> mealsStatusForTabBar = [all, active, inactive];
+  static List<String> columnsNameForMealsDataTable = [
+    hash,
+    mealName,
+    mealPrice,
+    departmentName,
+    subDepartmentName,
+    lastUpdate,
     action,
   ];
 

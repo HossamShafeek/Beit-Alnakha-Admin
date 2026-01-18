@@ -30,11 +30,11 @@ class AddDepartmentTextsFieldsSection extends StatelessWidget {
             ),
             validator: (value) {
               if (value!.trim().isEmpty) {
-                return AppStrings.pleaseEnterDepartmentName;
+                return AppStrings.pleaseEnterDepartmentMainName;
               }
               return null;
             },
-            hintText: AppStrings.departmentName,
+            hintText: AppStrings.departmentMainName,
           ),
           CustomListTile(
             removeIconPadding: true,

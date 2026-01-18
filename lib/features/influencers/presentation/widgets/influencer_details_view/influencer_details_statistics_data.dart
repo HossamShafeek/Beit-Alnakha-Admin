@@ -12,8 +12,8 @@ class InfluencerDetailsStatisticsData extends StatelessWidget {
   final List<String> influencerStatusIcon = const [
     AppAssets.requestsFill,
     AppAssets.moneyCircleFill,
-    AppAssets.ordersCancelled,
-    AppAssets.moneyCircle,
+    AppAssets.pointsFill,
+    AppAssets.equalMoneyCircleFill,
   ];
 
   final List<int> influencerDetailsStatusValues = const [

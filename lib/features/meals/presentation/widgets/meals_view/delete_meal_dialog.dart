@@ -4,8 +4,8 @@ import 'package:beit_alnakha_admin/core/utils/app_strings.dart';
 import 'package:beit_alnakha_admin/core/widgets/custom_dialog.dart';
 import 'package:flutter/material.dart';
 
-class DeleteDepartmentDialog extends StatelessWidget {
-  const DeleteDepartmentDialog({super.key});
+class DeleteMealDialog extends StatelessWidget {
+  const DeleteMealDialog({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -16,8 +16,8 @@ class DeleteDepartmentDialog extends StatelessWidget {
       buttonColorForPrimaryButton: AppColors.red,
       buttonTitleForPrimaryButton: AppStrings.delete,
       buttonTitleForSecondaryButton: AppStrings.cancel,
-      title: AppStrings.deleteMainDepartment,
-      subtitle: AppStrings.youAreSureDeleteMainDepartment,
+      title: AppStrings.deleteMeal,
+      subtitle: AppStrings.youAreSureDeleteMeal,
     );
   }
 }

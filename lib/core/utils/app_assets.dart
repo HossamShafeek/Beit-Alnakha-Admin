@@ -92,6 +92,8 @@ abstract class AppAssets {
       '${AppConstants.pathForSvg}money_circle_fill.svg';
   static const String moneyCircle =
       '${AppConstants.pathForSvg}money_circle.svg';
+  static const String equalMoneyCircleFill =
+      '${AppConstants.pathForSvg}equal_money_circle_fill.svg';
   static const String whatsApp = '${AppConstants.pathForSvg}whats_app.svg';
   static const String whatsAppFill =
       '${AppConstants.pathForSvg}whats_app_fill.svg';

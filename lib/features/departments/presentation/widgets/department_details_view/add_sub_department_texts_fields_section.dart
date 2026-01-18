@@ -34,7 +34,7 @@ class AddSubDepartmentTextsFieldsSection extends StatelessWidget {
               }
               return null;
             },
-            hintText: AppStrings.departmentName,
+            hintText: AppStrings.subDepartmentName,
           ),
           CustomListTile(
             removeIconPadding: true,

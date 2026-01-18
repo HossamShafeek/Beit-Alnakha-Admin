@@ -12,8 +12,8 @@ class AgentDetailsStatisticsData extends StatelessWidget {
   final List<String> driverStatusIcon = const [
     AppAssets.requestsFill,
     AppAssets.moneyCircleFill,
-    AppAssets.ordersCancelled,
-    AppAssets.moneyCircle,
+    AppAssets.pointsFill,
+    AppAssets.equalMoneyCircleFill,
   ];
 
   final List<int> driverDetailsStatusValues = const [10000,500000,50000,50000];

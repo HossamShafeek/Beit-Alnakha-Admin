@@ -15,7 +15,7 @@ import 'package:beit_alnakha_admin/features/influencers/presentation/views/influ
 import 'package:beit_alnakha_admin/features/influencers/presentation/views/influencer_details_layout.dart';
 import 'package:beit_alnakha_admin/features/layout/presentation/cubits/side_bar_cubit/side_bar_cubit.dart';
 import 'package:beit_alnakha_admin/features/layout/presentation/views/shell_route.dart';
-import 'package:beit_alnakha_admin/features/meals/presentation/views/meals_view.dart';
+import 'package:beit_alnakha_admin/features/meals/presentation/views/meals_layout.dart';
 import 'package:beit_alnakha_admin/features/ratings/presentation/views/ratings_layout.dart';
 import 'package:beit_alnakha_admin/features/requests/presentation/views/requests_details_layout.dart';
 import 'package:beit_alnakha_admin/features/requests/presentation/views/requests_layout.dart';
@@ -254,7 +254,7 @@ final GoRouter router = GoRouter(
             return _buildPageWithSlideTransition(
               context: context,
               state: state,
-              child: const MealsView(),
+              child: const MealsLayout(),
             );
           },
         ),
