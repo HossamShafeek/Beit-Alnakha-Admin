@@ -540,9 +540,36 @@ class AppStrings {
     action,
   ];
 
+  // Departments View
+
+  static const String addDepartment = 'إضافة قسم رئيسي';
+  static const String updateDepartment = 'تعديل قسم';
+  static const String departmentsMenu = 'قائمة الأقسام';
+  static const String searchWithDepartmentName = 'ابحث باسم القسم…';
+  static const String departmentName = 'اسم القسم';
+  static const String subDepartments = 'الأقسام الفرعية';
+  static const String productsCount = 'عدد المنتجات';
+  static const String departmentStatus = 'حالة القسم';
+  static const String departmentDetails = 'تفاصيل القسم';
+  static const String deleteDepartment = 'حذف القسم';
+  static const String youAreSureDeleteDepartment =
+      'هل انت متأكد من حذف هذا القسم؟';
+  static const String pleaseEnterDepartmentName = 'من فضلك أدخل اسم القسم';
+  static const String pressToUploadDepartmentImage = 'اضغط لرفع صورة القسم هنا';
+
+  static List<String> departmentsStatusForTabBar = [all, active, inactive];
+  static List<String> columnsNameForDepartmentsDataTable = [
+    hash,
+    departmentName,
+    subDepartments,
+    productsCount,
+    addedDate,
+    action,
+  ];
+
   // Ratings View
 
-  static const String ratingsMenu = 'جدول التقييمات';
+  static const String ratingsMenu = 'قائمة التقييمات';
   static const String starsCount = 'عدد النجوم';
   static const String searchWithRating = 'ابحث…';
   static const String deleteRating = 'حذف التقييم';

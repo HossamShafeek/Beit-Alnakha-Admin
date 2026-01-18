@@ -6,7 +6,7 @@ import 'package:beit_alnakha_admin/features/chefs/presentation/views/chefs_layou
 import 'package:beit_alnakha_admin/features/codes/presentation/views/codes_view.dart';
 import 'package:beit_alnakha_admin/features/customers/presentation/views/customer_details_layout.dart';
 import 'package:beit_alnakha_admin/features/customers/presentation/views/customers_layout.dart';
-import 'package:beit_alnakha_admin/features/departments/presentation/views/departments_view.dart';
+import 'package:beit_alnakha_admin/features/departments/presentation/views/departments_layout.dart';
 import 'package:beit_alnakha_admin/features/drivers/presentation/views/driver_details_layout.dart';
 import 'package:beit_alnakha_admin/features/drivers/presentation/views/drivers_layout.dart';
 import 'package:beit_alnakha_admin/features/employees/presentation/views/employees_layout.dart';
@@ -243,7 +243,7 @@ final GoRouter router = GoRouter(
             return _buildPageWithSlideTransition(
               context: context,
               state: state,
-              child: const DepartmentsView(),
+              child: const DepartmentsLayout(),
             );
           },
         ),

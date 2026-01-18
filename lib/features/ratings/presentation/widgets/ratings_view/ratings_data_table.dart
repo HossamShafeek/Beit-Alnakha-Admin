@@ -139,15 +139,18 @@ class RatingsDataTable extends StatelessWidget {
                           mainAxisSize: MainAxisSize.min,
                           spacing: AppSize.size4,
                           children: [
+                            SvgPicture.asset(
+                              AppAssets.star,
+                              width: AppSize.size18,
+                              height: AppSize.size18,
+                            ),
                             Text(
                               '${value.starsCount}',
-                              style: AppStyles.medium14(context),
+                              style: AppStyles.semiBold14(context).copyWith(
+                                color: AppColors.black,
+                              ),
                             ),
-                            Icon(
-                              Icons.star,
-                              color: AppColors.primary,
-                              size: AppSize.size16,
-                            ),
+
                           ],
                         ),
                       ),
