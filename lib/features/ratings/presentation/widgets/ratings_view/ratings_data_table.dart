@@ -9,6 +9,7 @@ import 'package:beit_alnakha_admin/core/utils/app_styles.dart';
 import 'package:beit_alnakha_admin/core/widgets/custom_data_table.dart';
 import 'package:beit_alnakha_admin/core/widgets/custom_popup_menu_button.dart';
 import 'package:beit_alnakha_admin/core/widgets/custom_switch.dart';
+import 'package:beit_alnakha_admin/features/ratings/presentation/views/rate_details_view.dart';
 import 'package:beit_alnakha_admin/features/ratings/presentation/widgets/ratings_view/delete_rating_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -166,11 +167,14 @@ class RatingsDataTable extends StatelessWidget {
 
                             CustomPopupMenuButton(
                               onSelected: (value) {
-                                if (value == MenuActionEnum.delete) {
+                                if (value == MenuActionEnum.viewDetails) {
+                                  showRateDetailsDialog(context: context);
+                                } else if (value == MenuActionEnum.delete) {
                                   showDeleteRatingDialog(context: context);
                                 }
                               },
                               items: buildPopupMenuItems(context, [
+                                MenuActionEnum.viewDetails,
                                 MenuActionEnum.delete,
                               ]),
                               child: Padding(
@@ -195,6 +199,15 @@ class RatingsDataTable extends StatelessWidget {
           ),
         ],
       ),
+    );
+  }
+
+  void showRateDetailsDialog({required BuildContext context}) {
+    showDialog(
+      context: context,
+      builder: (context) {
+        return RateDetailsView();
+      },
     );
   }
 

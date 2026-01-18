@@ -554,6 +554,11 @@ class AppStrings {
   static const String fourStars = '4 نجوم';
   static const String fiveStars = '5 نجوم';
   static const String starsCountFrom1To5 = 'عدد النجوم 1 إلى 5';
+  static const String ratingDetails = 'تفاصيل التقييم';
+  static const String theDriver = 'السائق';
+  static const String ratingOnRequest = 'تقييم على الطلب';
+  static const String ratingOnDriver = 'تقييم على السائق';
+  static const String ratingDate = 'تاريخ التقييم';
 
   static List<String> ratingsStarsForTabBar = [
     all,
