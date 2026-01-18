@@ -26,6 +26,13 @@ abstract class ApiServices {
     CancelToken? cancelToken,
   });
 
+  Future<Response> patch({
+    required String endPoint,
+    Map<String, dynamic> queryParameters,
+    dynamic data,
+    CancelToken? cancelToken,
+  });
+
   void setBaseUrl({required baseUrl});
   void setHeaders({required Map<String, dynamic> headers});
 }
