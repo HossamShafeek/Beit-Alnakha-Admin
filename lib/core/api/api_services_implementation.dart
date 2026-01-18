@@ -101,6 +101,21 @@ class ApiServicesImplementation extends ApiServices {
   }
 
   @override
+  Future<Response> patch({
+    required String endPoint,
+    Map<String, dynamic>? queryParameters,
+    dynamic data,
+    CancelToken? cancelToken,
+  }) async {
+    return await _dio.patch(
+      endPoint,
+      queryParameters: queryParameters,
+      data: data,
+      cancelToken: cancelToken,
+    );
+  }
+
+  @override
   Future<Response> delete({
     required String endPoint,
     Map<String, dynamic>? queryParameters,
