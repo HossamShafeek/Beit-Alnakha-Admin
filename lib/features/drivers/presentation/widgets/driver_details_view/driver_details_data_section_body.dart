@@ -1,14 +1,13 @@
+import 'package:beit_alnakha_admin/core/functions/build_stars_row.dart';
 import 'package:beit_alnakha_admin/core/helper/extensions_helper.dart';
 import 'package:beit_alnakha_admin/core/responsive_helper/responsive_pattern_layout.dart';
 import 'package:beit_alnakha_admin/core/utils/app_assets.dart';
 import 'package:beit_alnakha_admin/core/utils/app_colors.dart';
-import 'package:beit_alnakha_admin/core/utils/app_size.dart';
 import 'package:beit_alnakha_admin/core/utils/app_strings.dart';
 import 'package:beit_alnakha_admin/core/widgets/custom_list_tile.dart';
 import 'package:beit_alnakha_admin/core/widgets/custom_switch.dart';
 import 'package:beit_alnakha_admin/core/widgets/text_container_with_icon.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class DriverDetailsDataSectionBody extends StatelessWidget {
@@ -64,22 +63,7 @@ class DriverDetailsDataSectionBody extends StatelessWidget {
         CustomListTile(
           onTap: () {},
           svgIconPath: AppAssets.rate,
-          titleWidget: RatingBar.builder(
-            initialRating: 3,
-            minRating: 1,
-            ignoreGestures: true,
-            direction: Axis.horizontal,
-            allowHalfRating: true,
-            itemCount: 5,
-            itemSize: AppSize.size24,
-            unratedColor: AppColors.grey400,
-            itemPadding: EdgeInsets.symmetric(horizontal: 4.0),
-            itemBuilder: (context, _) => SvgPicture.asset(
-              AppAssets.star,
-              colorFilter: ColorFilter.mode(AppColors.primary, BlendMode.srcIn),
-            ),
-            onRatingUpdate: (rating) {},
-          ),
+          titleWidget: buildStarsRow(3),
           trailing: RotatedBox(
             quarterTurns: 2,
             child: SvgPicture.asset(

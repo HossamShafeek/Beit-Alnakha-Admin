@@ -4,10 +4,11 @@ import 'package:beit_alnakha_admin/core/utils/app_size.dart';
 import 'package:beit_alnakha_admin/core/utils/app_styles.dart';
 
 class CustomContainerWithTitle extends StatelessWidget {
-  const CustomContainerWithTitle({super.key, this.title, required this.child});
+  const CustomContainerWithTitle({super.key, this.title, required this.child, this.backgroundColor});
 
   final String? title;
   final Widget child;
+  final Color? backgroundColor;
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +16,7 @@ class CustomContainerWithTitle extends StatelessWidget {
       width: double.infinity,
       padding: const EdgeInsets.all(AppSize.size12),
       decoration: BoxDecoration(
-        color: AppColors.grey100,
+        color:backgroundColor?? AppColors.grey100,
         borderRadius: BorderRadius.circular(AppSize.size12),
       ),
       child: Column(

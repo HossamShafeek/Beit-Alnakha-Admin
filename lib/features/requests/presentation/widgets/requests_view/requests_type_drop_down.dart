@@ -1,6 +1,7 @@
 import 'package:beit_alnakha_admin/core/responsive_helper/responsive_app_extensions.dart';
 import 'package:beit_alnakha_admin/core/responsive_helper/screen_width_breakpoints.dart';
 import 'package:beit_alnakha_admin/core/utils/app_assets.dart';
+import 'package:beit_alnakha_admin/core/utils/app_colors.dart';
 import 'package:beit_alnakha_admin/core/utils/app_size.dart';
 import 'package:beit_alnakha_admin/core/utils/app_strings.dart';
 import 'package:beit_alnakha_admin/core/utils/app_styles.dart';
@@ -25,7 +26,7 @@ class RequestsTypeDropDown extends StatelessWidget {
               .map((e) => PopupMenuItem<String>(value: e, child: Text(e, style: AppStyles.medium16(context))))
               .toList(),
         child: CustomContainerButton(
-          imagePath: AppAssets.status,
+          imagePath: AppAssets.orders,
           size: AppSize.size48,
         ),
       );
@@ -37,7 +38,12 @@ class RequestsTypeDropDown extends StatelessWidget {
           hintText: AppStrings.requestType,
           prefixIcon: FittedBox(
             fit: BoxFit.scaleDown,
-            child: SvgPicture.asset(AppAssets.status),
+            child: SvgPicture.asset(
+              AppAssets.orders,
+              width: AppSize.size24,
+              height: AppSize.size24,
+              colorFilter: ColorFilter.mode(AppColors.black, BlendMode.srcIn),
+            ),
           ),
           items: AppStrings.requestsTypeForDropDown
               .map((e) => PopupMenuItem<String>(value: e, child: Text(e, style: AppStyles.medium16(context))))
